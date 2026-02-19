@@ -4,6 +4,8 @@ date: 2024-01-01T12:00:00
 slug: "welcome-2024"
 ---
 
+![](/images/image-asset.jpeg)
+
 A new year is always a great opportunity to reflect and set some goals - inspired by Der Shing's [blog](https://limdershing.blogspot.com), thought it useful to jot down priorities and give myself a chance to check back in a year to see how well I did against my stated intentions.
 
 ## Priorities

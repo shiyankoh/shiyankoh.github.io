@@ -4,6 +4,8 @@ date: 2024-01-01
 slug: "a-year-of-podcasting"
 ---
 
+![](/images/Screenshot_2024-01-02_at_6.43.24___PM.png)
+
 Late last year, Jeremy Au invited me to do a weekly podcast with him, riffing on the latest news in the Southeast Asia Tech scene. Now I love listening to podcasts (Acquired, Odd Lots, Stratechery), but I had some trepidation about being so out there with my thoughts in public. I figured it would be a good way to challenge myself. (good [tweet](https://x.com/kevinleeme/status/1742270859753201691?s=20) from Kevin Lee on getting over this fear)
 
 Key learnings/surprises from the year:

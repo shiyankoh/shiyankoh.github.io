@@ -4,6 +4,8 @@ date: 2020-08-16
 slug: "metrics-what-matters-and-why-to-a-pre-seed-investor"
 ---
 
+![](/images/lukas-blazek-mcSDtbWXUZU-unsplash.jpg)
+
 The idea of metrics for a pre-seed startups can feel rather oxymoronic; what does it even mean to have metrics when the business is so early? To add to the confusion, investors say conflicting things about the types of metrics they are looking for.
 
 Forget the investors for a second - as a founder, what do YOU want to know about your business? You are smart and talented and could be doing a million other things. What things should you be looking at to validate your own ideas?

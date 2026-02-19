@@ -4,6 +4,8 @@ date: 2022-01-04
 slug: "understanding-silicon-valley-a-discovery-operating-system"
 ---
 
+![](/images/cover.png)
+
 *This article was published as part of the book "America: A Singapore Perspective" edited by Tommy Koh and Daljit Singh. The full book can be purchased [here](https://www.amazon.com/America-Singapore-Perspective-29-Writers-ebook/dp/B09MTR2CDK).*
 
 *Koh Shiyan and Karen Tay*

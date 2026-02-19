@@ -4,6 +4,8 @@ date: 2025-04-29
 slug: "chefs-knife-or-kiwi-peeler"
 ---
 
+![](/images/Screenshot_2025-04-29_at_5.12.22___PM.png)
+
 A chef's knife can do almost anything in the kitchen — chop, slice, dice, even peel if you're determined enough. A kiwi peeler? It does exactly one thing, and only if you happen to have a ripe kiwi handy.
 
 Lately, I've been thinking about this knife vs. peeler analogy as a way to make sense of the explosion of AI applications, startup ideas, and even how we teach kids math. There's a big difference between building general-purpose tools and building hyper-specific ones. And in a world where flexibility and adaptability matter more than ever, this distinction is becoming critical.
@@ -12,6 +14,8 @@ We can actually map this thinking along two important dimensions:
 
 - General-purpose vs. Specific-purpose: Is the tool versatile (like a knife) or narrow (like a kiwi peeler)?
 - DIY/raw tool vs. Productized/SaaS: Is the tool handed to you raw (you have to figure it out) or neatly packaged into a polished product?
+
+![](/images/Screenshot_2025-04-29_at_5.11.27___PM.png)
 
 Picture a 2x2 grid. In one corner, you have raw, general-purpose tools like ChatGPT itself — flexible but demanding more initiative from the user. In the opposite corner, you have polished, specific-purpose products like an "AI-powered interview platform" SaaS offering — clear, constrained, easy to adopt.
 

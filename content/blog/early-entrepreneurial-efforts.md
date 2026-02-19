@@ -4,6 +4,8 @@ date: 2023-03-27
 slug: "early-entrepreneurial-efforts"
 ---
 
+![](/images/IMG_3354.JPG)
+
 One of my favourite childhood memories was picking fruit from my best friend's yard, loading up her red radio flyer wagon, and wandering around her neighbourhood selling oranges to her neighbours. We had no guidance on pricing, and no real goals other than wanting to be able to buy snacks at the pool snack bar we often frequented. Other revenue generating activities in my youth included raking leaves ($0.25 per giant trash bag) which seemed way more fun than waiting for my grandma to reward me for good grades. I've often wished I'd been encouraged to pursue some of these earlier entrepreneurial endeavours more, vs. being directed to study harder!
 
 Now as a parent, I wanted to offer my own kids as many opportunities to be entrepreneurial as possible. My daughter's interest in baking seemed like a great starting point - I'd much rather she sold those delicious chocolate chip cookies than leave them in the house for me to snack on! I told my wife about my intentions to get our daughter out to the park and selling homemade cookies. She gave me the same look that she gave me when I told her I wanted to build a cabin one day. The smirk just made me more determined to make it happen.

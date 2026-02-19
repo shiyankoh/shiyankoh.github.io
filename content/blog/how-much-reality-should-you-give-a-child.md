@@ -4,6 +4,8 @@ date: 2024-10-01
 slug: "how-much-reality-should-you-give-a-child"
 ---
 
+![](/images/Firefly_room_full_of_adults_on_their_devices_sitting_around_a_tbale_52710.jpg)
+
 If you're a parent, or involved with small children through blood or friendship, chances are you've been forced/privileged to observe a performance or two. Perhaps it was a song, something approximating a sporting event, or the performance of a musical instrument. Unless your child is a prodigy, most of these early performances are adorable but not particularly outstanding.
 
 Recently, my daughter was upset because she felt that at an impromptu post-meal performance in front of family and friends, adults were more interested in their phones than listening to her sing. So - what is one to do? On the one hand, we all wish adults were less glued to their devices, on the other, to really break through and capture someone's attention you need to think about your audience and what is compelling for them. Singing a few songs doesn't cut it in this day and age!

@@ -4,6 +4,8 @@ date: 2020-12-08
 slug: "on-building-communities"
 ---
 
+![](/images/Screenshot_2020-12-09_at_3.31.28_PM.png)
+
 I've been building communities all my life. In the beginning, it was accidental - I noticed that most groups were willing to do things if someone (anyone!), provided a small amount of direction, "Hey guys, let's go to the beach and do X, Y, Z," vs let's all stand around discussing things we could do for 30 minutes, with everyone politely deferring to everyone else and no decision being made.
 
 After relocating from SF to Singapore in 2018, one of our first tasks after settling the mundane and never-ending tasks of the move was to build community. We had long been spoiled in SF since my wife had grown up in the Bay Area, we'd both gone to undergrad there, and we both worked in technology - we had community built-in. Landing in Singapore, we needed to start from scratch. Making friends later in life is a fun exercise because you know yourself better - we wanted to build a group that we felt invigorated by, where we can learn and grow together.

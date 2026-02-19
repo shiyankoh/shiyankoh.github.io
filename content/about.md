@@ -2,14 +2,16 @@
 title: "About"
 ---
 
+![Shiyan Koh](/images/20240920_GoldHouse_Photowall2024_ShiyanKoh_1594.jpg)
+
 ## Shiyan Koh
 
-Co-founder and General Partner at [Hustle Fund](https://www.hustlefund.vc), a global pre-seed venture fund.
+Singapore-based early stage VC @ [Hustle Fund](https://www.hustlefund.vc).
 
-Previously VP of Business Operations & Corporate Development at NerdWallet (employee #10), where she grew annual revenue from $1 million to more than $150 million.
+On the board of Stanford Club of Singapore, Stanford Rugby, and Q Chamber.
 
-Prior to NerdWallet, Shiyan was an investor at Institutional Venture Partners and Bridgewater Associates.
+Previously @NerdWallet, @BridgewaterAssociates, @IVP, @JPMorgan.
 
-Based in Singapore.
+Mother, Wife, Enthusiastic reader and thrower of dinner parties.
 
-You can find more about Hustle Fund at [hustlefund.vc](https://www.hustlefund.vc).
+Twitter [@shiyankoh](https://twitter.com/shiyankoh) · Threads [@shiyankoh](https://www.threads.net/@shiyankoh)
