@@ -9,6 +9,8 @@ enableInlineShortcodes = true
   name = "Shiyan Koh"
   bio = "Co-founder & GP at Hustle Fund"
   description = "The Culdesac - A blog by Shiyan Koh"
+  disableThemeToggle = true
+  color = "linen"
 
 [markup]
   [markup.goldmark]
