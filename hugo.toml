@@ -1,4 +1,4 @@
-baseURL = "https://www.shiyankoh.com/"
+baseURL = "//www.shiyankoh.com/"
 languageCode = "en-us"
 title = "The Culdesac"
 theme = "paper"
