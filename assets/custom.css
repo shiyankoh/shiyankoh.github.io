@@ -1,0 +1,133 @@
+/* Custom styles for The Culdesac */
+
+:root {
+  --bg: #FAFAF7;
+  --accent: #C67D5B;
+  --accent-hover: #B06A48;
+  --w: 680px;
+}
+
+/* Warm background */
+html {
+  --bg: #FAFAF7 !important;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Charter, 'Times New Roman', serif !important;
+  letter-spacing: -0.01em;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration-color: rgba(198, 125, 91, 0.3);
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration-color: var(--accent-hover);
+}
+
+/* Bio section */
+.bio-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.bio-section .bio-name {
+  font-family: Georgia, Charter, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  color: #1a1a1a;
+}
+
+.bio-section .bio-tagline {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.bio-section .bio-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.bio-section .bio-links a {
+  color: var(--accent);
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.bio-section .bio-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Post list spacing */
+section.relative {
+  margin-top: 1.75rem !important;
+  margin-bottom: 1.75rem !important;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+section.relative:last-of-type {
+  border-bottom: none;
+}
+
+/* Post excerpt */
+.post-excerpt {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.35rem;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Content max-width */
+.prose {
+  max-width: 680px !important;
+}
+
+/* Dark mode warm tones */
+@media (prefers-color-scheme: dark) {
+  html.dark, .dark {
+    --bg: #1C1A17 !important;
+  }
+
+  .dark .bio-section {
+    border-bottom-color: rgba(255,255,255,0.1);
+  }
+
+  .dark .bio-section .bio-name {
+    color: #e8e4df;
+  }
+
+  .dark .bio-section .bio-tagline {
+    color: #a8a29e;
+  }
+
+  .dark .post-excerpt {
+    color: #a8a29e;
+  }
+
+  .dark section.relative {
+    border-bottom-color: rgba(255,255,255,0.06);
+  }
+
+  .dark a {
+    color: #D4956F;
+  }
+
+  .dark a:hover {
+    color: #E0A882;
+  }
+}
