@@ -6,8 +6,15 @@
     <description>Recent content in Blog on The Culdesac</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//www.shiyankoh.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Everyone Can Code Now (So Why Aren&#39;t They?)</title>
+      <link>//www.shiyankoh.com/blog/everyone-can-code-now/</link>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>//www.shiyankoh.com/blog/everyone-can-code-now/</guid>
+      <description>&lt;p&gt;My computer science grad cousin and his data scientist wife are peering at my laptop screen, looking at a little app I built — the bane of every Singaporean parent&amp;rsquo;s existence: a Chinese dictation practice tool for my nine-year-old.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m walking them through the prompts I used to build it in Claude Code. &amp;ldquo;How long did this take?&amp;rdquo; they ask. Less than 30 minutes.&lt;/p&gt;&#xA;&lt;p&gt;To prove the point, I do a live demo on the spot. We build a simple app to help people learn the ingredients and auspicious phrases for Chinese New Year yusheng — you know, the &amp;ldquo;huat ah!&amp;rdquo; stuff. Five minutes later, it&amp;rsquo;s running on my laptop.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Forest City: A Ghost Town Finds Its Residents with the Network School</title>
       <link>//www.shiyankoh.com/blog/forest-city-a-ghost-town-finds-its-residents-with-the-network-school/</link>
