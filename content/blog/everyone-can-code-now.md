@@ -1,5 +1,5 @@
 ---
-title: "Everyone Can Code Now (So Why Aren't They?)"
+title: "Press the Buttons, People!"
 date: 2026-02-19
 slug: "everyone-can-code-now"
 ---
