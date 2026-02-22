@@ -8,7 +8,7 @@ The best books about building startups aren't really about startups. They're abo
 
 Here are three that I keep coming back to and recommending to founders. They're all short reads. They'll all change how you think about your job.
 
-## 1. [Leadership Without Easy Answers](https://bookshop.org/search?keywords=leadership+without+easy+answers+heifetz) — Ronald Heifetz
+## 1. [Leadership Without Easy Answers](https://bookshop.org/p/books/leadership-without-easy-answers-ronald-a-heifetz/46d79460b84d58f2?ean=9780674518582) — Ronald Heifetz
 
 This is the book that rewired how I think about leadership. I took Heifetz's class at the Kennedy School, and his core idea has stuck with me ever since: **the hardest leadership problems aren't technical — they're adaptive.**
 
@@ -20,7 +20,7 @@ The key insight: your job as a leader isn't to have the answers. It's to manage 
 
 **Read this if:** You've ever been frustrated that your team "just won't get on board" with a decision that seems obviously right.
 
-## 2. [The Five Dysfunctions of a Team](https://bookshop.org/search?keywords=five+dysfunctions+of+a+team+lencioni) — Patrick Lencioni
+## 2. [The Five Dysfunctions of a Team](https://bookshop.org/p/books/the-five-dysfunctions-of-a-team-a-leadership-fable-patrick-m-lencioni/2f7512634ba6d549?ean=9780787960759) — Patrick Lencioni
 
 This one reads like a novel — literally, it's written as a fable — and you can finish it in an afternoon. Don't let that fool you. The framework underneath is sharp.
 
@@ -38,7 +38,7 @@ I think about this framework every time I see cofounders who are "nice" to each 
 
 **Read this if:** Your founding team "gets along great" but somehow never resolves the hard disagreements.
 
-## 3. [The Hard Thing About Hard Things](https://bookshop.org/search?keywords=hard+thing+about+hard+things+horowitz) — Ben Horowitz
+## 3. [The Hard Thing About Hard Things](https://bookshop.org/p/books/the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-answers-ben-horowitz/11bac56a0b645615?ean=9780062273208) — Ben Horowitz
 
 If Heifetz gives you the theory and Lencioni gives you the framework, Horowitz gives you the war stories. This book is what it actually feels like to lead a company through near-death experiences — the layoffs, the pivots, the moments where everything is falling apart and you still have to show up on Monday.
 
