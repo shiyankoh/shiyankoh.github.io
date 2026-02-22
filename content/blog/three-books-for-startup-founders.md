@@ -66,4 +66,4 @@ Together, they give you the vocabulary to understand what's happening in your te
 
 If you only read one, read Heifetz. If you need motivation to get through next week, read Horowitz. If you think your team is fine but somehow nothing is getting decided, read Lencioni.
 
-Or read all three. They're short. And you'll be a better founder for it.
+Or read all three. They're short. What books have shaped how you think about leadership? I'd love to hear — drop me a note.
