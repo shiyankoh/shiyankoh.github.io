@@ -1,0 +1,202 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en-us"
+  dir="ltr"
+><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>The Culdesac</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  <meta
+    name="description"
+    content="The Culdesac - A blog by Shiyan Koh"
+  />
+  <meta name="author" content="Shiyan Koh" /><link rel="preload stylesheet" as="style" href="//www.shiyankoh.com/main.min.0b966d3cd57d17807f7f2577eb8222e666df4f8db17ec45b616b62336851b053.css" integrity="sha256-C5ZtPNV9F4B/fyV364Ii5mbfT42xfsRbYWtiM2hRsFM=" />
+
+  
+  <link rel="preload" as="image" href="//www.shiyankoh.com/theme.png" />
+
+  
+
+  
+
+  
+
+  
+  <link
+    rel="icon"
+    href="//www.shiyankoh.com/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="//www.shiyankoh.com/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.156.0">
+  <meta itemprop="name" content="The Culdesac">
+  <meta itemprop="description" content="The Culdesac - A blog by Shiyan Koh">
+  <meta itemprop="datePublished" content="2025-12-09T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-12-09T00:00:00+00:00"><meta property="og:url" content="//www.shiyankoh.com/">
+  <meta property="og:site_name" content="The Culdesac">
+  <meta property="og:title" content="The Culdesac">
+  <meta property="og:description" content="The Culdesac - A blog by Shiyan Koh">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Culdesac">
+  <meta name="twitter:description" content="The Culdesac - A blog by Shiyan Koh">
+<link
+    rel="alternate"
+    type="application/rss&#43;xml"
+    href="//www.shiyankoh.com/index.xml"
+    title="The Culdesac"
+  />
+  <link rel="canonical" href="//www.shiyankoh.com/" />
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="//www.shiyankoh.com/"
+      >The Culdesac</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? "rgb(0 0 0 / 85%)" : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"
+    ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/blog/"
+        >Blog</a
+      ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      ></nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">Pandemic baking and remembering how to learn</h2>
+  <time class="text-xs antialiased opacity-60">Jun 1, 2020</time><p class="post-excerpt">
+I&rsquo;d taken up baking like everyone else during the COVID-19 pandemic, precipitated by a friend&rsquo;s kind gift of a 3 year old sourdough starter. My …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/pandemic-baking/">Pandemic baking and remembering how to learn</a>
+</section><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">Race, power and what we can do about it</h2>
+  <time class="text-xs antialiased opacity-60">Jun 1, 2020</time><p class="post-excerpt">If you&rsquo;re watching the news, and face it, who isn&rsquo;t, it&rsquo;s disheartening to watch what&rsquo;s happening in the US right now.
+Yesterday, we …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/race-power-and-what-we-can-do-about-it/">Race, power and what we can do about it</a>
+</section><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">Strategy, and why product-market fit alone isn&#39;t good enough</h2>
+  <time class="text-xs antialiased opacity-60">May 26, 2020</time><p class="post-excerpt">Every week I write a note to our portfolio, and in each one, I share one thought that I think is relevant for our founders to noodle on. This week&rsquo;s note …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/strategy-and-why-product-market-fit-alone-isnt-good-enough/">Strategy, and why product-market fit alone isn&#39;t good enough</a>
+</section><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">Scaling - The Agony and Ecstasy of scaling a high-growth business</h2>
+  <time class="text-xs antialiased opacity-60">May 2, 2020</time><p class="post-excerpt">I&rsquo;ve given various versions of this talk, and thought it might be worth sharing out the slides here for folks. Will add a transcript of the comments on …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/scaling-the-agony-and-ecstasy/">Scaling - The Agony and Ecstasy of scaling a high-growth business</a>
+</section><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">So you want to start a company...here&#39;s a reading list</h2>
+  <time class="text-xs antialiased opacity-60">Jul 31, 2019</time><p class="post-excerpt">I recently met with an incoming MBA student, who is leaving his cushy PE job for business school so that he can start something of his own. He asked if I had …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/reading-list-for-aspiring-entrepreneurs/">So you want to start a company...here&#39;s a reading list</a>
+</section><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">How to write a great investor update</h2>
+  <time class="text-xs antialiased opacity-60">May 22, 2019</time><p class="post-excerpt">One of my portfolio CEOs recently asked me for some examples of a great investor update newsletter and I thought that was a good opportunity to articulate the …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/how-to-write-a-great-investor-update/">How to write a great investor update</a>
+</section><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">Building a Product Management Community in Southeast Asia</h2>
+  <time class="text-xs antialiased opacity-60">Feb 14, 2019</time><p class="post-excerpt">
+Picture: From L to R, Shiyan Koh (Hustle Fund), Radhika Dutt (Radical Product), Anna Gong (Perx), Reshmi Roy (Skyscanner)
+Last night, I had the privilege of …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/product-management-southeastasia/">Building a Product Management Community in Southeast Asia</a>
+</section><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">Why I decided to join Hustle Fund</h2>
+  <time class="text-xs antialiased opacity-60">Sep 11, 2018</time><p class="post-excerpt">
+After almost 6 years at NerdWallet, and having had the chance of a lifetime to build a business from scratch with my friends, I was looking for something that …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/why-i-decided-to-join-hustle-fund/">Why I decided to join Hustle Fund</a>
+</section><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">What I&#39;ve been doing since leaving NerdWallet</h2>
+  <time class="text-xs antialiased opacity-60">Sep 5, 2018</time><p class="post-excerpt">After nearly 6 years building NerdWallet, I left at the end of March to move back to my home country, Singapore. It&rsquo;s been nearly 18 years since I first …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/what-ive-been-doing-since-leaving-nerdwallet/">What I&#39;ve been doing since leaving NerdWallet</a>
+</section><section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0"><h2 class="my-0!">Communities and the Cul-de-sac</h2>
+  <time class="text-xs antialiased opacity-60">Jan 24, 2018</time><p class="post-excerpt"> &ldquo;Wouldn&rsquo;t it be great if we could all be neighbors with our best friends? We could come home from work, trade stories over a glass of wine while …</p><a class="absolute inset-0 text-[0px]" href="//www.shiyankoh.com/blog/communities-and-the-cul-de-sac/">Communities and the Cul-de-sac</a>
+</section><nav class="mt-14 flex"><a class="btn not-prose" href="/">←Prev Page</a></nav></main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2026
+    <a class="link" href="//www.shiyankoh.com/">The Culdesac</a></div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+</body>
+</html>
