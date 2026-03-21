@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zero-Based Budgeting for Your Engineering Team | The Culdesac</title>
+  <meta name="description" content="The Culdesac - A blog by Shiyan Koh">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #888;
+      --accent: #C67D5B;
+      --max-width: 720px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+    
+     
+    .site-header { padding: 40px 0 20px; border-bottom: 1px solid #eee; margin-bottom: 40px; }
+    .site-header .container { display: flex; justify-content: space-between; align-items: baseline; }
+    .site-title { font-size: 22px; font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+    .site-title:hover { color: var(--accent); }
+    .site-nav a { margin-left: 24px; font-size: 15px; color: var(--text-secondary); text-decoration: none; }
+    .site-nav a:hover { color: var(--accent); }
+    
+     
+    main { min-height: 60vh; }
+    
+     
+    .site-footer { margin-top: 80px; padding: 24px 0; border-top: 1px solid #eee; color: var(--text-secondary); font-size: 14px; text-align: center; }
+    
+     
+    .bio { margin-bottom: 48px; }
+    .bio h2 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+    .bio p { font-size: 16px; color: var(--text-secondary); line-height: 1.6; }
+    .bio-links { margin-top: 8px; }
+    .bio-links a { font-size: 14px; color: var(--accent); text-decoration: none; margin-right: 16px; }
+    .bio-links a:hover { text-decoration: underline; }
+    
+     
+    .post-list { list-style: none; }
+    .post-item { margin-bottom: 32px; }
+    .post-item a { color: var(--text); text-decoration: none; font-size: 20px; font-weight: 600; line-height: 1.4; }
+    .post-item a:hover { color: var(--accent); }
+    .post-date { font-size: 14px; color: var(--text-secondary); margin-top: 2px; }
+    .post-excerpt { font-size: 16px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
+    
+     
+    .post-header { margin-bottom: 32px; }
+    .post-header h1 { font-size: 32px; font-weight: 700; line-height: 1.3; letter-spacing: -0.02em; }
+    .post-header .post-date { margin-top: 8px; }
+    .post-content { font-size: 18px; line-height: 1.8; }
+    .post-content p { margin-bottom: 1.4em; }
+    .post-content h2 { font-size: 24px; font-weight: 600; margin: 2em 0 0.8em; }
+    .post-content h3 { font-size: 20px; font-weight: 600; margin: 1.6em 0 0.6em; }
+    .post-content a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+    .post-content a:hover { text-decoration-thickness: 2px; }
+    .post-content img { max-width: 100%; height: auto; border-radius: 4px; margin: 1.5em 0; }
+    .post-content blockquote { border-left: 3px solid var(--accent); padding-left: 20px; margin: 1.4em 0; color: var(--text-secondary); font-style: italic; }
+    .post-content ul, .post-content ol { margin: 1em 0 1em 1.5em; }
+    .post-content li { margin-bottom: 0.4em; }
+    .post-content code { font-size: 0.9em; background: #f5f5f5; padding: 2px 6px; border-radius: 3px; }
+    .post-content pre { background: #f5f5f5; padding: 16px; border-radius: 6px; overflow-x: auto; margin: 1.4em 0; }
+    .post-content pre code { background: none; padding: 0; }
+    
+     
+    .page-content { font-size: 18px; line-height: 1.8; }
+    .page-content p { margin-bottom: 1.4em; }
+    .page-content a { color: var(--accent); }
+    
+     
+    .subscribe-section { margin-top: 48px; padding: 24px 0; border-top: 1px solid #eee; text-align: center; }
+    .subscribe-section p { font-size: 16px; color: var(--text-secondary); }
+    .subscribe-section a { color: var(--accent); text-decoration: underline; }
+    
+     
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .site-header { padding: 24px 0 16px; margin-bottom: 24px; }
+      .site-title { font-size: 20px; }
+      .post-header h1 { font-size: 26px; }
+      .post-item a { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-title">The Culdesac</a>
+      <nav class="site-nav">
+        
+          <a href="/blog/">Blog</a>
+        
+          <a href="/about/">About</a>
+        
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    
+<article>
+  <div class="post-header">
+    <h1>Zero-Based Budgeting for Your Engineering Team</h1>
+    <div class="post-date">March 21, 2026</div>
+  </div>
+  <div class="post-content">
+    <p>A founder I back asked me last week if I knew anyone who could help them rethink their engineering org from scratch. Not a layoff consultant. Not a recruiter. Someone who could help them answer a harder question:</p>
+<p><em>If I were building this team today, knowing what AI can do now, what would it look like?</em></p>
+<p>I&rsquo;ve been hearing versions of this question from almost every CEO in our portfolio. And I think it&rsquo;s the right question at the right time.</p>
+<h2 id="what-zero-based-engineering-means">What Zero-Based Engineering Means</h2>
+<p>In finance, zero-based budgeting means you don&rsquo;t start from last year&rsquo;s budget and adjust. You start from zero and justify every dollar. No line item gets a free pass just because it existed before.</p>
+<p>Apply that to your engineering team.</p>
+<p>Don&rsquo;t start from your current headcount and ask &ldquo;who can I cut?&rdquo; Start from zero and ask &ldquo;what do I actually need built, maintained, and operated, and what&rsquo;s the best way to do each of those things today?&rdquo;</p>
+<p>The answer in 2024 would have been very different from the answer today. AI coding tools have gone from cute autocomplete to genuine capability. Not for everything. But for enough that the math has changed.</p>
+<h2 id="the-maintenance-vs-creation-distinction">The Maintenance vs. Creation Distinction</h2>
+<p>Here&rsquo;s the nuance most people miss: AI is much better at maintaining existing code than most people think, and less reliable at building complex new systems than the hype suggests.</p>
+<p>Maintaining a codebase (fixing bugs, writing tests, updating dependencies, refactoring for performance, adding straightforward features to established patterns) is where AI tools are already shockingly competent. An engineer paired with Claude Code or Cursor can maintain a codebase at a pace that would have required a team of three eighteen months ago.</p>
+<p>But there&rsquo;s an important caveat. A recent benchmark called <a href="https://arxiv.org/abs/2603.03823">SWE-CI</a>, out of Alibaba Research, tested something most AI benchmarks don&rsquo;t: what happens when an AI agent has to maintain a system <em>over time</em>. Not just write code once, but repeatedly modify a real codebase across dozens of commits spanning months of evolution. The results were sobering. Even the best-performing models broke existing behavior in roughly half of their maintenance iterations.</p>
+<p>The failure modes tell you a lot about where the limits actually are. Agents apply minimal fixes to a failing test without understanding broader dependencies, causing cascading regressions. They change a function signature but don&rsquo;t update callers across the codebase. Over many iterations, they accumulate duplicated logic and inconsistent abstractions. They treat tests as constraints to bypass rather than signals about how the system is supposed to work.</p>
+<p>In other words: AI agents can generate technical debt just as fast as they generate code.</p>
+<p>This doesn&rsquo;t mean AI can&rsquo;t maintain systems. It means the <em>kind</em> of maintenance matters. AI is excellent at well-scoped, pattern-following work within clean codebases. It struggles with the kind of long-horizon stewardship that requires understanding dependencies, preserving architectural intent, and predicting the ripple effects of changes.</p>
+<p>Building new systems from scratch, making judgment calls about tradeoffs, understanding the business context behind technical decisions: this still requires experienced humans. AI makes them faster, not optional.</p>
+<p>The implication: you probably need fewer maintenance engineers and more architect-level thinkers than you currently have. But the architects aren&rsquo;t just designing new things. They&rsquo;re the ones who understand the system well enough to direct AI effectively and catch the failure modes that don&rsquo;t show up in test suites until it&rsquo;s too late. The ratio has shifted, but the senior end of the ratio matters more than ever.</p>
+<h2 id="what-does-the-team-look-like">What Does the Team Look Like?</h2>
+<p>If I were building a startup engineering team from zero today, here&rsquo;s roughly how I&rsquo;d think about it:</p>
+<p><strong>1-2 senior engineers who think in systems.</strong> These are your architects. They make the hard calls: what to build, how to structure it, where the complexity lives. They use AI tools aggressively but their value is judgment, not keystrokes. They&rsquo;re also the ones who can spot when AI-generated changes are introducing the kind of slow architectural erosion that doesn&rsquo;t show up in test suites until it&rsquo;s too late.</p>
+<p><strong>AI-augmented &ldquo;full stack operators.&rdquo;</strong> Engineers who are comfortable using AI to move fast across the stack. They&rsquo;re not specialists in one layer. They&rsquo;re generalists who can ship end-to-end with AI doing the heavy lifting on boilerplate. One of these people today can cover ground that used to require a frontend dev, a backend dev, and a QA engineer.</p>
+<p><strong>A DevOps/infra person (maybe).</strong> Depending on your stack. If you&rsquo;re on Vercel/Railway/managed everything, you might not need this. If you&rsquo;re running your own infrastructure, you still do. AI hasn&rsquo;t automated &ldquo;3am the database is on fire&rdquo; yet.</p>
+<p><strong>Product-minded leadership.</strong> The more AI handles the how, the more important it is to have humans focused on the what and why. Product sense becomes your scarcest resource, not engineering capacity.</p>
+<p>What you probably don&rsquo;t need: large teams of mid-level engineers writing CRUD endpoints, manual QA teams, or dedicated frontend/backend splits for standard product work.</p>
+<h2 id="youre-not-just-rebuilding-the-team-youre-rebuilding-the-product">You&rsquo;re Not Just Rebuilding the Team. You&rsquo;re Rebuilding the Product.</h2>
+<p>There&rsquo;s a second zero-based question most founders aren&rsquo;t asking yet, but should be:</p>
+<p><em>If I were designing this product today, who would be using it?</em></p>
+<p>Not just who. <em>What.</em></p>
+<p>The first generation of software was built for humans clicking buttons. The next generation is being built for AI agents making API calls. And the gap between those two is bigger than most people realize.</p>
+<p>Think about what&rsquo;s already happening. AI agents are booking travel, managing inboxes, writing code, doing research, placing orders. They don&rsquo;t need beautiful UI. They need clean APIs, structured data, predictable behavior, and good documentation. The &ldquo;user&rdquo; increasingly isn&rsquo;t a person. It&rsquo;s software acting on a person&rsquo;s behalf.</p>
+<p>This changes what you build and how you build it.</p>
+<p>Your product needs to be <em>findable and usable by agents</em>, not just humans. Well-documented, with predictable error handling and sensible defaults. Tool-use schemas and structured outputs aren&rsquo;t nice-to-haves anymore. They&rsquo;re how your product gets chosen by the AI layer sitting between you and the end user.</p>
+<p>You also need two kinds of UX now. One for humans, one for agents. Humans want intuitive flows. Agents want predictable contracts. Building both well requires a different kind of product thinking than most teams have today.</p>
+<p>And distribution changes too. If agents are choosing tools on behalf of users, your moat isn&rsquo;t brand awareness or ad spend. It&rsquo;s being the tool the agent picks. Reliability, speed, and being easy for an AI to work with matter more than your landing page.</p>
+<p>So what does <em>this</em> mean for the team?</p>
+<p>You need people who understand how AI agents consume software, not just how humans do. Product people who think about what the agent experience looks like. Engineers who design for machine callers first. People who are building the connective tissue between your product and the agentic ecosystem, not just shipping features for a dashboard.</p>
+<p>This is the deeper version of the zero-based question. It&rsquo;s not just &ldquo;what team do I need to build what I&rsquo;m building?&rdquo; It&rsquo;s &ldquo;am I even building the right thing for the world that&rsquo;s emerging?&rdquo;</p>
+<h2 id="how-do-you-manage-the-risk">How Do You Manage the Risk?</h2>
+<p>This is the part most founders get stuck on. &ldquo;Okay, I believe the team could be smaller. But how do I get from here to there without breaking everything?&rdquo;</p>
+<p>Three approaches I&rsquo;m seeing:</p>
+<p><strong>Component-by-component refactor.</strong> Take your existing codebase and, module by module, assess: can AI reliably maintain this? Is the code well-structured enough that an AI tool can work with it? If yes, you&rsquo;ve reduced the human maintenance burden for that component. If no, refactor it until it is. That&rsquo;s a one-time engineering investment that pays dividends.</p>
+<p>This is the conservative approach. Lower risk, slower payoff. Good if your product is in-market with paying customers and you can&rsquo;t afford instability.</p>
+<p><strong>Parallel &ldquo;red team&rdquo; rebuild.</strong> Stand up a small team (or even one senior engineer with AI tools) to rebuild a component or service from scratch in parallel. Compare quality, speed, and maintainability against the existing system. If the rebuild wins, swap it in. If not, you&rsquo;ve learned something about where the boundaries of AI-assisted development actually are for your specific stack.</p>
+<p>This is the aggressive approach. Higher risk, faster learning. Good if you have components that are already technical debt and need to be rewritten anyway.</p>
+<p><strong>The hybrid.</strong> Refactor the stable, well-understood parts. Rebuild the parts that are already a mess. Most teams should do this.</p>
+<h2 id="the-stability-question">The Stability Question</h2>
+<p>One thing I keep hearing from CTOs: &ldquo;But can I trust AI to maintain my codebase long-term?&rdquo;</p>
+<p>The honest answer is: it depends on your codebase.</p>
+<p>If your code is well-typed, well-tested, modular, and follows consistent patterns, AI tools are remarkably good at working with it. They can read the patterns, follow the conventions, and extend the system coherently. The SWE-CI data backs this up: AI agents perform best in codebases with clear structure and comprehensive test coverage. The failures cluster in the messy parts, where high-churn files with accumulated complexity are exactly where cascading regressions concentrate.</p>
+<p>If your code is a tangled monolith with no tests, implicit dependencies everywhere, and tribal knowledge locked in the heads of engineers who&rsquo;ve since left, AI will struggle with it just like a new hire would. Except the new hire might eventually figure it out through sheer determination, while the AI will confidently produce something that looks right and isn&rsquo;t.</p>
+<p>This means investing in code quality isn&rsquo;t just good practice anymore. It&rsquo;s a prerequisite for being able to run a lean team. The teams that can reduce headcount are the ones whose code is clean enough for AI to work with. Technical debt has become a hiring cost.</p>
+<h2 id="what-id-tell-a-founder-right-now">What I&rsquo;d Tell a Founder Right Now</h2>
+<p>If you&rsquo;re a Series A or B company with 8-15 engineers and you haven&rsquo;t done this exercise, do it this quarter. Not because you need to fire people. Maybe you don&rsquo;t. But because you need to know:</p>
+<ul>
+<li>Which parts of your system can AI reliably maintain today?</li>
+<li>Which parts need human judgment and how much?</li>
+<li>Where is your team&rsquo;s time actually going: new features, maintenance, firefighting?</li>
+<li>If you were hiring from zero, would you hire the same roles?</li>
+</ul>
+<p>The companies that figure this out early will operate at 2-3x the efficiency of those that don&rsquo;t. And in a market where efficiency is the new growth, that&rsquo;s a real competitive advantage.</p>
+<p>This isn&rsquo;t about replacing engineers with AI. It&rsquo;s about being honest about what the job actually requires now, and building a team that reflects that reality instead of last year&rsquo;s.</p>
+<hr>
+<p><em>If you&rsquo;re a founder thinking about this and want to compare notes, I&rsquo;m collecting frameworks and examples from across our portfolio. Reach out.</em></p>
+
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      &copy; 2026 Shiyan Koh
+    </div>
+  </footer>
+</body>
+</html>
