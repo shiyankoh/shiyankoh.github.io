@@ -110,7 +110,7 @@
 <article>
   <div class="post-header">
     <h1>Can a VC with Claude Code find better keloid treatments?</h1>
-    <div class="post-date">March 31, 2026</div>
+    <div class="post-date">March 30, 2026</div>
   </div>
   <div class="post-content">
     <p>I have keloids. If you don&rsquo;t know what those are, consider yourself lucky. They&rsquo;re raised, rubbery scars that grow way beyond the original wound. They itch. They&rsquo;re painful. They come back after treatment. And if you&rsquo;re unlucky enough to be prone to them (hi), every cut, piercing, or surgical incision is a roll of the dice.</p>
@@ -162,7 +162,7 @@
 <p><strong>This is hypothesis generation, not medical advice.</strong> I built a filter. A very rough, first-pass filter. It tells you which haystack to look in, not which needle to pick.</p>
 <h2 id="why-im-writing-this">Why I&rsquo;m writing this</h2>
 <p>Two reasons.</p>
-<p><strong>First, I think this is a genuinely interesting use case for AI tools.</strong> A non-technical person with a personal health question used publicly available databases and an AI coding assistant to build a research pipeline that would&rsquo;ve required a bioinformatics team a few years ago. The pipeline has 57 unit tests. It&rsquo;s reproducible. The <a href="https://github.com/shiyankoh/keloid-drug-repurposing">code is open source</a>. That&rsquo;s wild to me.</p>
+<p><strong>First, I think this is a genuinely interesting use case for AI tools.</strong> A non-technical person with a personal health question used publicly available databases and an AI coding assistant to build a research pipeline that would&rsquo;ve required a bioinformatics team a few years ago. The pipeline has 57 unit tests. It&rsquo;s reproducible. The code is open source. That&rsquo;s wild to me.</p>
 <p>I&rsquo;m not saying this replaces scientists. I&rsquo;m saying the barrier to doing <em>useful preliminary work</em> has dropped dramatically. Patients and advocates can now ask structured questions of public data, not just Google symptoms at 2am.</p>
 <p><strong>Second, I&rsquo;d love feedback from people who actually know what they&rsquo;re doing.</strong> Specifically:</p>
 <ul>
@@ -170,8 +170,65 @@
 <li><strong>Computational biologists:</strong> Is my experiment design reasonable? The scoring formula is simple — normalized pathway overlap, evidence strength, multi-target bonus. What would you change? What databases am I missing?</li>
 <li><strong>Anyone who treats keloids:</strong> What does the clinical reality look like that my pipeline can&rsquo;t see? Drug delivery matters a lot for keloids (topical vs. injection vs. systemic). My pipeline doesn&rsquo;t account for that at all.</li>
 </ul>
-<p>The pipeline, data, and full report are <a href="https://github.com/shiyankoh/keloid-drug-repurposing">on GitHub</a>. If you want to run it yourself, it&rsquo;s <code>pip install -r requirements.txt</code> and <code>./run_pipeline.sh</code>. No API keys needed.</p>
+<p>The pipeline, data, and full report are on GitHub. If you want to run it yourself, it&rsquo;s <code>pip install -r requirements.txt</code> and <code>./run_pipeline.sh</code>. No API keys needed.</p>
 <p>I don&rsquo;t know if any of this leads anywhere useful. But I&rsquo;ve got keloids, I&rsquo;ve got curiosity, and I&rsquo;ve got tools that didn&rsquo;t exist two years ago. Seemed worth a shot.</p>
+<h2 id="addendum-can-these-drugs-actually-bind-their-targets">Addendum: can these drugs actually bind their targets?</h2>
+<p>After I published the original analysis, a physician friend read it and gave me a very helpful reality check. The short version: pathway overlap is a starting point, not an answer. Just because a drug &ldquo;interacts with&rdquo; a keloid-related gene doesn&rsquo;t mean the drug molecule can physically bind to the protein in a therapeutically useful way. I was measuring adjacency, not fit.</p>
+<p>So I built the next layer: molecular docking.</p>
+<h3 id="what-molecular-docking-does">What molecular docking does</h3>
+<p>Imagine you have a lock (a protein involved in keloid formation) and a key (a drug molecule). Pathway analysis tells you the key is on the same keyring. Molecular docking actually tries to put the key in the lock and measures how well it fits.</p>
+<p>The tool is called AutoDock Vina. You feed it a 3D protein structure from the Protein Data Bank and a 3D drug molecule from PubChem, and it simulates how well the drug fits into the protein&rsquo;s binding site. The output is a binding energy in kcal/mol — more negative means tighter binding. Below -7.0 is generally considered promising.</p>
+<p>I ran this for 18 drug-protein pairs: the green and yellow tier drugs from the original analysis, docked against the specific keloid target proteins they hit.</p>
+<h3 id="what-came-out-1">What came out</h3>
+<p>The results reshuffled the rankings in interesting ways.</p>
+<p><strong>Imatinib is the clear winner structurally.</strong> It showed very strong binding across three different targets:</p>
+<ul>
+<li>SMAD3 (TGF-beta pathway): -9.4 kcal/mol</li>
+<li>EGFR (growth signaling): -9.2 kcal/mol</li>
+<li>JAK2 (cytokine signaling): -9.0 kcal/mol</li>
+</ul>
+<p>These are excellent scores. Imatinib was originally designed as a precision kinase inhibitor for leukemia, so it makes sense that it physically fits into kinase binding pockets well. It was #3 on the original pathway list. Docking promoted it to #1.</p>
+<p><strong>Dexamethasone validated.</strong> It showed strong binding to KDR (-7.2) and moderate binding to SMAD3 (-6.9). This is reassuring — dexamethasone is already the most commonly used drug for keloids via intralesional injection. The docking results are consistent with what we see clinically.</p>
+<p><strong>Celecoxib got demoted.</strong> It was the top green-tier drug in the pathway analysis (4 pathways, safe profile). But when we actually tried to dock it into STAT3, the binding was weak (-5.0 kcal/mol). Hitting a pathway in a database is not the same as fitting into the protein&rsquo;s binding pocket. This is exactly the kind of false positive that docking is designed to catch.</p>
+<p><strong>Aspirin is weak.</strong> Only -4.6 kcal/mol against CYP24A1. Aspirin is a broad, mild anti-inflammatory — it touches many pathways but doesn&rsquo;t bind any of them tightly. Not surprising, but good to confirm.</p>
+<p><strong>Some surprises in the middle tier:</strong></p>
+<ul>
+<li>Cucurbitacin B, a natural compound, showed strong binding to SMAD3 (-7.4) — worth watching</li>
+<li>Trifluoperazine, an antipsychotic, bound well to AKT1 (-7.2) — unexpected, but it&rsquo;s a known signaling pathway modulator</li>
+<li>Thalidomide and lenalidomide both bound well to TNF (-7.4 and -7.4) — consistent with their known anti-inflammatory mechanisms</li>
+</ul>
+<h3 id="what-the-docking-cant-tell-us">What the docking can&rsquo;t tell us</h3>
+<p>A physician reviewer flagged five fundamental limitations that the pipeline still doesn&rsquo;t address, and I think they&rsquo;re important to be honest about:</p>
+<ol>
+<li>
+<p><strong>Direction matters.</strong> Is the drug inhibiting the pathway (good for keloids) or activating it (bad)? Some drugs do both depending on the tissue. The pipeline treats all interactions equally.</p>
+</li>
+<li>
+<p><strong>Route of delivery matters a lot.</strong> Intralesional steroids work for keloids. Systemic steroids would be inappropriate. My pipeline doesn&rsquo;t model how a drug gets to the scar.</p>
+</li>
+<li>
+<p><strong>Not all pathways are equally important.</strong> The pipeline treats all pathways as equal, but keloids are likely driven primarily by inflammation. That&rsquo;s probably why steroids work and why so many anti-inflammatory drugs score well — not because mTOR or VEGF are the key drivers.</p>
+</li>
+<li>
+<p><strong>Mechanobiology is a different axis entirely.</strong> From a surgical perspective, tension and scar placement are the biggest factors in keloid prevention. Silicone taping works because of mechanical properties, not molecular pathways. This is outside what a computational pipeline can model.</p>
+</li>
+<li>
+<p><strong>Timing matters.</strong> Keloid formation happens in phases. Different therapies might be indicated at different stages. The pipeline treats keloid biology as a static snapshot.</p>
+</li>
+</ol>
+<h3 id="what-id-tell-a-researcher">What I&rsquo;d tell a researcher</h3>
+<p>If someone at a drug repurposing lab asked me what to look at based on this work, I&rsquo;d say:</p>
+<ul>
+<li><strong>Imatinib is the most structurally validated candidate.</strong> Strong binding to 3 different keloid targets, 4 pathway overlaps, and a more manageable safety profile than most cancer drugs. The question is whether anyone would prescribe a TKI for a benign condition. Maybe topical formulation would change the risk calculus.</li>
+<li><strong>Dexamethasone&rsquo;s multi-target binding is underappreciated.</strong> Everyone knows it works for keloids, but we may be underutilizing it by only exploiting one mechanism.</li>
+<li><strong>Celecoxib probably isn&rsquo;t as promising as the pathway analysis suggested.</strong> Weak binding should lower its priority.</li>
+<li><strong>The biologics (rituximab, aflibercept, certolizumab) can&rsquo;t be evaluated this way.</strong> They&rsquo;re large proteins, not small molecules. Docking only works for small molecules. You&rsquo;d need a different approach for those.</li>
+</ul>
+<h3 id="the-meta-lesson">The meta-lesson</h3>
+<p>I still can&rsquo;t believe I&rsquo;m running molecular docking simulations on my laptop. This used to require a computational chemistry lab, access to expensive software, and domain expertise I don&rsquo;t have.</p>
+<p>I downloaded protein structures from the Protein Data Bank. I pulled drug molecules from PubChem. I prepped them with Open Babel. I docked them with AutoDock Vina. And I did all of it by describing what I wanted to Claude Code and debugging the results together.</p>
+<p>The pipeline now has 118 unit tests. It takes about 30 minutes to run the full docking batch. The whole project is still open source, still no API keys needed.</p>
+<p>Am I going to discover a keloid cure in my spare time? Almost certainly not. But I can now have a much more informed conversation with a dermatologist about which drugs have both the pathway logic AND the structural evidence to be worth investigating. That feels like progress.</p>
 <hr>
 <p><em>If you work on keloids or drug repurposing and want to chat, I&rsquo;m <a href="mailto:keloid-research@agentmail.to">keloid-research@agentmail.to</a>. I&rsquo;m also curious about <a href="https://everycure.org">David Fajgenbaum&rsquo;s work at Every Cure</a> — this pipeline is loosely modeled on his computational pharmacophenomics approach for rare diseases.</em></p>
 
