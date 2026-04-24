@@ -84,6 +84,76 @@ The pipeline, data, and full report are [on GitHub](https://github.com/shiyankoh
 
 I don't know if any of this leads anywhere useful. But I've got keloids, I've got curiosity, and I've got tools that didn't exist two years ago. Seemed worth a shot.
 
+## Update: does it help or hurt?
+
+A physician friend read the original analysis and gave me a useful reality check. Two big problems:
+
+**Problem 1: The pipeline couldn't tell if a drug helps or hurts.** It found drugs that *interact* with keloid genes, but couldn't distinguish "inhibits the pathway driving scar formation" from "activates the pathway driving scar formation." A drug that touches TGF-beta might suppress it (good) or amplify it (bad). Every interaction had a question mark next to it.
+
+**Problem 2: The evidence quality was fake.** All 22 curated keloid targets had an identical evidence score of 0.70. TGF-beta1 — the most studied molecule in keloid biology, with decades of research — scored exactly the same as CYP24A1, which has basically one paper. The evidence component of the scoring formula was decorative.
+
+I went back and fixed both.
+
+### Directionality
+
+For each of the 12 actionable drug candidates, I researched every drug-gene interaction using ChEMBL mechanism-of-action data and PubMed. 38 drug-gene pairs annotated with actual direction — inhibitor, activator, or unknown.
+
+The results were mostly reassuring. Of 38 pairs: 31 are inhibitors (the direction you want), 4 are unknown, 2 are activators (bad), and 1 is a complex modulator. **9 of 12 actionable candidates are confirmed favorable** — all their known interactions inhibit pro-keloid genes.
+
+The two problematic drugs:
+
+**Peginterferon alfa-2B** activates JAK2. JAK2 drives fibroblast proliferation through STAT3 — a pro-keloid pathway. So while interferon suppresses EGFR and IL-6 (good), it fires up JAK2 (bad). Interesting wrinkle: interferon *is* used clinically for keloids, which suggests the good outweighs the bad. But it's not a clean story.
+
+**Miltefosine** activates STAT3 as a compensatory response to Akt inhibition. STAT3 is already hyperactive in keloid fibroblasts. Pushing it harder is the wrong direction.
+
+### Evidence quality
+
+I scored each of the 22 keloid targets based on actual keloid-specific evidence — expression studies in keloid tissue, functional studies in keloid fibroblasts, genetic associations, clinical trials.
+
+Some highlights:
+
+| Target | Old | New | Why |
+|--------|-----|-----|-----|
+| TGFB1 | 0.70 | **0.93** | Decades of keloid-specific data. Central cytokine. |
+| IL6 | 0.70 | **0.88** | 25+ years of keloid evidence. Clinical trial data. |
+| COL1A1 | 0.70 | **0.87** | 35x mRNA elevation in keloid tissue since 1987. |
+| STAT3 | 0.70 | **0.82** | #1 enriched pathway in keloid fibroblast chromatin analysis. |
+| PIK3CA | 0.70 | **0.52** | Zero gene-specific keloid studies. All pathway-level inference. |
+| CYP24A1 | 0.70 | **0.55** | One direct paper. Plausible but unproven. |
+
+The full range went from a flat 0.70 to 0.52–0.93. Now drugs targeting well-evidenced genes actually score higher than drugs relying on speculative targets.
+
+### How the rankings moved
+
+**Rituximab jumped from #8 to #2.** It targets IL6 (0.88) and TGFB1 (0.93). The old flat scoring couldn't reward hitting the strongest keloid targets. The new scoring can.
+
+**Cucurbitacin B climbed two spots.** It targets STAT3 (0.82) and SMAD3 (0.85) — both strong-evidence targets.
+
+**Aspirin and trifluoperazine slid down.** Both rely on lower-evidence targets like PIK3CA (0.52) and CYP24A1 (0.55).
+
+### Updated shortlist
+
+If I had to pick the drugs I'd want to discuss with a dermatologist right now:
+
+**Most practical (green safety, favorable direction, strong evidence):**
+- **Dexamethasone** — already standard of care. Now confirmed: it inhibits SMAD3, VEGFA, KDR, and CTNNB1. We're probably underutilizing its multi-target mechanism.
+- **Celecoxib** — OTC-adjacent COX-2 inhibitor. Inhibits four pro-keloid pathways. Very low barrier to trying.
+- **Sirolimus** — already used topically for keloids. High-confidence mTOR inhibition.
+- **Aspirin** — OTC. Inhibits TGF-beta. The "can't hurt to try" candidate.
+
+**Worth investigating (yellow safety, favorable direction):**
+- **Imatinib** — strongest published fibrosis evidence of anything on this list, plus case reports specifically in keloids. The question: would anyone prescribe a TKI for a benign condition?
+- **Rituximab** — mechanistically distinct from everything else. B-cell depletion reduces IL-6 and TGF-beta, the two highest-evidence keloid drivers.
+
+### What's still missing
+
+Two of the four original limitations are now addressed. Two remain:
+
+1. **Route of delivery.** The pipeline can't tell you whether a drug reaches keloid tissue at useful concentrations. Topical vs. intralesional vs. systemic are very different stories.
+2. **Pathway importance.** All pathways count equally. TGF-beta probably matters more than VEGF for keloids, but the formula doesn't reflect that.
+
+The pipeline now has 130 tests and about 1,200 lines of Python. Still open source, still no API keys. The [code and full results](https://github.com/shiyankoh/keloid-drug-repurposing) are on GitHub.
+
 ---
 
 *If you work on keloids or drug repurposing and want to chat, I'm [keloid-research@agentmail.to](mailto:keloid-research@agentmail.to). I'm also curious about [David Fajgenbaum's work at Every Cure](https://everycure.org) — this pipeline is loosely modeled on his computational pharmacophenomics approach for rare diseases.*
