@@ -6,8 +6,15 @@
     <description>Recent content in Blog on The Culdesac</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.shiyankoh.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Velocity was never about how fast you build</title>
+      <link>https://www.shiyankoh.com/blog/velocity-was-never-about-building/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.shiyankoh.com/blog/velocity-was-never-about-building/</guid>
+      <description>&lt;p&gt;A founder showed me a demo last week that would have taken a team a quarter to build two years ago. He&amp;rsquo;d done it over a weekend. Alone.&lt;/p&gt;&#xA;&lt;p&gt;It was very impressive. And yet it provided zero informational value on the viability of the business he was proposing.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s the strange place we&amp;rsquo;re in. AI collapsed the cost of building to near zero. You can go from idea to working prototype in a weekend — and so can the next person, and the person after that. When everyone can build the thing, building the thing stops being the point. But building was never the point! There&amp;rsquo;s an old adage that first-time founders focus on product, and repeat founders focus on distribution.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The interview was already happening</title>
       <link>https://www.shiyankoh.com/blog/the-interview-was-already-happening/</link>
