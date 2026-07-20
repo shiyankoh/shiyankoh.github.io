@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Startups on The Culdesac</title>
-    <link>https://www.shiyankoh.com/tags/startups/</link>
-    <description>Recent content in Startups on The Culdesac</description>
+    <title>Fundraising on The Culdesac</title>
+    <link>https://www.shiyankoh.com/tags/fundraising/</link>
+    <description>Recent content in Fundraising on The Culdesac</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.shiyankoh.com/tags/startups/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.shiyankoh.com/tags/fundraising/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Depth Is the Thing You&#39;re Selling</title>
       <link>https://www.shiyankoh.com/blog/depth-is-the-thing-youre-selling/</link>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://www.shiyankoh.com/blog/depth-is-the-thing-youre-selling/</guid>
       <description>&lt;p&gt;This past Saturday I got to sit on a panel with Jeff Paine (Golden Gate Ventures), Michael Blakey (Cocoon Capital), and Roy from Crane. It was one of those conversations where a bunch of threads come up that feel separate in the moment. But the more I sat with them afterward, the more I realized they were all circling the same thing.&lt;/p&gt;&#xA;&lt;p&gt;The question we kept coming back to is the one every pre-seed founder wrestles with: how do you stand out when you&amp;rsquo;re pre-product, pre-revenue, pre-product-market-fit — pre-everything? What are VCs actually looking for when there&amp;rsquo;s nothing to look at yet?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Pick Your Table</title>
-      <link>https://www.shiyankoh.com/blog/pick-your-table/</link>
-      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://www.shiyankoh.com/blog/pick-your-table/</guid>
-      <description>&lt;h2 id=&#34;urgency-is-a-social-phenomenon-not-an-internal-one&#34;&gt;Urgency is a social phenomenon, not an internal one&lt;/h2&gt;&#xA;&lt;p&gt;We talk about drive like it&amp;rsquo;s a character trait. I believe it&amp;rsquo;s mostly a downstream effect of your environment. You don&amp;rsquo;t decide to feel urgency. You catch it — from the person shipping something on a Saturday, from the friend who just raised, from overhearing a conversation at the next table that assumes a bigger game than the one you&amp;rsquo;re playing.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
