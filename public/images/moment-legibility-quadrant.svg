@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 660" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="820" height="660" fill="#FBFAF7"/>
+
+  <!-- Column headers -->
+  <text x="330" y="52" text-anchor="middle" font-size="19" font-weight="700" fill="#222">Moment-legible</text>
+  <text x="640" y="52" text-anchor="middle" font-size="19" font-weight="700" fill="#8A8A83">Moment-illegible</text>
+
+  <!-- Row labels (left, rotated) -->
+  <text transform="translate(40,250) rotate(-90)" text-anchor="middle" font-size="19" font-weight="700" fill="#222">Venture-shaped</text>
+  <text transform="translate(40,500) rotate(-90)" text-anchor="middle" font-size="19" font-weight="700" fill="#8A8A83">Not venture-shaped</text>
+
+  <!-- Grid cells -->
+  <!-- TL: venture-shaped + moment-legible -->
+  <rect x="175" y="70" width="310" height="250" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="2"/>
+  <!-- TR: venture-shaped + not moment-legible  (HIGHLIGHT) -->
+  <rect x="485" y="70" width="310" height="250" fill="#EAC77D" stroke="#2B2B2B" stroke-width="2"/>
+  <!-- BL: not venture-shaped + moment-legible -->
+  <rect x="175" y="320" width="310" height="250" fill="#F2F0EA" stroke="#2B2B2B" stroke-width="2"/>
+  <!-- BR: neither -->
+  <rect x="485" y="320" width="310" height="250" fill="#F2F0EA" stroke="#2B2B2B" stroke-width="2"/>
+
+  <!-- TL text -->
+  <text x="200" y="180" font-size="21" font-weight="700" fill="#222">The firehose finds you</text>
+  <text x="200" y="212" font-size="16" fill="#555">Danger is over-absorption —</text>
+  <text x="200" y="234" font-size="16" fill="#555">FOMO sets the round, not your</text>
+  <text x="200" y="256" font-size="16" fill="#555">absorption curve.</text>
+
+  <!-- TR text (highlight) -->
+  <text x="510" y="120" font-size="12.5" font-weight="700" fill="#7A5A12" letter-spacing="1.5">YOU ARE HERE</text>
+  <text x="510" y="184" font-size="21" font-weight="700" fill="#222">The warped mirror</text>
+  <text x="510" y="216" font-size="16" fill="#4A3B10">Real traction. Investors who</text>
+  <text x="510" y="238" font-size="16" fill="#4A3B10">believe you still pass — they</text>
+  <text x="510" y="260" font-size="16" fill="#4A3B10">can't see the Series A.</text>
+
+  <!-- BL text -->
+  <text x="200" y="430" font-size="21" font-weight="700" fill="#222">The mad-land special</text>
+  <text x="200" y="462" font-size="16" fill="#555">Funded on the plausible bull</text>
+  <text x="200" y="484" font-size="16" fill="#555">case. "You might be right"</text>
+  <text x="200" y="506" font-size="16" fill="#555">raises almost as well.</text>
+
+  <!-- BR text -->
+  <text x="510" y="430" font-size="21" font-weight="700" fill="#222">Neither</text>
+  <text x="510" y="462" font-size="16" fill="#555">The honest answer was always</text>
+  <text x="510" y="484" font-size="16" fill="#555">different capital.</text>
+
+  <!-- Caption -->
+  <text x="485" y="628" text-anchor="middle" font-size="15" font-style="italic" fill="#8A8A83">Two questions hide inside "fundable" — and in AI mad land, they've come apart.</text>
+</svg>
