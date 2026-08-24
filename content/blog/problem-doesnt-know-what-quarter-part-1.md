@@ -1,7 +1,9 @@
 ---
-title: "The Problem Doesn't Know What Quarter It Is (Part 1)"
+title: "Your Traction Is Real. The Money Says No. (Part 1)"
 date: 2026-08-24
-slug: "problem-doesnt-know-what-quarter-part-1"
+slug: "your-traction-is-real"
+aliases:
+  - "/blog/problem-doesnt-know-what-quarter-part-1/"
 draft: false
 ---
 
