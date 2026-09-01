@@ -77,4 +77,4 @@ The problem, meanwhile, doesn't know what quarter it is. Its shape hasn't change
 
 If you're one of the founders from those calls, here's the sentence you're waiting for someone to say: some of you have good businesses that this system will never fund well, and that is unfair.
 
-It is. And it's navigable. In Part 2: the map — how to diagnose your shape, when to raise for the sequential innings, when venture was never your capital, and what to do if you're wearing this quarter's costume and know it.
+It is. And it's navigable. In [Part 2](/blog/map-for-illegible-founders-part-2/): the map — how to diagnose your shape, when to raise for the sequential innings, when venture was never your capital, and what to do if you're wearing this quarter's costume and know it.

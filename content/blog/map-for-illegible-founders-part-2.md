@@ -2,14 +2,16 @@
 title: "The Map for Illegible Founders (Part 2)"
 date: 2026-08-24
 slug: "map-for-illegible-founders-part-2"
-draft: true
+draft: false
 ---
 
-In Part 1, I wrote about the founders I keep talking to — real traction, real customers, no investor interest — and why that's happening: capital has a shape derived from institutional portfolios, the shape gets transmitted recursively down the whole stack, it's mistimed against how companies actually absorb money, and right now, in AI mad land, the shape changes costume every two quarters. Being venture-shaped and being *moment-legible* have come apart, and a lot of good businesses are stranded in the gap.
+In [Part 1](/blog/your-traction-is-real/), I wrote about the founders I keep talking to — real traction, real customers, no investor interest — and why that's happening: capital has a shape derived from institutional portfolios, the shape gets transmitted recursively down the whole stack, it's mistimed against how companies actually absorb money, and right now, in AI mad land, the shape changes costume every two quarters. Being venture-shaped and being *moment-legible* have come apart, and a lot of good businesses are stranded in the gap.
 
 The diagnosis matters, but diagnosis alone is just a more articulate way to feel bad. So: some of you have good businesses that this system will never fund well, and that is unfair. It is also navigable. Here's the map.
 
 **1. Diagnose your shape before you pitch.** Is your problem venture-shaped now, venture-shaped later, or never? And separately: are you moment-legible right now, and which direction are you drifting? Most founders skip this diagnosis and receive it instead, expensively, via sixty rejections.
+
+![](/images/moment-legibility-quadrant.svg)
 
 **2. If you're venture-shaped later: raise for the sequential innings, not the story.** Some big problems have early phases that are sequential — trust, regulation, cold starts, hardware cycles — where money can't buy speed yet. Name your inflection point before investors ask. "Two million for thirty months beats ten million for eighteen, and here's the milestone where that flips" is a legible sentence — but only if you say it first. Find the investors who underwrite absorption curves; they exist, and they're better partners anyway.
 
