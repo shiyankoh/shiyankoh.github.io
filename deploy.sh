@@ -42,6 +42,15 @@ cp -r public/. "$TMP/"
 # Switch to gh-pages, overwrite with the fresh build, push (skip cleanly if unchanged).
 git checkout gh-pages
 cp -r "$TMP/." .
+
+# SAFETY: never publish local tooling artifacts or a nested build dir to the
+# public gh-pages branch. Without this, `git add -A` below sweeps in whatever
+# untracked files happen to sit in the working tree — e.g. a .gstack/ folder
+# with a daemon token, or a duplicate public/ build dir. (.gitignore on
+# gh-pages covers these too; this is belt-and-suspenders.)
+rm -rf .gstack public
+find . -name '.DS_Store' -delete 2>/dev/null || true
+
 git add -A
 if git diff --cached --quiet; then
   echo "No changes to deploy — gh-pages already up to date."
