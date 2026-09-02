@@ -2,6 +2,7 @@
 title: "Building a Product Management Community in Southeast Asia"
 date: 2019-02-14
 slug: "product-management-southeastasia"
+categories: ["Community"]
 ---
 
 ![](/images/Image_from_iOS__1_.jpg)

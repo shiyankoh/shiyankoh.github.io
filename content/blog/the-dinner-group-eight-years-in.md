@@ -2,6 +2,7 @@
 title: "The dinner group, eight years in"
 date: 2026-09-02
 slug: "the-dinner-group-eight-years-in"
+categories: ["Community"]
 ---
 
 ![The SEA Tech Salon by the numbers: from 6 women in 2018 to 55 in 2026](/images/sea-tech-salon-2026.svg)

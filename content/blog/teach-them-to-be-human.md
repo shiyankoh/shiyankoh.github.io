@@ -2,6 +2,7 @@
 title: "Teach Them to Be Human. AI Will Handle the Rest."
 date: 2026-02-26
 slug: "teach-them-to-be-human"
+categories: ["Parenting"]
 ---
 
 Every parent I know is asking some version of the same question: what should we actually be teaching our kids now that AI can do... most things?

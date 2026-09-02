@@ -2,6 +2,7 @@
 title: "Can a VC with Claude Code find better keloid treatments?"
 date: 2026-03-31
 slug: "keloid-drug-repurposing"
+categories: ["Life"]
 ---
 
 I have keloids. If you don't know what those are, consider yourself lucky. They're raised, rubbery scars that grow way beyond the original wound. They itch. They're painful. They come back after treatment. And if you're unlucky enough to be prone to them (hi), every cut, piercing, or surgical incision is a roll of the dice.

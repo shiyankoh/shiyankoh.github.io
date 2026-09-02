@@ -2,6 +2,7 @@
 title: "Communities and the Cul-de-sac"
 date: 2018-01-24
 slug: "communities-and-the-cul-de-sac"
+categories: ["Community"]
 ---
 
 > "Wouldn't it be great if we could all be neighbors with our best friends? We could come home from work, trade stories over a glass of wine while watching our kids play together?"

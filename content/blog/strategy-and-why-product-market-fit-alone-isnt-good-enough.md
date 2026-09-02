@@ -2,6 +2,7 @@
 title: "Strategy, and why product-market fit alone isn't good enough"
 date: 2020-05-26
 slug: "strategy-and-why-product-market-fit-alone-isnt-good-enough"
+categories: ["Investing"]
 ---
 
 Every week I write a note to our portfolio, and in each one, I share one thought that I think is relevant for our founders to noodle on. This week's note got some good feedback, so thought I'd share it here.

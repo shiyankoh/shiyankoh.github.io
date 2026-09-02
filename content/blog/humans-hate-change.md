@@ -2,6 +2,7 @@
 title: "Humans Hate Change. Your Job Is to Help Them Through It Anyway."
 date: 2026-02-20
 slug: "humans-hate-change"
+categories: ["Investing"]
 ---
 
 Most startup advice is about strategy, metrics, hiring. Very little about how people *feel* — and yet feelings are usually what determines whether a team ships or stalls.

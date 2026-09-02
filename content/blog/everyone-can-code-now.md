@@ -2,6 +2,7 @@
 title: "Press the Buttons, People!"
 date: 2026-02-19
 slug: "everyone-can-code-now"
+categories: ["Life"]
 ---
 
 My computer science grad cousin and his data scientist wife are peering at my laptop screen, looking at a little app I built — the bane of every Singaporean parent's existence: a Chinese dictation practice tool for my nine-year-old.

@@ -2,6 +2,7 @@
 title: "Consider Living Near Your Kids"
 date: 2026-03-25
 slug: "time-with-kids"
+categories: ["Parenting"]
 ---
 
 There's a poster by Tim Urban that shows your entire life in weeks. 4,000 little boxes. It's sobering.

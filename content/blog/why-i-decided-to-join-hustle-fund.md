@@ -2,6 +2,7 @@
 title: "Why I decided to join Hustle Fund"
 date: 2018-09-11
 slug: "why-i-decided-to-join-hustle-fund"
+categories: ["Investing"]
 ---
 
 ![](/images/champagne.jpeg)

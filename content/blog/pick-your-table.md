@@ -7,6 +7,7 @@ tags:
   - communities
   - startups
   - singapore
+categories: ["Community"]
 ---
 
 ## Urgency is a social phenomenon, not an internal one

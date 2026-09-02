@@ -2,6 +2,7 @@
 title: "First Day of School"
 date: 2023-01-03
 slug: "first-day-of-school"
+categories: ["Parenting"]
 ---
 
 ![](/images/IMG_1626.JPG)

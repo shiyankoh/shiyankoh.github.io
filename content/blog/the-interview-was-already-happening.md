@@ -2,6 +2,7 @@
 title: "The interview was already happening"
 date: 2026-06-05
 slug: "the-interview-was-already-happening"
+categories: ["Community"]
 ---
 
 Last night at our Founder Friends event, a guy walked up to me with the kind of opener you don't forget.

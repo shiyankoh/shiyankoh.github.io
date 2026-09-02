@@ -5,6 +5,7 @@ slug: "your-traction-is-real"
 aliases:
   - "/blog/problem-doesnt-know-what-quarter-part-1/"
 draft: false
+categories: ["Investing"]
 ---
 
 I've had a version of the same conversation maybe a dozen times in the past few weeks.

@@ -2,6 +2,7 @@
 title: "On building communities"
 date: 2020-12-08
 slug: "on-building-communities"
+categories: ["Community"]
 ---
 
 ![](/images/Screenshot_2020-12-09_at_3.31.28_PM.png)

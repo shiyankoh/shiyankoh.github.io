@@ -2,6 +2,7 @@
 title: "How to write a great investor update"
 date: 2019-05-22
 slug: "how-to-write-a-great-investor-update"
+categories: ["Investing"]
 ---
 
 One of my portfolio CEOs recently asked me for some examples of a great investor update newsletter and I thought that was a good opportunity to articulate the key components of a great investor update.

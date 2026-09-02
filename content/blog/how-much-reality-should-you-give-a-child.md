@@ -2,6 +2,7 @@
 title: "How much reality should you give a child?"
 date: 2024-10-01
 slug: "how-much-reality-should-you-give-a-child"
+categories: ["Parenting"]
 ---
 
 ![](/images/Firefly_room_full_of_adults_on_their_devices_sitting_around_a_tbale_52710.jpg)

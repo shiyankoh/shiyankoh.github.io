@@ -2,6 +2,7 @@
 title: "Zero-Based Budgeting for Your Engineering Team"
 date: 2026-03-21
 slug: "zero-based-budgeting-engineering"
+categories: ["Investing"]
 ---
 
 A founder I back asked me last week if I knew anyone who could help them rethink their engineering org from scratch. Not a layoff consultant. Not a recruiter. Someone who could help them answer a harder question:

@@ -3,6 +3,7 @@ title: "The Map for Illegible Founders (Part 2)"
 date: 2026-08-24
 slug: "map-for-illegible-founders-part-2"
 draft: false
+categories: ["Investing"]
 ---
 
 In [Part 1](/blog/your-traction-is-real/), I wrote about the founders I keep talking to — real traction, real customers, no investor interest — and why that's happening: capital has a shape derived from institutional portfolios, the shape gets transmitted recursively down the whole stack, it's mistimed against how companies actually absorb money, and right now, in AI mad land, the shape changes costume every two quarters. Being venture-shaped and being *moment-legible* have come apart, and a lot of good businesses are stranded in the gap.

@@ -2,6 +2,7 @@
 title: "Chef's knife? Or Kiwi peeler?"
 date: 2025-04-29
 slug: "chefs-knife-or-kiwi-peeler"
+categories: ["Investing"]
 ---
 
 ![](/images/Screenshot_2025-04-29_at_5.12.22___PM.png)

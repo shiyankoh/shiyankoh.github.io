@@ -2,6 +2,7 @@
 title: "A year of podcasting"
 date: 2024-01-01
 slug: "a-year-of-podcasting"
+categories: ["Life"]
 ---
 
 ![](/images/Screenshot_2024-01-02_at_6.43.24___PM.png)

@@ -1,0 +1,59 @@
+{{ define "head" }}
+<style>
+  :root{--panel:#150c22;--panel2:#1f142f;--cream:#fdf3dc;--gold:#ffd23f;--pink:#ff4f7d;--cyan:#38e0cf;--green:#8be04f;--violet:#b07bff;--line:#3a2857}
+  *{margin:0;padding:0;box-sizing:border-box}
+  ::selection{background:var(--pink);color:#fff}
+  body{background:var(--panel);color:var(--cream);font-family:'VT323',monospace;font-size:22px;line-height:1.35;image-rendering:pixelated;overflow-x:hidden}
+  svg{image-rendering:pixelated;display:block}
+  a{color:inherit}
+  .log-scene{min-height:100vh;padding:60px 20px 90px;background:linear-gradient(180deg,#241636,#1a0f28);position:relative}
+  .log-scene::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 2px,transparent 2px);background-size:28px 28px;pointer-events:none}
+  .log-wrap{max-width:900px;margin:0 auto;position:relative;z-index:2}
+  .back{display:inline-block;font-family:'Press Start 2P';font-size:9px;color:var(--cream);text-decoration:none;background:rgba(0,0,0,.4);padding:9px 12px;border:2px solid rgba(255,255,255,.25);margin-bottom:28px}
+  .back:hover{background:var(--pink);border-color:#fff}
+  .log-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:26px;flex-wrap:wrap;gap:12px}
+  .log-head h1{font-family:'Press Start 2P';font-size:clamp(15px,3vw,24px);color:var(--gold);text-shadow:3px 3px 0 rgba(0,0,0,.5)}
+  .log-head .pg{font-family:'Silkscreen';font-size:13px;color:var(--cyan)}
+  .quest{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--gold);padding:18px 20px;margin-bottom:14px;text-decoration:none;transition:.12s}
+  .quest:hover{transform:translateX(8px);border-color:#fff;background:#26173a}
+  .quest .slot{width:64px;height:64px;background:var(--panel);border:2px solid var(--line);display:grid;place-items:center}
+  .quest .info .t{font-family:'Press Start 2P';font-size:12px;color:var(--cream);line-height:1.5}
+  .quest:hover .info .t{color:var(--gold)}
+  .quest .info .d{font-size:20px;color:#c9bda6;margin-top:8px}
+  .quest .side{text-align:right;white-space:nowrap}
+  .quest .side .xp{display:block;font-family:'Silkscreen';font-size:13px;color:var(--gold)}
+  .quest .side .date{display:block;font-size:18px;color:#9a8fb5;margin-top:4px}
+  .quest[data-cat="Investing"]{border-left-color:var(--cyan)}
+  .quest[data-cat="Parenting"]{border-left-color:var(--pink)}
+  .quest[data-cat="Community"]{border-left-color:var(--green)}
+  .quest[data-cat="Life"]{border-left-color:var(--gold)}
+  @media(max-width:720px){body{font-size:20px}.quest{grid-template-columns:52px 1fr;gap:14px}.quest .side{grid-column:2;text-align:left}}
+</style>
+{{ end }}
+
+{{ define "main" }}
+<section class="log-scene">
+  <div class="log-wrap">
+    <a class="back" href="{{ "/" | relURL }}">◄ WORLD MAP</a>
+    <div class="log-head">
+      <h1>▤ {{ .Title | upper }}</h1>
+      <span class="pg">{{ len .Pages }} QUESTS IN THIS WORLD</span>
+    </div>
+    {{ range .Pages.ByDate.Reverse }}
+    {{ $cat := "" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
+    {{ $xp := mul (add .ReadingTime 1) 30 }}
+    <a class="quest" data-cat="{{ $cat }}" href="{{ .RelPermalink }}">
+      <div class="slot">{{ partial "pixel-icon.html" $cat }}</div>
+      <div class="info">
+        <div class="t">{{ .Title }}</div>
+        <div class="d">{{ .Summary | plainify | truncate 150 }}</div>
+      </div>
+      <div class="side">
+        <span class="xp">+{{ $xp }} XP</span>
+        <span class="date">{{ .Date.Format "2 Jan 2006" | upper }}</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

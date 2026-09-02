@@ -2,6 +2,7 @@
 title: "Three Books Every Startup Founder Should Read (That Aren't About Startups)"
 date: 2026-02-21
 slug: "three-books-for-startup-founders"
+categories: ["Investing"]
 ---
 
 The best books about building startups aren't really about startups. They're about people — how they work together, why they fall apart, and what it takes to lead through the mess.

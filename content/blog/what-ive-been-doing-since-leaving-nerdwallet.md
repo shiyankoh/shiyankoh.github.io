@@ -2,6 +2,7 @@
 title: "What I've been doing since leaving NerdWallet"
 date: 2018-09-05
 slug: "what-ive-been-doing-since-leaving-nerdwallet"
+categories: ["Life"]
 ---
 
 After nearly 6 years building NerdWallet, I left at the end of March to move back to my home country, Singapore. It's been nearly 18 years since I first arrived in the US to start university at Stanford. I never imagined I would be here so long, and now it's time to begin navigating my return.

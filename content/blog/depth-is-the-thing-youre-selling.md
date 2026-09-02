@@ -7,6 +7,7 @@ tags:
   - startups
   - fundraising
   - venture capital
+categories: ["Investing"]
 ---
 
 This past Saturday I got to sit on a panel with Jeff Paine (Golden Gate Ventures), Michael Blakey (Cocoon Capital), and Roy from Crane. It was one of those conversations where a bunch of threads come up that feel separate in the moment. But the more I sat with them afterward, the more I realized they were all circling the same thing.

@@ -2,6 +2,7 @@
 title: "Welcome 2024!"
 date: 2024-01-01T12:00:00
 slug: "welcome-2024"
+categories: ["Life"]
 ---
 
 ![](/images/image-asset.jpeg)

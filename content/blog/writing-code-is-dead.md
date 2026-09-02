@@ -2,6 +2,7 @@
 title: "Writing Code Is Dead. Long Live the Meta Engineer."
 date: 2026-02-26
 slug: "writing-code-is-dead"
+categories: ["Life"]
 ---
 
 Everyone keeps saying writing code is dead. They're not wrong — but not quite right either.

@@ -2,6 +2,7 @@
 title: "The Art of the Group Chat"
 date: 2026-02-23
 slug: "art-of-the-group-chat"
+categories: ["Community"]
 ---
 
 You know a group chat has gone off the rails when someone asks for credentials. "Well, what's *your* background in this?" Or worse — "that came across as pretty condescending."

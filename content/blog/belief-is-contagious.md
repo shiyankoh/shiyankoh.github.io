@@ -2,6 +2,7 @@
 title: "Belief Is Contagious"
 date: 2026-03-05
 slug: "belief-is-contagious"
+categories: ["Investing"]
 ---
 
 There's a negativity problem in Southeast Asia's startup ecosystem right now. And look — there are reasons for it. Markdowns, down rounds, slower exits, tighter liquidity. I'm not going to pretend the data doesn't say what it says.

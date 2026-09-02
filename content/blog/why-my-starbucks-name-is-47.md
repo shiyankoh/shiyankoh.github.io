@@ -2,6 +2,7 @@
 title: "Why My Starbucks Name Is 47"
 date: 2026-03-05
 slug: "why-my-starbucks-name-is-47"
+categories: ["Life"]
 ---
 
 Starbucks asks for your name because someone in a boardroom decided it would "foster connection." The barista says your name, you feel seen, you come back tomorrow. Beautiful theory.

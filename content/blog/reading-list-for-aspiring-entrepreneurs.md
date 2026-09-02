@@ -2,6 +2,7 @@
 title: "So you want to start a company...here's a reading list"
 date: 2019-07-31
 slug: "reading-list-for-aspiring-entrepreneurs"
+categories: ["Investing"]
 ---
 
 I recently met with an incoming MBA student, who is leaving his cushy PE job for business school so that he can start something of his own. He asked if I had any recommendations on a) how to optimize his business school experience to best prepare himself for entrepreneurship, and b) if I had any books to recommend. It's something that's been on my mind as I've just finished teaching a 12 week [product management class](https://www.bigstartupschool.com/) at Singapore Management University and one of the major challenges has been for me to impart the context and experiences of 20 years spent in Silicon Valley.

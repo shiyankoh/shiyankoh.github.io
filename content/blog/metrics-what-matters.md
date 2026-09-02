@@ -2,6 +2,7 @@
 title: "Metrics - what matters and why (to a pre-seed investor)"
 date: 2020-08-16
 slug: "metrics-what-matters-and-why-to-a-pre-seed-investor"
+categories: ["Investing"]
 ---
 
 ![](/images/lukas-blazek-mcSDtbWXUZU-unsplash.jpg)

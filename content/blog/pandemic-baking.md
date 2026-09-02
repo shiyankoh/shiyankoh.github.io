@@ -2,6 +2,7 @@
 title: "Pandemic baking and remembering how to learn"
 date: 2020-06-01
 slug: "pandemic-baking"
+categories: ["Life"]
 ---
 
 ![](/images/Todaysbread.jpg)

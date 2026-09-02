@@ -2,6 +2,7 @@
 title: "Early entrepreneurial efforts"
 date: 2023-03-27
 slug: "early-entrepreneurial-efforts"
+categories: ["Life"]
 ---
 
 ![](/images/IMG_3354.JPG)

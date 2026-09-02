@@ -2,6 +2,7 @@
 title: "Forest City: A Ghost Town Finds Its Residents with the Network School"
 date: 2025-12-09
 slug: "forest-city-a-ghost-town-finds-its-residents-with-the-network-school"
+categories: ["Community"]
 ---
 
 There is a certain irony in finding one of the most vibrant communities I've encountered in what was designed to be a ghost city.

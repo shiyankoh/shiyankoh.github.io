@@ -2,6 +2,7 @@
 title: "Forget the Deck. Watch the Founders."
 date: 2026-03-03
 slug: "forget-the-deck"
+categories: ["Investing"]
 ---
 
 Last year, I sat through a forty-five minute pitch where the CEO answered every single question — including deeply technical ones — while the CTO sat silently and nodded. Not one substantive contribution from the person who was supposed to be building the product. The deck was fine. The market was real. But that meeting told me everything I needed to know about how that company was being run.

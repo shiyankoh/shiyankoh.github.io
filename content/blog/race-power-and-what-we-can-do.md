@@ -2,6 +2,7 @@
 title: "Race, power and what we can do about it"
 date: 2020-06-01
 slug: "race-power-and-what-we-can-do-about-it"
+categories: ["Life"]
 ---
 
 If you're watching the news, and face it, who isn't, it's disheartening to watch what's happening in the US right now.

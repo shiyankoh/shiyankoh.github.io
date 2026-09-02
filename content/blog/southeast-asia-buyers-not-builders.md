@@ -7,6 +7,7 @@ tags:
   - venture capital
   - southeast asia
   - startups
+categories: ["Investing"]
 ---
 
 I got invited to a lunch a little while ago on "redefining Southeast Asia's value proposition." Fourteen people around a table, Chatham House rules — so I'm not going to tell you who was there or what was said.

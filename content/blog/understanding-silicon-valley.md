@@ -2,6 +2,7 @@
 title: "Understanding Silicon Valley: A Discovery Operating System"
 date: 2022-01-04
 slug: "understanding-silicon-valley-a-discovery-operating-system"
+categories: ["Investing"]
 ---
 
 ![](/images/cover.png)
