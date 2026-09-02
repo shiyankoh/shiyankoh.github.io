@@ -30,6 +30,9 @@
   .b-mtns{position:absolute;left:0;right:0;bottom:0;z-index:2}
   .b-mtns svg{width:100%;height:240px}
   .b-scrim{position:absolute;left:0;right:0;bottom:0;height:74%;z-index:5;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(20,8,34,.62) 78%)}
+  .b-scrim-soft{height:52%;background:linear-gradient(180deg,transparent,rgba(20,8,34,.40) 85%)}
+  .banner h1{text-shadow:3px 3px 0 var(--pink),6px 6px 0 rgba(0,0,0,.6),0 0 10px rgba(0,0,0,.5)}
+  .meta{text-shadow:1px 1px 0 rgba(0,0,0,.85)}
   .back{position:absolute;top:18px;left:18px;z-index:8;font-family:'Press Start 2P';font-size:9px;color:#fff;text-decoration:none;background:rgba(0,0,0,.45);padding:9px 12px;border:2px solid rgba(255,255,255,.35)}
   .back:hover{background:var(--pink);border-color:#fff}
   .b-inner{position:relative;z-index:7;max-width:760px;margin:0 auto;width:100%}
@@ -89,13 +92,14 @@
   <div class="crt"></div>
   <a class="back" href="{{ "/" | relURL }}">◄ WORLD MAP</a>
   <div class="b-stars" id="bstars"></div>
-  <div class="b-scrim"></div>
+  <div class="b-scrim{{ if ne .Section "blog" }} b-scrim-soft{{ end }}"></div>
   <svg class="b-sun" viewBox="0 0 22 22" shape-rendering="crispEdges">
     <g fill="#ffd23f"><rect x="7" y="1" width="8" height="1"/><rect x="5" y="2" width="12" height="1"/><rect x="4" y="3" width="14" height="1"/><rect x="3" y="4" width="16" height="1"/><rect x="2" y="5" width="18" height="2"/></g>
     <g fill="#ff8f4f"><rect x="1" y="7" width="20" height="2"/><rect x="2" y="10" width="18" height="1"/><rect x="1" y="11" width="20" height="1"/></g>
     <g fill="#ff5277"><rect x="2" y="13" width="18" height="1"/><rect x="3" y="14" width="16" height="2"/><rect x="4" y="17" width="14" height="1"/><rect x="5" y="19" width="12" height="1"/><rect x="7" y="20" width="8" height="1"/></g>
   </svg>
   <div class="b-mtns">
+    {{ if eq .Section "blog" }}
     <svg viewBox="0 0 320 80" preserveAspectRatio="none" shape-rendering="crispEdges">
       <g fill="#3d1a5c"><rect x="24" y="34" width="7" height="46"/><rect x="37" y="34" width="7" height="46"/><rect x="50" y="34" width="7" height="46"/></g>
       <rect x="20" y="28" width="41" height="5" fill="#4a2568"/><rect x="55" y="31" width="7" height="2" fill="#4a2568"/>
@@ -111,6 +115,27 @@
       <g fill="#b0492c"><rect x="258" y="38" width="1" height="14"/><rect x="270" y="40" width="1" height="12"/><rect x="282" y="38" width="1" height="14"/></g>
       <rect x="168" y="70" width="152" height="10" fill="#1c2f5a"/>
     </svg>
+    {{ else }}
+    <!-- Singapore colourful shophouses -->
+    <svg viewBox="0 0 320 80" preserveAspectRatio="none" shape-rendering="crispEdges">
+      {{ $cols := slice "#ff6b9d" "#4fd1c5" "#ffd23f" "#8be04f" "#ff8f4f" "#b07bff" "#ff5277" "#57c6e6" }}
+      {{ range $i := (seq 0 7) }}
+      {{ $x := mul $i 40 }}
+      {{ $col := index $cols (mod $i 8) }}
+      <rect x="{{ add $x 1 }}" y="18" width="38" height="62" fill="{{ $col }}"/>
+      <rect x="{{ $x }}" y="12" width="40" height="7" fill="#f4e9d0"/>
+      <rect x="{{ $x }}" y="18" width="3" height="62" fill="#f4e9d0"/>
+      <rect x="{{ add $x 37 }}" y="18" width="3" height="62" fill="#f4e9d0"/>
+      <rect x="{{ add $x 8 }}" y="26" width="10" height="15" fill="#f4e9d0"/>
+      <rect x="{{ add $x 9 }}" y="27" width="8" height="13" fill="#2a1240"/>
+      <rect x="{{ add $x 22 }}" y="26" width="10" height="15" fill="#f4e9d0"/>
+      <rect x="{{ add $x 23 }}" y="27" width="8" height="13" fill="#2a1240"/>
+      <rect x="{{ add $x 6 }}" y="46" width="28" height="3" fill="#f4e9d0"/>
+      <rect x="{{ add $x 7 }}" y="58" width="26" height="22" fill="#f4e9d0"/>
+      <rect x="{{ add $x 9 }}" y="60" width="22" height="20" fill="#201533"/>
+      {{ end }}
+    </svg>
+    {{ end }}
   </div>
   <div class="b-inner">
     <span class="chip">✦ {{ with $cat }}{{ upper . }}{{ else }}ESSAY{{ end }}</span>

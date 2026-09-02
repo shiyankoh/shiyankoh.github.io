@@ -1,0 +1,78 @@
+{{ define "head" }}
+<style>
+  :root{--panel:#150c22;--panel2:#1f142f;--cream:#fdf3dc;--gold:#ffd23f;--pink:#ff4f7d;--cyan:#38e0cf;--green:#8be04f;--violet:#b07bff;--line:#3a2857}
+  *{margin:0;padding:0;box-sizing:border-box}
+  ::selection{background:var(--pink);color:#fff}
+  body{background:var(--panel);color:var(--cream);font-family:'VT323',monospace;font-size:22px;line-height:1.35;image-rendering:pixelated;overflow-x:hidden}
+  svg{image-rendering:pixelated;display:block}
+  a{color:inherit}
+  .reads-scene{min-height:100vh;padding:60px 20px 90px;background:linear-gradient(180deg,#241636,#1a0f28);position:relative}
+  .reads-scene::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 2px,transparent 2px);background-size:28px 28px;pointer-events:none}
+  .reads-wrap{max-width:900px;margin:0 auto;position:relative;z-index:2}
+  .back{display:inline-block;font-family:'Press Start 2P';font-size:9px;color:var(--cream);text-decoration:none;background:rgba(0,0,0,.4);padding:9px 12px;border:2px solid rgba(255,255,255,.25);margin-bottom:28px}
+  .back:hover{background:var(--pink);border-color:#fff}
+  .reads-title{font-family:'Press Start 2P';font-size:clamp(16px,3.4vw,26px);color:var(--gold);text-shadow:3px 3px 0 rgba(0,0,0,.5);margin-bottom:14px}
+  .reads-intro{font-size:22px;color:#c9bda6;max-width:60ch;margin-bottom:44px}
+  .shelf{margin-bottom:44px}
+  .shelf-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .shelf-head .ico{width:34px;height:34px;flex:none}
+  .shelf-head h2{font-family:'Press Start 2P';font-size:15px;color:var(--cream);text-shadow:2px 2px 0 rgba(0,0,0,.5)}
+  .shelf-head .cnt{font-family:'Silkscreen';font-size:12px;color:var(--cyan);margin-left:auto}
+  .items{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .item-card{display:block;background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--gold);padding:16px 18px;text-decoration:none;transition:.12s}
+  .item-card:hover{transform:translateX(6px);border-color:#fff;background:#26173a}
+  .shelf[data-shelf="books"] .item-card{border-left-color:var(--gold)}
+  .shelf[data-shelf="articles"] .item-card{border-left-color:var(--cyan)}
+  .shelf[data-shelf="podcasts"] .item-card{border-left-color:var(--pink)}
+  .item-card .t{font-family:'Press Start 2P';font-size:11px;color:var(--cream);line-height:1.55}
+  .item-card:hover .t{color:var(--gold)}
+  .item-card .by{font-family:'Silkscreen';font-size:11px;color:var(--cyan);margin-top:9px;letter-spacing:.5px}
+  .item-card .note{font-size:19px;color:#c9bda6;margin-top:9px;line-height:1.3}
+  .item-card .ext{float:right;font-family:'Silkscreen';font-size:10px;color:#9a8fb5}
+  .empty{font-family:'Silkscreen';font-size:13px;color:#9a8fb5;padding:16px 18px;border:3px dashed var(--line);letter-spacing:.5px}
+  @media(max-width:640px){.items{grid-template-columns:1fr}}
+</style>
+{{ end }}
+
+{{ define "main" }}
+{{ $d := site.Data.reads }}
+<section class="reads-scene">
+  <div class="reads-wrap">
+    <a class="back" href="{{ "/" | relURL }}">◄ WORLD MAP</a>
+    <h1 class="reads-title">▤ THE ARMORY · RECOMMENDED READS</h1>
+    {{ with $d.intro }}<p class="reads-intro">{{ . }}</p>{{ end }}
+
+    {{ range $d.shelves }}
+    <div class="shelf" data-shelf="{{ .key }}">
+      <div class="shelf-head">
+        {{ if eq .key "books" }}
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="2" width="10" height="12" fill="#ffd23f"/><rect x="3" y="2" width="10" height="2" fill="#ff4f7d"/><rect x="5" y="6" width="6" height="1" fill="#45205f"/><rect x="5" y="8" width="6" height="1" fill="#45205f"/><rect x="5" y="10" width="4" height="1" fill="#45205f"/></svg>
+        {{ else if eq .key "articles" }}
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="3" width="10" height="11" fill="#38e0cf"/><rect x="2" y="2" width="12" height="2" fill="#17968a"/><rect x="5" y="6" width="6" height="1" fill="#0f2f3f"/><rect x="5" y="8" width="6" height="1" fill="#0f2f3f"/><rect x="5" y="10" width="4" height="1" fill="#0f2f3f"/></svg>
+        {{ else if eq .key "podcasts" }}
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="4" y="2" width="8" height="2" fill="#ff4f7d"/><rect x="3" y="3" width="2" height="5" fill="#ff4f7d"/><rect x="11" y="3" width="2" height="5" fill="#ff4f7d"/><rect x="2" y="7" width="3" height="6" fill="#8be04f"/><rect x="11" y="7" width="3" height="6" fill="#8be04f"/></svg>
+        {{ else }}
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="3" width="10" height="10" fill="#b07bff"/></svg>
+        {{ end }}
+        <h2>{{ .label }}</h2>
+        <span class="cnt">{{ len .items }} PICK{{ if ne (len .items) 1 }}S{{ end }}</span>
+      </div>
+      {{ if .items }}
+      <div class="items">
+        {{ range .items }}
+        {{ if .url }}<a class="item-card" href="{{ .url }}" target="_blank" rel="noopener">{{ else }}<div class="item-card">{{ end }}
+          {{ if .url }}<span class="ext">↗</span>{{ end }}
+          <div class="t">{{ .title }}</div>
+          {{ with .by }}<div class="by">{{ . }}</div>{{ end }}
+          {{ with .note }}<div class="note">{{ . }}</div>{{ end }}
+        {{ if .url }}</a>{{ else }}</div>{{ end }}
+        {{ end }}
+      </div>
+      {{ else }}
+      <div class="empty">Curating this shelf — check back soon.</div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
