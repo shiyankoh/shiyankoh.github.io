@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reads | The Culdesac</title>
+  <meta name="description" content="The Culdesac - A blog by Shiyan Koh">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" rel="stylesheet">
+  
+<style>
+  :root{--panel:#150c22;--panel2:#1f142f;--cream:#fdf3dc;--gold:#ffd23f;--pink:#ff4f7d;--cyan:#38e0cf;--green:#8be04f;--violet:#b07bff;--line:#3a2857}
+  *{margin:0;padding:0;box-sizing:border-box}
+  ::selection{background:var(--pink);color:#fff}
+  body{background:var(--panel);color:var(--cream);font-family:'VT323',monospace;font-size:22px;line-height:1.35;image-rendering:pixelated;overflow-x:hidden}
+  svg{image-rendering:pixelated;display:block}
+  a{color:inherit}
+  .reads-scene{min-height:100vh;padding:60px 20px 90px;background:linear-gradient(180deg,#241636,#1a0f28);position:relative}
+  .reads-scene::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 2px,transparent 2px);background-size:28px 28px;pointer-events:none}
+  .reads-wrap{max-width:900px;margin:0 auto;position:relative;z-index:2}
+  .back{display:inline-block;font-family:'Press Start 2P';font-size:9px;color:var(--cream);text-decoration:none;background:rgba(0,0,0,.4);padding:9px 12px;border:2px solid rgba(255,255,255,.25);margin-bottom:28px}
+  .back:hover{background:var(--pink);border-color:#fff}
+  .reads-title{font-family:'Press Start 2P';font-size:clamp(16px,3.4vw,26px);color:var(--gold);text-shadow:3px 3px 0 rgba(0,0,0,.5);margin-bottom:14px}
+  .reads-intro{font-size:22px;color:#c9bda6;max-width:60ch;margin-bottom:44px}
+  .shelf{margin-bottom:44px}
+  .shelf-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .shelf-head .ico{width:34px;height:34px;flex:none}
+  .shelf-head h2{font-family:'Press Start 2P';font-size:15px;color:var(--cream);text-shadow:2px 2px 0 rgba(0,0,0,.5)}
+  .shelf-head .cnt{font-family:'Silkscreen';font-size:12px;color:var(--cyan);margin-left:auto}
+  .items{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .item-card{display:block;background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--gold);padding:16px 18px;text-decoration:none;transition:.12s}
+  .item-card:hover{transform:translateX(6px);border-color:#fff;background:#26173a}
+  .shelf[data-shelf="books"] .item-card{border-left-color:var(--gold)}
+  .shelf[data-shelf="articles"] .item-card{border-left-color:var(--cyan)}
+  .shelf[data-shelf="podcasts"] .item-card{border-left-color:var(--pink)}
+  .item-card .t{font-family:'Press Start 2P';font-size:11px;color:var(--cream);line-height:1.55}
+  .item-card:hover .t{color:var(--gold)}
+  .item-card .by{font-family:'Silkscreen';font-size:11px;color:var(--cyan);margin-top:9px;letter-spacing:.5px}
+  .item-card .note{font-size:19px;color:#c9bda6;margin-top:9px;line-height:1.3}
+  .item-card .ext{float:right;font-family:'Silkscreen';font-size:10px;color:#9a8fb5}
+  .empty{font-family:'Silkscreen';font-size:13px;color:#9a8fb5;padding:16px 18px;border:3px dashed var(--line);letter-spacing:.5px}
+  @media(max-width:640px){.items{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+  
+
+<section class="reads-scene">
+  <div class="reads-wrap">
+    <a class="back" href="/">◄ WORLD MAP</a>
+    <h1 class="reads-title">▤ THE ARMORY · RECOMMENDED READS</h1>
+    <p class="reads-intro">The books, essays, and shows I keep pressing on founders. Seeded from a couple of old posts — I&#39;ll keep adding to it.</p>
+
+    
+    <div class="shelf" data-shelf="books">
+      <div class="shelf-head">
+        
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="2" width="10" height="12" fill="#ffd23f"/><rect x="3" y="2" width="10" height="2" fill="#ff4f7d"/><rect x="5" y="6" width="6" height="1" fill="#45205f"/><rect x="5" y="8" width="6" height="1" fill="#45205f"/><rect x="5" y="10" width="4" height="1" fill="#45205f"/></svg>
+        
+        <h2>BOOKS</h2>
+        <span class="cnt">8 PICKS</span>
+      </div>
+      
+      <div class="items">
+        
+        <a class="item-card" href="https://bookshop.org/p/books/leadership-without-easy-answers-ronald-a-heifetz/46d79460b84d58f2?ean=9780674518582" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Leadership Without Easy Answers</div>
+          <div class="by">Ronald Heifetz</div>
+          <div class="note">The book that rewired how I think about leadership. Adaptive vs. technical problems.</div>
+        </a>
+        
+        <a class="item-card" href="https://bookshop.org/p/books/the-five-dysfunctions-of-a-team-a-leadership-fable-patrick-m-lencioni/2f7512634ba6d549?ean=9780787960759" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">The Five Dysfunctions of a Team</div>
+          <div class="by">Patrick Lencioni</div>
+          <div class="note">Reads like a novel. Trust → conflict → commitment → accountability → results.</div>
+        </a>
+        
+        <a class="item-card" href="https://bookshop.org/p/books/the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-answers-ben-horowitz/11bac56a0b645615?ean=9780062273208" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">The Hard Thing About Hard Things</div>
+          <div class="by">Ben Horowitz</div>
+          <div class="note">The war stories. &#39;The Struggle,&#39; and peacetime vs. wartime CEO.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.amazon.com/Innovators-Dilemma-Technologies-Management-Innovation-ebook/dp/B012BLTM6I/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">The Innovator&#39;s Dilemma</div>
+          <div class="by">Clayton Christensen</div>
+          <div class="note">How good companies get disrupted by doing everything right.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.amazon.com/Competing-Against-Luck-Innovation-Customer-ebook/dp/B01BBPZIHM/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Competing Against Luck</div>
+          <div class="by">Clayton Christensen</div>
+          <div class="note">Jobs to be Done. Why your perfect product might not do the right job.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.amazon.com/Sprint-Solve-Problems-Test-Ideas-ebook/dp/B010MH1DAQ/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Sprint</div>
+          <div class="by">Jake Knapp</div>
+          <div class="note">Test big ideas in five days. Wonderfully practical.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.amazon.com/Everything-Store-Jeff-Bezos-Amazon-ebook/dp/B00BWQW73E/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">The Everything Store</div>
+          <div class="by">Brad Stone</div>
+          <div class="note">Bezos and the age of Amazon.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.amazon.com/Zero-One-Future-Paperback-Masters/dp/2511207206/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Zero to One</div>
+          <div class="by">Peter Thiel</div>
+          <div class="note">Building something new instead of copying what works.</div>
+        </a>
+        
+      </div>
+      
+    </div>
+    
+    <div class="shelf" data-shelf="articles">
+      <div class="shelf-head">
+        
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="3" width="10" height="11" fill="#38e0cf"/><rect x="2" y="2" width="12" height="2" fill="#17968a"/><rect x="5" y="6" width="6" height="1" fill="#0f2f3f"/><rect x="5" y="8" width="6" height="1" fill="#0f2f3f"/><rect x="5" y="10" width="4" height="1" fill="#0f2f3f"/></svg>
+        
+        <h2>BLOGS &amp; ARTICLES</h2>
+        <span class="cnt">6 PICKS</span>
+      </div>
+      
+      <div class="items">
+        
+        <a class="item-card" href="https://www.noahpinion.blog/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Noahpinion</div>
+          <div class="by">Noah Smith</div>
+          <div class="note">Economics and tech, clearly and prolifically explained.</div>
+        </a>
+        
+        <div class="item-card">
+          
+          <div class="t">The Leverage</div>
+          
+          <div class="note">Sharp, concise takes on markets and tech.</div>
+        </div>
+        
+        <a class="item-card" href="https://stratechery.com/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Stratechery</div>
+          <div class="by">Ben Thompson</div>
+          <div class="note">Business strategy applied to tech, four days a week. Worth the subscription.</div>
+        </a>
+        
+        <a class="item-card" href="https://a16z.com/2012/06/15/good-product-managerbad-product-manager/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Good Product Manager, Bad Product Manager</div>
+          <div class="by">Ben Horowitz · a16z</div>
+          <div class="note">Old but still the clearest map of what a PM&#39;s job actually is.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.slideshare.net/ProductCampToronto/why-product-management-is-hard-saeed-khan" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Why Product Management is Hard</div>
+          <div class="by">Saeed Khan</div>
+          <div class="note">The origins of PM and how the role changes as you scale.</div>
+        </a>
+        
+        <a class="item-card" href="https://medium.com/@uxpin/how-to-write-a-painless-product-requirements-document-508ff6807b4a" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">How to Write a Painless PRD</div>
+          <div class="by">UXPin</div>
+          <div class="note">A clean walk-through, useful for non-technical folks.</div>
+        </a>
+        
+      </div>
+      
+    </div>
+    
+    <div class="shelf" data-shelf="podcasts">
+      <div class="shelf-head">
+        
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="4" y="2" width="8" height="2" fill="#ff4f7d"/><rect x="3" y="3" width="2" height="5" fill="#ff4f7d"/><rect x="11" y="3" width="2" height="5" fill="#ff4f7d"/><rect x="2" y="7" width="3" height="6" fill="#8be04f"/><rect x="11" y="7" width="3" height="6" fill="#8be04f"/></svg>
+        
+        <h2>PODCASTS</h2>
+        <span class="cnt">4 PICKS</span>
+      </div>
+      
+      <div class="items">
+        
+        <a class="item-card" href="https://www.acquired.fm/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Acquired</div>
+          <div class="by">Ben Gilbert &amp; David Rosenthal</div>
+          <div class="note">Deep company histories, gloriously long.</div>
+        </a>
+        
+        <a class="item-card" href="https://joincolossus.com/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Invest Like the Best</div>
+          <div class="by">Patrick O&#39;Shaughnessy</div>
+          <div class="note">Conversations on investing, business, and craft.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.sporkful.com/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">The Sporkful</div>
+          <div class="by">Dan Pashman</div>
+          <div class="note">Food, but really about people.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.searchengine.show/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Search Engine</div>
+          <div class="by">PJ Vogt</div>
+          <div class="note">One curious question per episode, chased down properly.</div>
+        </a>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+  <script data-goatcounter="https://shiyankoh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
