@@ -5,11 +5,20 @@
     <loc>https://www.shiyankoh.com/blog/</loc>
     <lastmod>2026-09-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.shiyankoh.com/categories/</loc>
+    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.shiyankoh.com/categories/community/</loc>
+    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.shiyankoh.com/</loc>
     <lastmod>2026-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.shiyankoh.com/blog/the-dinner-group-eight-years-in/</loc>
     <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.shiyankoh.com/categories/investing/</loc>
+    <lastmod>2026-08-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.shiyankoh.com/blog/map-for-illegible-founders-part-2/</loc>
     <lastmod>2026-08-24T00:00:00+00:00</lastmod>
@@ -53,7 +62,13 @@
     <loc>https://www.shiyankoh.com/blog/keloid-drug-repurposing/</loc>
     <lastmod>2026-03-31T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.shiyankoh.com/categories/life/</loc>
+    <lastmod>2026-03-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.shiyankoh.com/blog/time-with-kids/</loc>
+    <lastmod>2026-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.shiyankoh.com/categories/parenting/</loc>
     <lastmod>2026-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.shiyankoh.com/blog/zero-based-budgeting-engineering/</loc>
@@ -147,7 +162,5 @@
     <lastmod>2018-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.shiyankoh.com/about/</loc>
-  </url><url>
-    <loc>https://www.shiyankoh.com/categories/</loc>
   </url>
 </urlset>

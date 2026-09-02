@@ -5,386 +5,1057 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tags | The Culdesac</title>
   <meta name="description" content="The Culdesac - A blog by Shiyan Koh">
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --text-secondary: #888;
-      --accent: #C67D5B;
-      --max-width: 720px;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.7;
-      font-size: 18px;
-      -webkit-font-smoothing: antialiased;
-    }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-    
-     
-    .site-header { padding: 40px 0 20px; border-bottom: 1px solid #eee; margin-bottom: 40px; }
-    .site-header .container { display: flex; justify-content: space-between; align-items: baseline; }
-    .site-title { font-size: 22px; font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
-    .site-title:hover { color: var(--accent); }
-    .site-nav a { margin-left: 24px; font-size: 15px; color: var(--text-secondary); text-decoration: none; }
-    .site-nav a:hover { color: var(--accent); }
-    
-     
-    main { min-height: 60vh; }
-    
-     
-    .site-footer { margin-top: 80px; padding: 24px 0; border-top: 1px solid #eee; color: var(--text-secondary); font-size: 14px; text-align: center; }
-    
-     
-    .bio { margin-bottom: 48px; }
-    .bio h2 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
-    .bio p { font-size: 16px; color: var(--text-secondary); line-height: 1.6; }
-    .bio-links { margin-top: 8px; }
-    .bio-links a { font-size: 14px; color: var(--accent); text-decoration: none; margin-right: 16px; }
-    .bio-links a:hover { text-decoration: underline; }
-    
-     
-    .post-list { list-style: none; }
-    .post-item { margin-bottom: 32px; }
-    .post-item a { color: var(--text); text-decoration: none; font-size: 20px; font-weight: 600; line-height: 1.4; }
-    .post-item a:hover { color: var(--accent); }
-    .post-date { font-size: 14px; color: var(--text-secondary); margin-top: 2px; }
-    .post-excerpt { font-size: 16px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
-    
-     
-    .post-header { margin-bottom: 32px; }
-    .post-header h1 { font-size: 32px; font-weight: 700; line-height: 1.3; letter-spacing: -0.02em; }
-    .post-header .post-date { margin-top: 8px; }
-    .post-content { font-size: 18px; line-height: 1.8; }
-    .post-content p { margin-bottom: 1.4em; }
-    .post-content h2 { font-size: 24px; font-weight: 600; margin: 2em 0 0.8em; }
-    .post-content h3 { font-size: 20px; font-weight: 600; margin: 1.6em 0 0.6em; }
-    .post-content a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
-    .post-content a:hover { text-decoration-thickness: 2px; }
-    .post-content img { max-width: 100%; height: auto; border-radius: 4px; margin: 1.5em 0; }
-    .post-content blockquote { border-left: 3px solid var(--accent); padding-left: 20px; margin: 1.4em 0; color: var(--text-secondary); font-style: italic; }
-    .post-content ul, .post-content ol { margin: 1em 0 1em 1.5em; }
-    .post-content li { margin-bottom: 0.4em; }
-    .post-content code { font-size: 0.9em; background: #f5f5f5; padding: 2px 6px; border-radius: 3px; }
-    .post-content pre { background: #f5f5f5; padding: 16px; border-radius: 6px; overflow-x: auto; margin: 1.4em 0; }
-    .post-content pre code { background: none; padding: 0; }
-    
-     
-    .page-content { font-size: 18px; line-height: 1.8; }
-    .page-content p { margin-bottom: 1.4em; }
-    .page-content a { color: var(--accent); }
-    
-     
-    .subscribe-section { margin-top: 48px; padding: 24px 0; border-top: 1px solid #eee; text-align: center; }
-    .subscribe-section p { font-size: 16px; color: var(--text-secondary); }
-    .subscribe-section a { color: var(--accent); text-decoration: underline; }
-    
-     
-    @media (max-width: 600px) {
-      body { font-size: 16px; }
-      .site-header { padding: 24px 0 16px; margin-bottom: 24px; }
-      .site-title { font-size: 20px; }
-      .post-header h1 { font-size: 26px; }
-      .post-item a { font-size: 18px; }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" rel="stylesheet">
+  
+<style>
+  :root{
+    --sky-top:#2a0f4e; --sky-mid:#7a2b8f; --sky-low:#e6486b; --sky-hot:#ff9a52;
+    --sun:#ffd23f; --sun2:#ff6b6b;
+    --panel:#150c22; --panel2:#1f142f;
+    --cream:#fdf3dc; --gold:#ffd23f; --pink:#ff4f7d; --cyan:#38e0cf; --green:#8be04f; --violet:#b07bff;
+    --line:#3a2857;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  ::selection{background:var(--pink);color:#fff}
+  body{background:var(--panel);color:var(--cream);font-family:'VT323',monospace;font-size:22px;
+    line-height:1.35;image-rendering:pixelated;overflow-x:hidden}
+  svg{image-rendering:pixelated;display:block}
+  h1,h2,h3{font-family:'Press Start 2P',monospace;line-height:1.5;letter-spacing:.5px}
+  .sil{font-family:'Silkscreen',monospace}
+  a{color:inherit}
+  .crt{position:fixed;inset:0;z-index:200;pointer-events:none;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);
+    mix-blend-mode:multiply;animation:flick 6s infinite}
+  .crt::after{content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 100% at 50% 50%,transparent 60%,rgba(0,0,0,.5))}
+  @keyframes flick{0%,97%{opacity:.5}98%{opacity:.35}100%{opacity:.5}}
+  section{position:relative;overflow:hidden}
+  .scene-label{position:absolute;top:16px;left:16px;z-index:20;font-family:'Press Start 2P';
+    font-size:9px;color:var(--cream);background:rgba(0,0,0,.45);padding:8px 10px;border:2px solid rgba(255,255,255,.25)}
+   
+  .title-scene{position:relative;min-height:100vh;overflow:hidden;
+    background:linear-gradient(180deg,var(--sky-top) 0%,var(--sky-mid) 40%,var(--sky-low) 68%,var(--sky-hot) 92%)}
+  .stars{position:absolute;inset:0;z-index:1}
+  .star{position:absolute;width:3px;height:3px;background:#fff;animation:tw 3s steps(2) infinite}
+  .sun-wrap{position:absolute;right:7%;top:9%;z-index:2;width:min(30vw,240px)}
+  .clouds{position:absolute;inset:0;z-index:3;pointer-events:none}
+  .cloud{position:absolute;opacity:.9}
+  .cl1{top:16%;left:-20%;animation:drift 46s linear infinite}
+  .cl2{top:30%;left:-40%;animation:drift 64s linear infinite;transform:scale(.7)}
+  .cl3{top:9%;left:-10%;animation:drift 80s linear infinite;transform:scale(.5);opacity:.6}
+  @keyframes drift{to{transform:translateX(160vw)}}
+  @keyframes tw{50%{opacity:.15}}
+  .mtns{position:absolute;left:0;right:0;bottom:146px;z-index:4}
+  .mtns svg{width:100%;height:250px}
+  .ground{position:absolute;bottom:0;left:0;right:0;z-index:6;height:150px;
+    background:linear-gradient(180deg,var(--grass,#4bbf6b) 0 26px,#2f8f4e 26px 40px,#7a4a2c 40px);
+    box-shadow:inset 0 6px 0 rgba(255,255,255,.18)}
+  .ground::before{content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle,rgba(0,0,0,.25) 2px,transparent 2px);
+    background-size:24px 24px;opacity:.35}
+  .hero{position:absolute;left:-8%;bottom:150px;z-index:7;width:74px;
+    animation:walk 22s linear infinite, bob .46s steps(2) infinite}
+  @keyframes bob{50%{transform:translateY(-5px)}}
+  @keyframes walk{from{left:-8%}to{left:108%}}
+  .hero .legA{animation:la .46s steps(1) infinite}
+  .hero .legB{animation:lb .46s steps(1) infinite}
+  @keyframes la{0%{opacity:1}50%{opacity:0}}
+  @keyframes lb{0%{opacity:0}50%{opacity:1}}
+  .hero::after{content:"";position:absolute;left:-10px;bottom:2px;width:8px;height:8px;
+    background:rgba(255,255,255,.5);animation:puff .46s steps(3) infinite}
+  @keyframes puff{0%{opacity:.6;transform:translateX(0) scale(1)}100%{opacity:0;transform:translateX(-14px) scale(.2)}}
+  .coin-f{position:absolute;z-index:6;width:26px;animation:float 2.4s ease-in-out infinite}
+  .coin-f svg{animation:spin 1.2s steps(4) infinite}
+  @keyframes float{50%{transform:translateY(-16px)}}
+  .cf1{left:30%;bottom:230px}.cf2{left:58%;bottom:280px;animation-delay:.6s}.cf3{left:74%;bottom:210px;animation-delay:1.1s}
+  .sparkle{position:absolute;z-index:6;color:#fff;font-family:'Press Start 2P';font-size:10px;animation:spk 1.8s steps(3) infinite;opacity:0}
+  @keyframes spk{40%{opacity:1;transform:scale(1.3) rotate(20deg)}80%{opacity:0}}
+  .sp1{left:34%;bottom:262px;animation-delay:.2s}.sp2{left:62%;bottom:250px;animation-delay:1s}.sp3{left:20%;bottom:300px;animation-delay:1.5s}
+  .bird{position:absolute;top:24%;left:-6%;z-index:5;width:30px;animation:fly 26s linear infinite}
+  .bird .wUp{animation:wu .5s steps(1) infinite}.bird .wDn{animation:wd .5s steps(1) infinite}
+  @keyframes wu{0%{opacity:1}50%{opacity:0}}@keyframes wd{0%{opacity:0}50%{opacity:1}}
+  @keyframes fly{to{left:110%}}
+  .merlion{position:absolute;left:4%;bottom:150px;z-index:7;width:70px}
+  .merlion .spout{animation:spout 1.6s steps(4) infinite}
+  @keyframes spout{0%,100%{opacity:.9}50%{opacity:.4}}
+  .pool{position:absolute;left:2.5%;bottom:150px;z-index:6;width:96px;height:10px;
+    background:#3fb6d6;box-shadow:inset 0 3px 0 rgba(255,255,255,.35);animation:shimmer 2.2s steps(2) infinite}
+  @keyframes shimmer{50%{background:#54c6e2}}
+  .title-copy{position:absolute;left:0;right:0;top:26%;z-index:8;text-align:center;padding:0 20px}
+  .logo{font-size:clamp(26px,7vw,74px);color:var(--gold);
+    text-shadow:4px 4px 0 var(--pink),8px 8px 0 rgba(0,0,0,.45),0 0 24px rgba(255,210,63,.4);margin-bottom:20px}
+  .logo .k{color:var(--cyan);text-shadow:4px 4px 0 var(--violet),8px 8px 0 rgba(0,0,0,.45)}
+  .ribbon{display:inline-block;background:var(--panel);color:var(--cream);font-family:'Silkscreen';
+    font-size:15px;letter-spacing:2px;padding:10px 18px;border:3px solid var(--gold);
+    box-shadow:5px 5px 0 rgba(0,0,0,.5);text-transform:uppercase}
+  .start{margin-top:30px;display:inline-block;font-family:'Press Start 2P';font-size:clamp(11px,2vw,16px);
+    color:#fff;text-decoration:none;animation:blink 1s steps(2) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .hud{position:absolute;top:16px;right:16px;z-index:20;display:flex;gap:18px;align-items:center;
+    font-family:'Silkscreen';font-size:14px;background:rgba(0,0,0,.4);padding:9px 14px;border:2px solid rgba(255,255,255,.25)}
+  .hearts span{color:var(--pink);font-size:18px}
+  .coins{color:var(--gold)}
+  .coin-i{display:inline-block;width:12px;height:14px;vertical-align:-2px;margin-right:4px;
+    background:var(--gold);border-radius:2px;animation:spin 1.4s steps(4) infinite}
+  @keyframes spin{0%{transform:scaleX(1)}25%{transform:scaleX(.2)}50%{transform:scaleX(1)}75%{transform:scaleX(.2)}}
+   
+  .map-scene{padding:70px 20px 90px;background:linear-gradient(180deg,#123a4a,#0f2f3f 60%,#0b2431);position:relative}
+  .map-scene::before{content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(56,224,207,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(56,224,207,.06) 2px,transparent 2px);
+    background-size:34px 34px;pointer-events:none}
+  .h-band{text-align:center;position:relative;z-index:2;margin-bottom:44px}
+  .h-band h2{font-size:clamp(16px,3.5vw,26px);color:var(--cyan);text-shadow:3px 3px 0 rgba(0,0,0,.5)}
+  .h-band p{font-family:'Silkscreen';color:var(--cream);opacity:.75;margin-top:12px;font-size:14px;letter-spacing:1px}
+  .worlds{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative;z-index:2}
+  .world{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:20px 10px;
+    background:var(--panel2);border:4px solid var(--line);transition:.12s;box-shadow:0 6px 0 rgba(0,0,0,.5)}
+  .world:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 0 rgba(0,0,0,.5)}
+  .world .icn{width:52px;height:52px}
+  .world .nm{font-family:'Press Start 2P';font-size:9px;color:var(--cream);text-align:center}
+  .world .lv{font-family:'Silkscreen';font-size:12px;color:var(--gold)}
+  .world:hover .nm{color:var(--gold)}
+   
+  .dlg-scene{position:relative;padding:80px 20px 44px;min-height:88vh;display:flex;align-items:flex-end;
+    background:linear-gradient(180deg,#1a0e33 0%,#3a1550 45%,#5a1a4a 78%,#7a2130 100%)}
+  .dlg-stars{position:absolute;inset:0;z-index:1}
+  .fog{position:absolute;z-index:3;height:30px;background:rgba(232,236,245,.16);filter:blur(4px);border-radius:30px;pointer-events:none}
+  .fog1{bottom:120px;left:-40%;width:70%;animation:fogd 44s linear infinite}
+  .fog2{bottom:158px;left:-60%;width:90%;opacity:.6;animation:fogd 66s linear infinite}
+  .fog3{bottom:96px;left:-30%;width:60%;opacity:.5;animation:fogd 34s linear infinite}
+  @keyframes fogd{to{left:120%}}
+  .hillscape{position:absolute;left:0;right:0;bottom:0;z-index:2}
+  .hillscape svg{width:100%;height:560px}
+  .dlg-box{position:relative;z-index:5;max-width:900px;margin:0 auto;width:100%;
+    background:rgba(16,8,28,.30);backdrop-filter:blur(1px);-webkit-backdrop-filter:blur(1px);
+    border:4px solid rgba(255,255,255,.9);box-shadow:0 0 0 4px rgba(16,8,28,.30),12px 12px 0 rgba(0,0,0,.5);
+    padding:24px;display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:start}
+  .portrait{width:120px;height:120px;background:var(--panel2);border:3px solid var(--cyan)}
+  .dlg-body .who{font-family:'Press Start 2P';font-size:11px;color:var(--gold);margin-bottom:14px;text-shadow:2px 2px 0 rgba(0,0,0,.85)}
+  .dlg-body .quest-tag{display:inline-block;font-family:'Silkscreen';font-size:12px;letter-spacing:1px;color:#111;background:var(--gold);padding:4px 10px;margin-bottom:14px}
+  .dlg-body h2{font-family:'Press Start 2P';font-size:clamp(13px,2.6vw,20px);color:#fff;line-height:1.6;margin-bottom:16px;text-shadow:2px 2px 0 rgba(0,0,0,.9),0 0 8px rgba(0,0,0,.6)}
+  .dlg-body h2 a{text-decoration:none}.dlg-body h2 a:hover{color:var(--gold)}
+  .dlg-body p{font-size:22px;color:#f4ecd9;text-shadow:1px 1px 0 rgba(0,0,0,.95),0 0 6px rgba(0,0,0,.7)}
+  .cont{margin-top:14px;text-align:right;font-family:'Press Start 2P';font-size:12px;color:var(--cyan)}
+  .cont .arw{display:inline-block;animation:bob2 .8s steps(2) infinite}
+  @keyframes bob2{50%{transform:translateY(4px)}}
+   
+  .log-scene{padding:70px 20px 90px;background:linear-gradient(180deg,#241636,#1a0f28);position:relative}
+  .log-scene::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 2px,transparent 2px);background-size:28px 28px}
+  .log-wrap{max-width:900px;margin:0 auto;position:relative;z-index:2}
+  .log-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+  .log-head h2{font-size:clamp(15px,3vw,22px);color:var(--gold);text-shadow:3px 3px 0 rgba(0,0,0,.5)}
+  .log-head .pg{font-family:'Silkscreen';font-size:13px;color:var(--cyan)}
+  .quest{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;
+    background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--gold);
+    padding:18px 20px;margin-bottom:14px;text-decoration:none;transition:.12s}
+  .quest:hover{transform:translateX(8px);border-color:#fff;background:#26173a}
+  .quest .slot{width:64px;height:64px;background:var(--panel);border:2px solid var(--line);display:grid;place-items:center}
+  .quest .info .t{font-family:'Press Start 2P';font-size:12px;color:var(--cream);line-height:1.5}
+  .quest:hover .info .t{color:var(--gold)}
+  .quest .info .d{font-size:20px;color:#c9bda6;margin-top:8px}
+  .quest .side{text-align:right;white-space:nowrap}
+  .quest .side .cat{font-family:'Silkscreen';font-size:11px;letter-spacing:1px;color:#111;background:var(--cyan);padding:3px 8px;display:inline-block}
+  .quest .side .xp{display:block;font-family:'Silkscreen';font-size:13px;color:var(--gold);margin-top:10px}
+  .quest .side .date{display:block;font-size:18px;color:#9a8fb5;margin-top:4px}
+   
+  .quest[data-cat="Investing"]{border-left-color:var(--cyan)} .quest[data-cat="Investing"] .cat{background:var(--cyan);color:#111}
+  .quest[data-cat="Parenting"]{border-left-color:var(--pink)} .quest[data-cat="Parenting"] .cat{background:var(--pink);color:#fff}
+  .quest[data-cat="Community"]{border-left-color:var(--green)} .quest[data-cat="Community"] .cat{background:var(--green);color:#111}
+  .quest[data-cat="Life"]{border-left-color:var(--gold)} .quest[data-cat="Life"] .cat{background:var(--gold);color:#111}
+   
+  .over-scene{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:80px 20px;background:radial-gradient(120% 90% at 50% 30%,#2a0f3f,#0c0716);position:relative}
+  .over-scene .stars2{position:absolute;inset:0}
+  .over-scene h2{font-size:clamp(20px,5vw,44px);color:var(--pink);text-shadow:4px 4px 0 rgba(0,0,0,.6),0 0 26px rgba(255,79,125,.5);position:relative;z-index:2}
+  .boss-banner{position:relative;z-index:2;font-family:'Press Start 2P';font-size:clamp(11px,2.4vw,16px);color:var(--gold);margin-bottom:18px;text-shadow:3px 3px 0 rgba(0,0,0,.6)}
+  .boss{position:relative;z-index:2;width:min(150px,40vw);margin-bottom:22px;animation:float 2.6s ease-in-out infinite}
+  .boss .beye{animation:blink 3.4s steps(2) infinite}
+  .hpbar{position:relative;z-index:2;width:min(340px,80vw);margin-bottom:8px}
+  .hpbar .lbl{display:flex;justify-content:space-between;font-family:'Silkscreen';font-size:12px;color:var(--cream);margin-bottom:6px;letter-spacing:1px}
+  .hpbar .track{height:16px;background:#3a1030;border:3px solid #fff;box-shadow:4px 4px 0 rgba(0,0,0,.5)}
+  .hpbar .fill{height:100%;width:100%;background:var(--pink);animation:drain 2.2s steps(20) .4s forwards}
+  @keyframes drain{to{width:0}}
+  .defeated{position:relative;z-index:2;font-family:'Press Start 2P';font-size:13px;color:var(--green);margin:6px 0 30px;opacity:0;animation:pop .3s steps(2) 2.6s forwards}
+  @keyframes pop{to{opacity:1}}
+  .over-scene .thx{font-family:'Silkscreen';font-size:16px;color:var(--cream);margin-top:26px;letter-spacing:1px;position:relative;z-index:2}
+  .credits{margin-top:34px;font-family:'Silkscreen';font-size:14px;color:#b9aed0;line-height:2.1;position:relative;z-index:2}
+  .credits b{color:var(--gold)}
+  .insert{margin-top:36px;font-family:'Press Start 2P';font-size:12px;color:var(--cyan);animation:blink 1.1s steps(2) infinite;position:relative;z-index:2}
+  .sub-nav{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;z-index:2}
+  .sub-nav a{font-family:'Silkscreen';font-size:13px;text-decoration:none;color:var(--cream);border:2px solid var(--line);padding:8px 14px}
+  .sub-nav a:hover{border-color:var(--gold);color:var(--gold)}
+  @media(max-width:720px){
+    body{font-size:20px}
+    .worlds{grid-template-columns:repeat(2,1fr)}
+    .dlg-box{grid-template-columns:1fr;text-align:center}
+    .portrait{margin:0 auto}
+    .quest{grid-template-columns:52px 1fr;gap:14px}
+    .quest .side{grid-column:2;text-align:left}
+    .scene-label{font-size:7.5px;padding:6px 7px}
+    .hud{font-size:11px;gap:9px;padding:6px 9px}
+  }
+</style>
+
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="site-title">The Culdesac</a>
-      <nav class="site-nav">
-        
-          <a href="/blog/">Blog</a>
-        
-          <a href="/about/">About</a>
-        
-      </nav>
-    </div>
-  </header>
-  <main class="container">
-    
-<div class="bio">
-  <h2>Shiyan Koh</h2>
-  <p>Co-founder &amp; GP at Hustle Fund. Writing about startups, communities, parenting, and discovery.</p>
-  <div class="bio-links">
-    <a href="https://hustlefund.vc" target="_blank">Hustle Fund</a>
-    <a href="https://www.linkedin.com/in/shiyankoh/" target="_blank">LinkedIn</a>
-    <a href="https://x.com/shiyankoh" target="_blank">X</a>
-  </div>
-</div>
+  
 
-<ul class="post-list">
-  
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/the-dinner-group-eight-years-in/">The dinner group, eight years in</a>
-    <div class="post-date">September 2, 2026</div>
-    <div class="post-excerpt">
+
+
+
+
+
+
+<div class="crt"></div>
+
+
+<section class="title-scene">
+  <span class="scene-label">◄ WORLD 1 · SINGAPORE ►</span>
+  <div class="hud">
+    <span class="hearts sil"><span>♥♥♥</span></span>
+    <span class="coins sil"><span class="coin-i"></span>×39</span>
+    <span class="sil" style="color:var(--cyan)">1UP</span>
+  </div>
+  <div class="stars" id="stars1"></div>
+  <div class="sun-wrap">
+    <svg viewBox="0 0 22 22" shape-rendering="crispEdges" width="100%">
+      <g fill="#ffd23f"><rect x="7" y="1" width="8" height="1"/><rect x="5" y="2" width="12" height="1"/><rect x="4" y="3" width="14" height="1"/><rect x="3" y="4" width="16" height="1"/><rect x="2" y="5" width="18" height="1"/><rect x="2" y="6" width="18" height="1"/></g>
+      <g fill="#ff8f4f"><rect x="1" y="7" width="20" height="1"/><rect x="1" y="8" width="20" height="1"/><rect x="2" y="10" width="18" height="1"/><rect x="1" y="11" width="20" height="1"/></g>
+      <g fill="#ff5277"><rect x="2" y="13" width="18" height="1"/><rect x="3" y="14" width="16" height="1"/><rect x="3" y="16" width="16" height="1"/><rect x="4" y="17" width="14" height="1"/><rect x="5" y="19" width="12" height="1"/><rect x="7" y="20" width="8" height="1"/></g>
+    </svg>
+  </div>
+  <div class="clouds">
+    <svg class="cloud cl1" width="150" viewBox="0 0 30 12" shape-rendering="crispEdges"><g fill="#fce9d2"><rect x="6" y="4" width="18" height="6"/><rect x="9" y="2" width="10" height="3"/><rect x="3" y="6" width="4" height="4"/><rect x="23" y="6" width="4" height="4"/></g></svg>
+    <svg class="cloud cl2" width="150" viewBox="0 0 30 12" shape-rendering="crispEdges"><g fill="#f6d9e0"><rect x="6" y="4" width="18" height="6"/><rect x="9" y="2" width="10" height="3"/><rect x="3" y="6" width="4" height="4"/><rect x="23" y="6" width="4" height="4"/></g></svg>
+    <svg class="cloud cl3" width="150" viewBox="0 0 30 12" shape-rendering="crispEdges"><g fill="#fff"><rect x="6" y="4" width="18" height="6"/><rect x="9" y="2" width="10" height="3"/><rect x="3" y="6" width="4" height="4"/><rect x="23" y="6" width="4" height="4"/></g></svg>
+  </div>
+  <div class="mtns">
+    <svg viewBox="0 0 320 110" preserveAspectRatio="none" shape-rendering="crispEdges">
+      <g fill="#5a3184"><rect x="2" y="72" width="12" height="38"/><rect x="15" y="62" width="9" height="48"/><rect x="26" y="68" width="11" height="42"/><rect x="39" y="56" width="8" height="54"/><rect x="49" y="66" width="12" height="44"/><rect x="63" y="60" width="9" height="50"/><rect x="74" y="70" width="10" height="40"/><rect x="86" y="64" width="8" height="46"/><rect x="240" y="70" width="10" height="40"/><rect x="252" y="62" width="8" height="48"/><rect x="262" y="72" width="9" height="38"/></g>
+      <g fill="#48265f"><rect x="104" y="46" width="9" height="64"/><rect x="121" y="46" width="9" height="64"/><rect x="138" y="46" width="9" height="64"/></g>
+      <rect x="98" y="38" width="58" height="7" fill="#5c3378"/><rect x="150" y="41" width="9" height="3" fill="#5c3378"/>
+      <g fill="#ffd23f" opacity=".85"><rect x="106" y="52" width="2" height="2"/><rect x="106" y="62" width="2" height="2"/><rect x="106" y="74" width="2" height="2"/><rect x="123" y="54" width="2" height="2"/><rect x="123" y="66" width="2" height="2"/><rect x="123" y="82" width="2" height="2"/><rect x="140" y="52" width="2" height="2"/><rect x="140" y="64" width="2" height="2"/><rect x="140" y="78" width="2" height="2"/></g>
+      <g fill="#356b3a"><rect x="171" y="60" width="3" height="50"/><polygon points="172,44 163,62 182,62"/><rect x="190" y="52" width="3" height="58"/><polygon points="191,34 181,56 202,56"/><rect x="210" y="58" width="3" height="52"/><polygon points="211,42 202,60 221,60"/><rect x="226" y="64" width="3" height="46"/><polygon points="227,50 219,66 236,66"/></g>
+      <g fill="#ff5db0"><rect x="169" y="45" width="6" height="2"/><rect x="188" y="35" width="6" height="2"/><rect x="208" y="43" width="6" height="2"/><rect x="224" y="51" width="6" height="2"/></g>
+      <g fill="#46255f"><rect x="279" y="46" width="3" height="46"/><rect x="292" y="46" width="3" height="46"/></g>
+      <g stroke="#46255f" stroke-width="2" fill="none"><circle cx="286" cy="44" r="16"/><line x1="286" y1="28" x2="286" y2="60"/><line x1="270" y1="44" x2="302" y2="44"/><line x1="275" y1="33" x2="297" y2="55"/><line x1="297" y1="33" x2="275" y2="55"/></g>
+      <circle cx="286" cy="44" r="2" fill="#ffd23f"/>
+    </svg>
+  </div>
+  <svg class="bird" viewBox="0 0 16 10" shape-rendering="crispEdges">
+    <g class="wDn" fill="#2a1442"><rect x="2" y="4" width="5" height="2"/><rect x="9" y="4" width="5" height="2"/><rect x="7" y="5" width="2" height="2"/></g>
+    <g class="wUp" fill="#2a1442"><rect x="2" y="2" width="4" height="2"/><rect x="10" y="2" width="4" height="2"/><rect x="6" y="4" width="4" height="2"/></g>
+  </svg>
+  <div class="coin-f cf1"><svg viewBox="0 0 8 10" shape-rendering="crispEdges"><rect x="1" y="1" width="6" height="8" fill="#ffd23f"/><rect x="0" y="3" width="1" height="4" fill="#ffd23f"/><rect x="7" y="3" width="1" height="4" fill="#ffd23f"/><rect x="3" y="3" width="2" height="4" fill="#b8891f"/></svg></div>
+  <div class="coin-f cf2"><svg viewBox="0 0 8 10" shape-rendering="crispEdges"><rect x="1" y="1" width="6" height="8" fill="#ffd23f"/><rect x="0" y="3" width="1" height="4" fill="#ffd23f"/><rect x="7" y="3" width="1" height="4" fill="#ffd23f"/><rect x="3" y="3" width="2" height="4" fill="#b8891f"/></svg></div>
+  <div class="coin-f cf3"><svg viewBox="0 0 8 10" shape-rendering="crispEdges"><rect x="1" y="1" width="6" height="8" fill="#ffd23f"/><rect x="0" y="3" width="1" height="4" fill="#ffd23f"/><rect x="7" y="3" width="1" height="4" fill="#ffd23f"/><rect x="3" y="3" width="2" height="4" fill="#b8891f"/></svg></div>
+  <span class="sparkle sp1">✦</span><span class="sparkle sp2">+</span><span class="sparkle sp3">✦</span>
+  <svg class="hero" viewBox="0 0 18 20" shape-rendering="crispEdges">
+    <rect x="4" y="2" width="10" height="4" fill="#ff5277"/><rect x="3" y="5" width="12" height="2" fill="#c1305a"/>
+    <rect x="5" y="6" width="8" height="5" fill="#ffcf9e"/><rect x="6" y="8" width="2" height="2" fill="#2a1442"/><rect x="10" y="8" width="2" height="2" fill="#2a1442"/>
+    <rect x="4" y="11" width="10" height="6" fill="#38e0cf"/><rect x="4" y="12" width="10" height="1" fill="#1fae9f"/>
+    <rect x="2" y="12" width="2" height="4" fill="#ffcf9e"/><rect x="14" y="12" width="2" height="4" fill="#ffcf9e"/>
+    <g class="legA" fill="#2a1442"><rect x="5" y="17" width="3" height="3"/><rect x="10" y="17" width="3" height="2"/></g>
+    <g class="legB" fill="#2a1442"><rect x="5" y="17" width="3" height="2"/><rect x="10" y="17" width="3" height="3"/></g>
+  </svg>
+  <div class="pool"></div>
+  <svg class="merlion" viewBox="0 0 40 30" shape-rendering="crispEdges">
+    <rect x="6" y="24" width="22" height="6" fill="#9aa7b0"/><rect x="6" y="24" width="22" height="1" fill="#c3ccd2"/>
+    <rect x="9" y="15" width="14" height="10" fill="#eef2f5"/><rect x="17" y="9" width="8" height="9" fill="#eef2f5"/>
+    <rect x="13" y="8" width="6" height="4" fill="#dfe6ea"/><rect x="24" y="12" width="3" height="3" fill="#eef2f5"/>
+    <rect x="20" y="11" width="1" height="1" fill="#2a1442"/><rect x="9" y="14" width="4" height="3" fill="#dfe6ea"/>
+    <g class="spout" fill="#7fd6ff"><rect x="27" y="11" width="3" height="1"/><rect x="30" y="12" width="2" height="1"/><rect x="32" y="14" width="2" height="2"/><rect x="34" y="17" width="1" height="3"/><rect x="34" y="20" width="2" height="4"/></g>
+  </svg>
+  <div class="ground"></div>
+  <div class="title-copy">
+    <h1 class="logo">SHIYAN <span class="k">KOH</span></h1>
+    <span class="ribbon">Pre-seed VC · Mom of 3 · Writes at night</span>
+    <a class="start" href="/blog/the-dinner-group-eight-years-in/">▶ PRESS START TO READ</a>
+  </div>
+</section>
+
+
+<section class="map-scene">
+  <span class="scene-label">◄ WORLD 2 · SELECT A LEVEL ►</span>
+  <div class="h-band">
+    <h2>CHOOSE YOUR PATH</h2>
+    <p>Pick a world. Investing, parenting, community, life.</p>
+  </div>
+  <div class="worlds">
+    <a class="world" href="/categories/investing/">
+      <svg class="icn" viewBox="0 0 16 16" shape-rendering="crispEdges"><circle cx="8" cy="8" r="6" fill="#ffd23f"/><rect x="7" y="4" width="2" height="8" fill="#7a4a2c"/><rect x="5" y="7" width="6" height="2" fill="#7a4a2c"/></svg>
+      <span class="nm">INVESTING</span><span class="lv">17 POSTS</span>
+    </a>
+    <a class="world" href="/categories/parenting/">
+      <svg class="icn" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="8" width="12" height="6" fill="#ff4f7d"/><polygon points="8,2 2,8 14,8" fill="#ff8f4f"/><rect x="6" y="10" width="4" height="4" fill="#45205f"/></svg>
+      <span class="nm">PARENTING</span><span class="lv">4 POSTS</span>
+    </a>
+    <a class="world" href="/categories/community/">
+      <svg class="icn" viewBox="0 0 16 16" shape-rendering="crispEdges"><circle cx="5" cy="5" r="2.5" fill="#38e0cf"/><circle cx="11" cy="5" r="2.5" fill="#8be04f"/><rect x="1" y="9" width="8" height="5" fill="#38e0cf"/><rect x="8" y="9" width="7" height="5" fill="#8be04f"/></svg>
+      <span class="nm">COMMUNITY</span><span class="lv">8 POSTS</span>
+    </a>
+    <a class="world" href="/categories/life/">
+      <svg class="icn" viewBox="0 0 16 16" shape-rendering="crispEdges"><ellipse cx="8" cy="7" rx="5" ry="5" fill="#8be04f"/><rect x="7" y="10" width="2" height="4" fill="#7a4a2c"/><rect x="6" y="5" width="2" height="1" fill="#b6f07a"/></svg>
+      <span class="nm">LIFE</span><span class="lv">10 POSTS</span>
+    </a>
+    <a class="world" href="/about/">
+      <svg class="icn" viewBox="0 0 16 16" shape-rendering="crispEdges"><circle cx="8" cy="6" r="4" fill="#ffcf9e"/><rect x="4" y="10" width="8" height="4" fill="#b07bff"/></svg>
+      <span class="nm">ABOUT</span><span class="lv">ME</span>
+    </a>
+  </div>
+</section>
+
+
+<section class="dlg-scene">
+  <span class="scene-label">◄ WORLD 3 · SAN FRANCISCO ►</span>
+  <div class="dlg-stars" id="stars3"></div>
+  <div class="hillscape">
+    <svg viewBox="0 0 320 90" preserveAspectRatio="none" shape-rendering="crispEdges">
+      <g fill="#2a1240"><rect x="30" y="46" width="10" height="44"/><rect x="42" y="40" width="8" height="50"/><rect x="86" y="42" width="10" height="48"/><rect x="98" y="48" width="12" height="42"/><rect x="140" y="44" width="11" height="46"/><rect x="154" y="50" width="9" height="40"/></g>
+      <polygon points="66,8 58,58 74,58" fill="#33184d"/><rect x="65" y="2" width="2" height="8" fill="#33184d"/>
+      <rect x="122" y="30" width="7" height="30" fill="#33184d"/><rect x="122" y="26" width="7" height="4" fill="#3d1f5a"/>
+      <g fill="#d1462f"><rect x="206" y="14" width="6" height="52"/><rect x="284" y="14" width="6" height="52"/><rect x="204" y="20" width="10" height="3"/><rect x="204" y="28" width="10" height="3"/><rect x="282" y="20" width="10" height="3"/><rect x="282" y="28" width="10" height="3"/></g>
+      <rect x="176" y="52" width="144" height="3" fill="#b83e29"/>
+      <g fill="#e8623f"><rect x="176" y="50" width="6" height="2"/><rect x="182" y="46" width="6" height="2"/><rect x="188" y="40" width="6" height="2"/><rect x="194" y="30" width="6" height="2"/><rect x="200" y="20" width="8" height="2"/><rect x="212" y="20" width="8" height="2"/><rect x="220" y="26" width="10" height="2"/><rect x="230" y="32" width="14" height="2"/><rect x="244" y="34" width="12" height="2"/><rect x="256" y="32" width="14" height="2"/><rect x="270" y="26" width="10" height="2"/><rect x="280" y="20" width="8" height="2"/><rect x="290" y="20" width="8" height="2"/><rect x="298" y="30" width="6" height="2"/><rect x="304" y="40" width="6" height="2"/><rect x="310" y="46" width="6" height="2"/><rect x="316" y="50" width="4" height="2"/></g>
+      <g fill="#c0492e"><rect x="220" y="28" width="1" height="24"/><rect x="232" y="34" width="1" height="18"/><rect x="244" y="36" width="1" height="16"/><rect x="256" y="34" width="1" height="18"/><rect x="268" y="28" width="1" height="24"/></g>
+      <rect x="0" y="66" width="320" height="24" fill="#182a52"/>
+      <g fill="#294a86"><rect x="0" y="66" width="320" height="2"/><rect x="24" y="72" width="40" height="1"/><rect x="120" y="77" width="60" height="1"/><rect x="240" y="70" width="52" height="1"/></g>
+    </svg>
+  </div>
+  <div class="fog fog1"></div><div class="fog fog2"></div><div class="fog fog3"></div>
+  <div class="dlg-box">
+    <div class="portrait">
+      <svg viewBox="0 0 18 18" width="120" height="120" shape-rendering="crispEdges"><rect x="4" y="2" width="10" height="3" fill="#ff4f7d"/><rect x="3" y="4" width="12" height="2" fill="#c1305a"/><rect x="5" y="5" width="8" height="6" fill="#ffcf9e"/><rect x="6" y="7" width="2" height="2" fill="#2a1442"/><rect x="10" y="7" width="2" height="2" fill="#2a1442"/><rect x="7" y="10" width="4" height="1" fill="#c1305a"/><rect x="4" y="12" width="10" height="6" fill="#38e0cf"/><rect x="4" y="13" width="10" height="1" fill="#1fae9f"/></svg>
+    </div>
+    <div class="dlg-body">
+      <div class="who">★ SHIYAN:</div>
+      <span class="quest-tag">NEW QUEST — LATEST ESSAY</span>
+      <h2><a href="/blog/the-dinner-group-eight-years-in/">The dinner group, eight years in</a></h2>
+      <p>
+Almost six years ago, I wrote about starting a dinner group for women in tech in Singapore. We&rsquo;d just moved back from San Francisco, I didn&rsquo;t know many people, so I invited two women to dinner and asked them …</p>
+      <a class="cont" href="/blog/the-dinner-group-eight-years-in/" style="text-decoration:none;display:block">READ ON <span class="arw">▼</span></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="log-scene">
+  <span class="scene-label">◄ WORLD 4 · QUEST LOG ►</span>
+  <div class="log-wrap">
+    <div class="log-head">
+      <h2>▤ QUEST LOG</h2>
+      <span class="pg">39 ENTRIES LOGGED · ▲▼ TO SCROLL</span>
+    </div>
+    
+    
+    
+    <a class="quest" data-cat="Community" href="/blog/the-dinner-group-eight-years-in/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="4" cy="4" r="2" fill="#38e0cf"/><circle cx="8" cy="4" r="2" fill="#8be04f"/><rect x="1" y="7" width="6" height="4" fill="#38e0cf"/><rect x="6" y="7" width="5" height="4" fill="#8be04f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">The dinner group, eight years in</div>
+        <div class="d">
 Almost six years ago, I wrote about starting a dinner group for women in tech in Singapore. We&rsquo;d just moved back from San Francisco, I …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/your-traction-is-real/">Your Traction Is Real. The Money Says No. (Part 1)</a>
-    <div class="post-date">August 24, 2026</div>
-    <div class="post-excerpt">I&rsquo;ve had a version of the same conversation maybe a dozen times in the past few weeks.
+      </div>
+      <div class="side">
+        <span class="cat">COMMUNITY</span>
+        <span class="xp">+180 XP</span>
+        <span class="date">2 SEP 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/your-traction-is-real/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Your Traction Is Real. The Money Says No. (Part 1)</div>
+        <div class="d">I&rsquo;ve had a version of the same conversation maybe a dozen times in the past few weeks.
 A founder — different founder each time, same …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/map-for-illegible-founders-part-2/">The Map for Illegible Founders (Part 2)</a>
-    <div class="post-date">August 24, 2026</div>
-    <div class="post-excerpt">In Part 1, I wrote about the founders I keep talking to — real traction, real customers, no investor interest — and why that&rsquo;s happening: …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/southeast-asia-buyers-not-builders/">Southeast Asia doesn&#39;t have a builder problem. It has a buyer problem.</a>
-    <div class="post-date">July 30, 2026</div>
-    <div class="post-excerpt">I got invited to a lunch a little while ago on &ldquo;redefining Southeast Asia&rsquo;s value proposition.&rdquo; Fourteen people around a table, …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/depth-is-the-thing-youre-selling/">Depth Is the Thing You&#39;re Selling</a>
-    <div class="post-date">July 20, 2026</div>
-    <div class="post-excerpt">This past Saturday I got to sit on a panel with Jeff Paine (Golden Gate Ventures), Michael Blakey (Cocoon Capital), and Roy from Crane. It was one of …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/the-interview-was-already-happening/">The interview was already happening</a>
-    <div class="post-date">June 5, 2026</div>
-    <div class="post-excerpt">Last night at our Founder Friends event, a guy walked up to me with the kind of opener you don&rsquo;t forget.
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+270 XP</span>
+        <span class="date">24 AUG 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/map-for-illegible-founders-part-2/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">The Map for Illegible Founders (Part 2)</div>
+        <div class="d">In Part 1, I wrote about the founders I keep talking to — real traction, real customers, no investor interest — and why that&rsquo;s happening: …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+120 XP</span>
+        <span class="date">24 AUG 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/southeast-asia-buyers-not-builders/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Southeast Asia doesn&#39;t have a builder problem. It has a buyer problem.</div>
+        <div class="d">I got invited to a lunch a little while ago on &ldquo;redefining Southeast Asia&rsquo;s value proposition.&rdquo; Fourteen people around a table, …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+300 XP</span>
+        <span class="date">30 JUL 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/depth-is-the-thing-youre-selling/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Depth Is the Thing You&#39;re Selling</div>
+        <div class="d">This past Saturday I got to sit on a panel with Jeff Paine (Golden Gate Ventures), Michael Blakey (Cocoon Capital), and Roy from Crane. It was one of …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+180 XP</span>
+        <span class="date">20 JUL 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Community" href="/blog/the-interview-was-already-happening/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="4" cy="4" r="2" fill="#38e0cf"/><circle cx="8" cy="4" r="2" fill="#8be04f"/><rect x="1" y="7" width="6" height="4" fill="#38e0cf"/><rect x="6" y="7" width="5" height="4" fill="#8be04f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">The interview was already happening</div>
+        <div class="d">Last night at our Founder Friends event, a guy walked up to me with the kind of opener you don&rsquo;t forget.
 &ldquo;This might be a little weird — …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/pick-your-table/">Pick Your Table</a>
-    <div class="post-date">April 24, 2026</div>
-    <div class="post-excerpt">Urgency is a social phenomenon, not an internal one We talk about drive like it&rsquo;s a character trait. I believe it&rsquo;s mostly a downstream …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/keloid-drug-repurposing/">Can a VC with Claude Code find better keloid treatments?</a>
-    <div class="post-date">March 31, 2026</div>
-    <div class="post-excerpt">I have keloids. If you don&rsquo;t know what those are, consider yourself lucky. They&rsquo;re raised, rubbery scars that grow way beyond the original …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/time-with-kids/">Consider Living Near Your Kids</a>
-    <div class="post-date">March 25, 2026</div>
-    <div class="post-excerpt">There&rsquo;s a poster by Tim Urban that shows your entire life in weeks. 4,000 little boxes. It&rsquo;s sobering.
+      </div>
+      <div class="side">
+        <span class="cat">COMMUNITY</span>
+        <span class="xp">+120 XP</span>
+        <span class="date">5 JUN 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Community" href="/blog/pick-your-table/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="4" cy="4" r="2" fill="#38e0cf"/><circle cx="8" cy="4" r="2" fill="#8be04f"/><rect x="1" y="7" width="6" height="4" fill="#38e0cf"/><rect x="6" y="7" width="5" height="4" fill="#8be04f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Pick Your Table</div>
+        <div class="d">Urgency is a social phenomenon, not an internal one We talk about drive like it&rsquo;s a character trait. I believe it&rsquo;s mostly a downstream …</div>
+      </div>
+      <div class="side">
+        <span class="cat">COMMUNITY</span>
+        <span class="xp">+120 XP</span>
+        <span class="date">24 APR 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/keloid-drug-repurposing/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Can a VC with Claude Code find better keloid treatments?</div>
+        <div class="d">I have keloids. If you don&rsquo;t know what those are, consider yourself lucky. They&rsquo;re raised, rubbery scars that grow way beyond the original …</div>
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+330 XP</span>
+        <span class="date">31 MAR 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Parenting" href="/blog/time-with-kids/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><rect x="2" y="6" width="8" height="5" fill="#ff4f7d"/><polygon points="6,2 1,6 11,6" fill="#ff8f4f"/><rect x="5" y="8" width="2" height="3" fill="#45205f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Consider Living Near Your Kids</div>
+        <div class="d">There&rsquo;s a poster by Tim Urban that shows your entire life in weeks. 4,000 little boxes. It&rsquo;s sobering.
 But for parents, there&rsquo;s a …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/zero-based-budgeting-engineering/">Zero-Based Budgeting for Your Engineering Team</a>
-    <div class="post-date">March 21, 2026</div>
-    <div class="post-excerpt">A founder I back asked me last week if I knew anyone who could help them rethink their engineering org from scratch. Not a layoff consultant. Not a …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/why-my-starbucks-name-is-47/">Why My Starbucks Name Is 47</a>
-    <div class="post-date">March 5, 2026</div>
-    <div class="post-excerpt">Starbucks asks for your name because someone in a boardroom decided it would &ldquo;foster connection.&rdquo; The barista says your name, you feel …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/belief-is-contagious/">Belief Is Contagious</a>
-    <div class="post-date">March 5, 2026</div>
-    <div class="post-excerpt">There&rsquo;s a negativity problem in Southeast Asia&rsquo;s startup ecosystem right now. And look — there are reasons for it. Markdowns, down rounds, …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/forget-the-deck/">Forget the Deck. Watch the Founders.</a>
-    <div class="post-date">March 3, 2026</div>
-    <div class="post-excerpt">Last year, I sat through a forty-five minute pitch where the CEO answered every single question — including deeply technical ones — while the CTO sat …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/writing-code-is-dead/">Writing Code Is Dead. Long Live the Meta Engineer.</a>
-    <div class="post-date">February 26, 2026</div>
-    <div class="post-excerpt">Everyone keeps saying writing code is dead. They&rsquo;re not wrong — but not quite right either.
+      </div>
+      <div class="side">
+        <span class="cat">PARENTING</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">25 MAR 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/zero-based-budgeting-engineering/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Zero-Based Budgeting for Your Engineering Team</div>
+        <div class="d">A founder I back asked me last week if I knew anyone who could help them rethink their engineering org from scratch. Not a layoff consultant. Not a …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+300 XP</span>
+        <span class="date">21 MAR 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/why-my-starbucks-name-is-47/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Why My Starbucks Name Is 47</div>
+        <div class="d">Starbucks asks for your name because someone in a boardroom decided it would &ldquo;foster connection.&rdquo; The barista says your name, you feel …</div>
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">5 MAR 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/belief-is-contagious/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Belief Is Contagious</div>
+        <div class="d">There&rsquo;s a negativity problem in Southeast Asia&rsquo;s startup ecosystem right now. And look — there are reasons for it. Markdowns, down rounds, …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+150 XP</span>
+        <span class="date">5 MAR 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/forget-the-deck/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Forget the Deck. Watch the Founders.</div>
+        <div class="d">Last year, I sat through a forty-five minute pitch where the CEO answered every single question — including deeply technical ones — while the CTO sat …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+210 XP</span>
+        <span class="date">3 MAR 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/writing-code-is-dead/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Writing Code Is Dead. Long Live the Meta Engineer.</div>
+        <div class="d">Everyone keeps saying writing code is dead. They&rsquo;re not wrong — but not quite right either.
 What&rsquo;s dead is the value of typing code. AI …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/teach-them-to-be-human/">Teach Them to Be Human. AI Will Handle the Rest.</a>
-    <div class="post-date">February 26, 2026</div>
-    <div class="post-excerpt">Every parent I know is asking some version of the same question: what should we actually be teaching our kids now that AI can do&hellip; most things? …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/art-of-the-group-chat/">The Art of the Group Chat</a>
-    <div class="post-date">February 23, 2026</div>
-    <div class="post-excerpt">You know a group chat has gone off the rails when someone asks for credentials. &ldquo;Well, what&rsquo;s your background in this?&rdquo; Or worse — …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/three-books-for-startup-founders/">Three Books Every Startup Founder Should Read (That Aren&#39;t About Startups)</a>
-    <div class="post-date">February 21, 2026</div>
-    <div class="post-excerpt">The best books about building startups aren&rsquo;t really about startups. They&rsquo;re about people — how they work together, why they fall apart, …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/humans-hate-change/">Humans Hate Change. Your Job Is to Help Them Through It Anyway.</a>
-    <div class="post-date">February 20, 2026</div>
-    <div class="post-excerpt">Most startup advice is about strategy, metrics, hiring. Very little about how people feel — and yet feelings are usually what determines whether a …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/everyone-can-code-now/">Press the Buttons, People!</a>
-    <div class="post-date">February 19, 2026</div>
-    <div class="post-excerpt">My computer science grad cousin and his data scientist wife are peering at my laptop screen, looking at a little app I built — the bane of every …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/forest-city-a-ghost-town-finds-its-residents-with-the-network-school/">Forest City: A Ghost Town Finds Its Residents with the Network School</a>
-    <div class="post-date">December 9, 2025</div>
-    <div class="post-excerpt">There is a certain irony in finding one of the most vibrant communities I&rsquo;ve encountered in what was designed to be a ghost city.
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+150 XP</span>
+        <span class="date">26 FEB 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Parenting" href="/blog/teach-them-to-be-human/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><rect x="2" y="6" width="8" height="5" fill="#ff4f7d"/><polygon points="6,2 1,6 11,6" fill="#ff8f4f"/><rect x="5" y="8" width="2" height="3" fill="#45205f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Teach Them to Be Human. AI Will Handle the Rest.</div>
+        <div class="d">Every parent I know is asking some version of the same question: what should we actually be teaching our kids now that AI can do&hellip; most things? …</div>
+      </div>
+      <div class="side">
+        <span class="cat">PARENTING</span>
+        <span class="xp">+150 XP</span>
+        <span class="date">26 FEB 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Community" href="/blog/art-of-the-group-chat/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="4" cy="4" r="2" fill="#38e0cf"/><circle cx="8" cy="4" r="2" fill="#8be04f"/><rect x="1" y="7" width="6" height="4" fill="#38e0cf"/><rect x="6" y="7" width="5" height="4" fill="#8be04f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">The Art of the Group Chat</div>
+        <div class="d">You know a group chat has gone off the rails when someone asks for credentials. &ldquo;Well, what&rsquo;s your background in this?&rdquo; Or worse — …</div>
+      </div>
+      <div class="side">
+        <span class="cat">COMMUNITY</span>
+        <span class="xp">+180 XP</span>
+        <span class="date">23 FEB 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/three-books-for-startup-founders/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Three Books Every Startup Founder Should Read (That Aren&#39;t About Startups)</div>
+        <div class="d">The best books about building startups aren&rsquo;t really about startups. They&rsquo;re about people — how they work together, why they fall apart, …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+180 XP</span>
+        <span class="date">21 FEB 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/humans-hate-change/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Humans Hate Change. Your Job Is to Help Them Through It Anyway.</div>
+        <div class="d">Most startup advice is about strategy, metrics, hiring. Very little about how people feel — and yet feelings are usually what determines whether a …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+240 XP</span>
+        <span class="date">20 FEB 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/everyone-can-code-now/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Press the Buttons, People!</div>
+        <div class="d">My computer science grad cousin and his data scientist wife are peering at my laptop screen, looking at a little app I built — the bane of every …</div>
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+150 XP</span>
+        <span class="date">19 FEB 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Community" href="/blog/forest-city-a-ghost-town-finds-its-residents-with-the-network-school/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="4" cy="4" r="2" fill="#38e0cf"/><circle cx="8" cy="4" r="2" fill="#8be04f"/><rect x="1" y="7" width="6" height="4" fill="#38e0cf"/><rect x="6" y="7" width="5" height="4" fill="#8be04f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Forest City: A Ghost Town Finds Its Residents with the Network School</div>
+        <div class="d">There is a certain irony in finding one of the most vibrant communities I&rsquo;ve encountered in what was designed to be a ghost city.
 I recently …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/chefs-knife-or-kiwi-peeler/">Chef&#39;s knife? Or Kiwi peeler?</a>
-    <div class="post-date">April 29, 2025</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">COMMUNITY</span>
+        <span class="xp">+180 XP</span>
+        <span class="date">9 DEC 2025</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/chefs-knife-or-kiwi-peeler/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Chef&#39;s knife? Or Kiwi peeler?</div>
+        <div class="d">
 A chef&rsquo;s knife can do almost anything in the kitchen — chop, slice, dice, even peel if you&rsquo;re determined enough. A kiwi peeler? It does …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/how-much-reality-should-you-give-a-child/">How much reality should you give a child?</a>
-    <div class="post-date">October 1, 2024</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+120 XP</span>
+        <span class="date">29 APR 2025</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Parenting" href="/blog/how-much-reality-should-you-give-a-child/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><rect x="2" y="6" width="8" height="5" fill="#ff4f7d"/><polygon points="6,2 1,6 11,6" fill="#ff8f4f"/><rect x="5" y="8" width="2" height="3" fill="#45205f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">How much reality should you give a child?</div>
+        <div class="d">
 If you&rsquo;re a parent, or involved with small children through blood or friendship, chances are you&rsquo;ve been forced/privileged to observe a …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/welcome-2024/">Welcome 2024!</a>
-    <div class="post-date">January 1, 2024</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">PARENTING</span>
+        <span class="xp">+120 XP</span>
+        <span class="date">1 OCT 2024</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/welcome-2024/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Welcome 2024!</div>
+        <div class="d">
 A new year is always a great opportunity to reflect and set some goals - inspired by Der Shing&rsquo;s blog, thought it useful to jot down priorities …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/a-year-of-podcasting/">A year of podcasting</a>
-    <div class="post-date">January 1, 2024</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+60 XP</span>
+        <span class="date">1 JAN 2024</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/a-year-of-podcasting/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">A year of podcasting</div>
+        <div class="d">
 Late last year, Jeremy Au invited me to do a weekly podcast with him, riffing on the latest news in the Southeast Asia Tech scene. Now I love …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/early-entrepreneurial-efforts/">Early entrepreneurial efforts</a>
-    <div class="post-date">March 27, 2023</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">1 JAN 2024</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/early-entrepreneurial-efforts/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Early entrepreneurial efforts</div>
+        <div class="d">
 One of my favourite childhood memories was picking fruit from my best friend&rsquo;s yard, loading up her red radio flyer wagon, and wandering around …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/first-day-of-school/">First Day of School</a>
-    <div class="post-date">January 3, 2023</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">27 MAR 2023</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Parenting" href="/blog/first-day-of-school/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><rect x="2" y="6" width="8" height="5" fill="#ff4f7d"/><polygon points="6,2 1,6 11,6" fill="#ff8f4f"/><rect x="5" y="8" width="2" height="3" fill="#45205f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">First Day of School</div>
+        <div class="d">
 I&rsquo;ve always loved first days - of school, work, trips - it is a moment bursting with possibility and anticipation. (and of course the school …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/understanding-silicon-valley-a-discovery-operating-system/">Understanding Silicon Valley: A Discovery Operating System</a>
-    <div class="post-date">January 4, 2022</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">PARENTING</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">3 JAN 2023</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/understanding-silicon-valley-a-discovery-operating-system/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Understanding Silicon Valley: A Discovery Operating System</div>
+        <div class="d">
 This article was published as part of the book &ldquo;America: A Singapore Perspective&rdquo; edited by Tommy Koh and Daljit Singh. The full book can …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/on-building-communities/">On building communities</a>
-    <div class="post-date">December 8, 2020</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+360 XP</span>
+        <span class="date">4 JAN 2022</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Community" href="/blog/on-building-communities/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="4" cy="4" r="2" fill="#38e0cf"/><circle cx="8" cy="4" r="2" fill="#8be04f"/><rect x="1" y="7" width="6" height="4" fill="#38e0cf"/><rect x="6" y="7" width="5" height="4" fill="#8be04f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">On building communities</div>
+        <div class="d">
 I&rsquo;ve been building communities all my life. In the beginning, it was accidental - I noticed that most groups were willing to do things if …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/metrics-what-matters-and-why-to-a-pre-seed-investor/">Metrics - what matters and why (to a pre-seed investor)</a>
-    <div class="post-date">August 16, 2020</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">COMMUNITY</span>
+        <span class="xp">+240 XP</span>
+        <span class="date">8 DEC 2020</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/metrics-what-matters-and-why-to-a-pre-seed-investor/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Metrics - what matters and why (to a pre-seed investor)</div>
+        <div class="d">
 The idea of metrics for a pre-seed startups can feel rather oxymoronic; what does it even mean to have metrics when the business is so early? To add …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/race-power-and-what-we-can-do-about-it/">Race, power and what we can do about it</a>
-    <div class="post-date">June 1, 2020</div>
-    <div class="post-excerpt">If you&rsquo;re watching the news, and face it, who isn&rsquo;t, it&rsquo;s disheartening to watch what&rsquo;s happening in the US right now. …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/pandemic-baking/">Pandemic baking and remembering how to learn</a>
-    <div class="post-date">June 1, 2020</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+120 XP</span>
+        <span class="date">16 AUG 2020</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/race-power-and-what-we-can-do-about-it/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Race, power and what we can do about it</div>
+        <div class="d">If you&rsquo;re watching the news, and face it, who isn&rsquo;t, it&rsquo;s disheartening to watch what&rsquo;s happening in the US right now. …</div>
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+210 XP</span>
+        <span class="date">1 JUN 2020</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/pandemic-baking/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Pandemic baking and remembering how to learn</div>
+        <div class="d">
 I&rsquo;d taken up baking like everyone else during the COVID-19 pandemic, precipitated by a friend&rsquo;s kind gift of a 3 year old sourdough …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/strategy-and-why-product-market-fit-alone-isnt-good-enough/">Strategy, and why product-market fit alone isn&#39;t good enough</a>
-    <div class="post-date">May 26, 2020</div>
-    <div class="post-excerpt">Every week I write a note to our portfolio, and in each one, I share one thought that I think is relevant for our founders to noodle on. This …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/scaling-the-agony-and-ecstasy/">Scaling - The Agony and Ecstasy of scaling a high-growth business</a>
-    <div class="post-date">May 2, 2020</div>
-    <div class="post-excerpt">I&rsquo;ve given various versions of this talk, and thought it might be worth sharing out the slides here for folks. Will add a transcript of the …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/reading-list-for-aspiring-entrepreneurs/">So you want to start a company...here&#39;s a reading list</a>
-    <div class="post-date">July 31, 2019</div>
-    <div class="post-excerpt">I recently met with an incoming MBA student, who is leaving his cushy PE job for business school so that he can start something of his own. He asked …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/how-to-write-a-great-investor-update/">How to write a great investor update</a>
-    <div class="post-date">May 22, 2019</div>
-    <div class="post-excerpt">One of my portfolio CEOs recently asked me for some examples of a great investor update newsletter and I thought that was a good opportunity to …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/product-management-southeastasia/">Building a Product Management Community in Southeast Asia</a>
-    <div class="post-date">February 14, 2019</div>
-    <div class="post-excerpt">
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">1 JUN 2020</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/strategy-and-why-product-market-fit-alone-isnt-good-enough/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Strategy, and why product-market fit alone isn&#39;t good enough</div>
+        <div class="d">Every week I write a note to our portfolio, and in each one, I share one thought that I think is relevant for our founders to noodle on. This …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+180 XP</span>
+        <span class="date">26 MAY 2020</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/scaling-the-agony-and-ecstasy/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Scaling - The Agony and Ecstasy of scaling a high-growth business</div>
+        <div class="d">I&rsquo;ve given various versions of this talk, and thought it might be worth sharing out the slides here for folks. Will add a transcript of the …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+60 XP</span>
+        <span class="date">2 MAY 2020</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/reading-list-for-aspiring-entrepreneurs/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">So you want to start a company...here&#39;s a reading list</div>
+        <div class="d">I recently met with an incoming MBA student, who is leaving his cushy PE job for business school so that he can start something of his own. He asked …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+150 XP</span>
+        <span class="date">31 JUL 2019</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/how-to-write-a-great-investor-update/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">How to write a great investor update</div>
+        <div class="d">One of my portfolio CEOs recently asked me for some examples of a great investor update newsletter and I thought that was a good opportunity to …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+150 XP</span>
+        <span class="date">22 MAY 2019</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Community" href="/blog/product-management-southeastasia/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="4" cy="4" r="2" fill="#38e0cf"/><circle cx="8" cy="4" r="2" fill="#8be04f"/><rect x="1" y="7" width="6" height="4" fill="#38e0cf"/><rect x="6" y="7" width="5" height="4" fill="#8be04f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Building a Product Management Community in Southeast Asia</div>
+        <div class="d">
 Picture: From L to R, Shiyan Koh (Hustle Fund), Radhika Dutt (Radical Product), Anna Gong (Perx), Reshmi Roy (Skyscanner)
 Last night, I had the …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/why-i-decided-to-join-hustle-fund/">Why I decided to join Hustle Fund</a>
-    <div class="post-date">September 11, 2018</div>
-    <div class="post-excerpt">
-After almost 6 years at NerdWallet, and having had the chance of a lifetime to build a business from scratch with my friends, I was looking for …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/what-ive-been-doing-since-leaving-nerdwallet/">What I&#39;ve been doing since leaving NerdWallet</a>
-    <div class="post-date">September 5, 2018</div>
-    <div class="post-excerpt">After nearly 6 years building NerdWallet, I left at the end of March to move back to my home country, Singapore. It&rsquo;s been nearly 18 years since …</div>
-  </li>
-  
-  <li class="post-item">
-    <a href="https://www.shiyankoh.com/blog/communities-and-the-cul-de-sac/">Communities and the Cul-de-sac</a>
-    <div class="post-date">January 24, 2018</div>
-    <div class="post-excerpt"> &ldquo;Wouldn&rsquo;t it be great if we could all be neighbors with our best friends? We could come home from work, trade stories over a glass of …</div>
-  </li>
-  
-</ul>
-
-<div class="subscribe-section">
-  <p>Want to get new posts by email? <a href="https://paragraph.com/@duriandaily" target="_blank">Subscribe on Paragraph</a></p>
+      </div>
+      <div class="side">
+        <span class="cat">COMMUNITY</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">14 FEB 2019</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Investing" href="/blog/why-i-decided-to-join-hustle-fund/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="6" cy="6" r="5" fill="#ffd23f"/><rect x="5" y="3" width="2" height="6" fill="#b8891f"/><rect x="4" y="5" width="4" height="2" fill="#b8891f"/></svg>
 </div>
+      <div class="info">
+        <div class="t">Why I decided to join Hustle Fund</div>
+        <div class="d">
+After almost 6 years at NerdWallet, and having had the chance of a lifetime to build a business from scratch with my friends, I was looking for …</div>
+      </div>
+      <div class="side">
+        <span class="cat">INVESTING</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">11 SEP 2018</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/what-ive-been-doing-since-leaving-nerdwallet/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">What I&#39;ve been doing since leaving NerdWallet</div>
+        <div class="d">After nearly 6 years building NerdWallet, I left at the end of March to move back to my home country, Singapore. It&rsquo;s been nearly 18 years since …</div>
+      </div>
+      <div class="side">
+        <span class="cat">LIFE</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">5 SEP 2018</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Community" href="/blog/communities-and-the-cul-de-sac/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><circle cx="4" cy="4" r="2" fill="#38e0cf"/><circle cx="8" cy="4" r="2" fill="#8be04f"/><rect x="1" y="7" width="6" height="4" fill="#38e0cf"/><rect x="6" y="7" width="5" height="4" fill="#8be04f"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Communities and the Cul-de-sac</div>
+        <div class="d"> &ldquo;Wouldn&rsquo;t it be great if we could all be neighbors with our best friends? We could come home from work, trade stories over a glass of …</div>
+      </div>
+      <div class="side">
+        <span class="cat">COMMUNITY</span>
+        <span class="xp">+90 XP</span>
+        <span class="date">24 JAN 2018</span>
+      </div>
+    </a>
+    
+  </div>
+</section>
 
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      &copy; 2026 Shiyan Koh
-    </div>
-  </footer>
+
+<section class="over-scene">
+  <span class="scene-label">◄ WORLD 9 · END ►</span>
+  <div class="stars2" id="stars5"></div>
+  <div class="boss-banner">⚔ FINAL BOSS · THE BLANK PAGE</div>
+  <svg class="boss" viewBox="0 0 24 26" shape-rendering="crispEdges">
+    <rect x="3" y="1" width="18" height="22" fill="#f4e9d0"/><rect x="3" y="1" width="18" height="2" fill="#d8c9a6"/>
+    <g fill="#c9b98f"><rect x="6" y="6" width="12" height="1"/><rect x="6" y="9" width="12" height="1"/><rect x="6" y="12" width="9" height="1"/></g>
+    <g class="beye" fill="#2a1442"><rect x="7" y="15" width="3" height="4"/><rect x="14" y="15" width="3" height="4"/></g>
+    <rect x="9" y="20" width="6" height="2" fill="#2a1442"/>
+    <g fill="#f4e9d0"><rect x="3" y="23" width="4" height="3"/><rect x="10" y="23" width="4" height="3"/><rect x="17" y="23" width="4" height="3"/></g>
+  </svg>
+  <div class="hpbar">
+    <div class="lbl"><span>WRITER'S BLOCK</span><span>HP</span></div>
+    <div class="track"><div class="fill"></div></div>
+  </div>
+  <div class="defeated">★ DEFEATED — ESSAY SHIPPED ★</div>
+  <h2>THANKS FOR PLAYING</h2>
+  <p class="thx">You reached the end of the page. Real high score, honestly.</p>
+  <div class="credits">
+    A GAME BY <b>SHIYAN KOH</b><br>
+    THE CULDESAC · A BLOG<br>
+    MADE IN <b>SINGAPORE</b> · GMT+8
+  </div>
+  <div class="sub-nav">
+    <a href="/categories/investing/">✦ INVESTING</a>
+    <a href="/categories/parenting/">♥ PARENTING</a>
+    <a href="/categories/community/">◈ COMMUNITY</a>
+    <a href="https://paragraph.com/@duriandaily" target="_blank" rel="noopener">✉ SUBSCRIBE</a>
+  </div>
+  <div class="insert">◉ INSERT COIN TO CONTINUE ◉</div>
+</section>
+
+<script>
+  function seed(id,n,topPct){
+    const el=document.getElementById(id); if(!el) return;
+    let h='';
+    for(let i=0;i<n;i++){
+      const x=(i*37+11)%100, y=(i*53+7)%(topPct||70), d=(i%5)*0.4;
+      h+=`<span class="star" style="left:${x}%;top:${y}%;animation-delay:${d}s"></span>`;
+    }
+    el.innerHTML=h;
+  }
+  seed('stars1',46,64); seed('stars3',40,60); seed('stars5',60,100);
+  const sun=document.querySelector('.sun-wrap'), mtns=document.querySelector('.mtns'),
+        clouds=document.querySelector('.clouds'), stars1=document.getElementById('stars1');
+  let ticking=false;
+  function parallax(){
+    const y=window.scrollY;
+    if(y<window.innerHeight*1.2){
+      if(sun) sun.style.transform=`translateY(${y*0.35}px)`;
+      if(mtns) mtns.style.transform=`translateY(${y*0.18}px)`;
+      if(clouds) clouds.style.transform=`translateY(${y*0.5}px)`;
+      if(stars1) stars1.style.transform=`translateY(${y*0.12}px)`;
+    }
+    ticking=false;
+  }
+  window.addEventListener('scroll',()=>{ if(!ticking){requestAnimationFrame(parallax);ticking=true;} },{passive:true});
+</script>
+
   <script data-goatcounter="https://shiyankoh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Life | The Culdesac</title>
+  <meta name="description" content="The Culdesac - A blog by Shiyan Koh">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" rel="stylesheet">
+  
+<style>
+  :root{--panel:#150c22;--panel2:#1f142f;--cream:#fdf3dc;--gold:#ffd23f;--pink:#ff4f7d;--cyan:#38e0cf;--green:#8be04f;--violet:#b07bff;--line:#3a2857}
+  *{margin:0;padding:0;box-sizing:border-box}
+  ::selection{background:var(--pink);color:#fff}
+  body{background:var(--panel);color:var(--cream);font-family:'VT323',monospace;font-size:22px;line-height:1.35;image-rendering:pixelated;overflow-x:hidden}
+  svg{image-rendering:pixelated;display:block}
+  a{color:inherit}
+  .log-scene{min-height:100vh;padding:60px 20px 90px;background:linear-gradient(180deg,#241636,#1a0f28);position:relative}
+  .log-scene::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 2px,transparent 2px);background-size:28px 28px;pointer-events:none}
+  .log-wrap{max-width:900px;margin:0 auto;position:relative;z-index:2}
+  .back{display:inline-block;font-family:'Press Start 2P';font-size:9px;color:var(--cream);text-decoration:none;background:rgba(0,0,0,.4);padding:9px 12px;border:2px solid rgba(255,255,255,.25);margin-bottom:28px}
+  .back:hover{background:var(--pink);border-color:#fff}
+  .log-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:26px;flex-wrap:wrap;gap:12px}
+  .log-head h1{font-family:'Press Start 2P';font-size:clamp(15px,3vw,24px);color:var(--gold);text-shadow:3px 3px 0 rgba(0,0,0,.5)}
+  .log-head .pg{font-family:'Silkscreen';font-size:13px;color:var(--cyan)}
+  .quest{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--gold);padding:18px 20px;margin-bottom:14px;text-decoration:none;transition:.12s}
+  .quest:hover{transform:translateX(8px);border-color:#fff;background:#26173a}
+  .quest .slot{width:64px;height:64px;background:var(--panel);border:2px solid var(--line);display:grid;place-items:center}
+  .quest .info .t{font-family:'Press Start 2P';font-size:12px;color:var(--cream);line-height:1.5}
+  .quest:hover .info .t{color:var(--gold)}
+  .quest .info .d{font-size:20px;color:#c9bda6;margin-top:8px}
+  .quest .side{text-align:right;white-space:nowrap}
+  .quest .side .xp{display:block;font-family:'Silkscreen';font-size:13px;color:var(--gold)}
+  .quest .side .date{display:block;font-size:18px;color:#9a8fb5;margin-top:4px}
+  .quest[data-cat="Investing"]{border-left-color:var(--cyan)}
+  .quest[data-cat="Parenting"]{border-left-color:var(--pink)}
+  .quest[data-cat="Community"]{border-left-color:var(--green)}
+  .quest[data-cat="Life"]{border-left-color:var(--gold)}
+  @media(max-width:720px){body{font-size:20px}.quest{grid-template-columns:52px 1fr;gap:14px}.quest .side{grid-column:2;text-align:left}}
+</style>
+
+</head>
+<body>
+  
+<section class="log-scene">
+  <div class="log-wrap">
+    <a class="back" href="/">◄ WORLD MAP</a>
+    <div class="log-head">
+      <h1>▤ LIFE</h1>
+      <span class="pg">10 QUESTS IN THIS WORLD</span>
+    </div>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/keloid-drug-repurposing/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Can a VC with Claude Code find better keloid treatments?</div>
+        <div class="d">I have keloids. If you don&rsquo;t know what those are, consider yourself lucky. They&rsquo;re raised, rubbery scars that grow way beyond the original …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+330 XP</span>
+        <span class="date">31 MAR 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/why-my-starbucks-name-is-47/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Why My Starbucks Name Is 47</div>
+        <div class="d">Starbucks asks for your name because someone in a boardroom decided it would &ldquo;foster connection.&rdquo; The barista says your name, you feel …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+90 XP</span>
+        <span class="date">5 MAR 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/writing-code-is-dead/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Writing Code Is Dead. Long Live the Meta Engineer.</div>
+        <div class="d">Everyone keeps saying writing code is dead. They&rsquo;re not wrong — but not quite right either.
+What&rsquo;s dead is the value of typing code. AI …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+150 XP</span>
+        <span class="date">26 FEB 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/everyone-can-code-now/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Press the Buttons, People!</div>
+        <div class="d">My computer science grad cousin and his data scientist wife are peering at my laptop screen, looking at a little app I built — the bane of every …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+150 XP</span>
+        <span class="date">19 FEB 2026</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/welcome-2024/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Welcome 2024!</div>
+        <div class="d">
+A new year is always a great opportunity to reflect and set some goals - inspired by Der Shing&rsquo;s blog, thought it useful to jot down priorities …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+60 XP</span>
+        <span class="date">1 JAN 2024</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/a-year-of-podcasting/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">A year of podcasting</div>
+        <div class="d">
+Late last year, Jeremy Au invited me to do a weekly podcast with him, riffing on the latest news in the Southeast Asia Tech scene. Now I love …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+90 XP</span>
+        <span class="date">1 JAN 2024</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/early-entrepreneurial-efforts/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Early entrepreneurial efforts</div>
+        <div class="d">
+One of my favourite childhood memories was picking fruit from my best friend&rsquo;s yard, loading up her red radio flyer wagon, and wandering around …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+90 XP</span>
+        <span class="date">27 MAR 2023</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/race-power-and-what-we-can-do-about-it/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Race, power and what we can do about it</div>
+        <div class="d">If you&rsquo;re watching the news, and face it, who isn&rsquo;t, it&rsquo;s disheartening to watch what&rsquo;s happening in the US right now. …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+210 XP</span>
+        <span class="date">1 JUN 2020</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/pandemic-baking/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">Pandemic baking and remembering how to learn</div>
+        <div class="d">
+I&rsquo;d taken up baking like everyone else during the COVID-19 pandemic, precipitated by a friend&rsquo;s kind gift of a 3 year old sourdough …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+90 XP</span>
+        <span class="date">1 JUN 2020</span>
+      </div>
+    </a>
+    
+    
+    
+    <a class="quest" data-cat="Life" href="/blog/what-ive-been-doing-since-leaving-nerdwallet/">
+      <div class="slot"><svg width="40" height="40" viewBox="0 0 12 12" shape-rendering="crispEdges"><ellipse cx="6" cy="5" rx="4" ry="4" fill="#8be04f"/><rect x="5" y="8" width="2" height="3" fill="#7a4a2c"/><rect x="4" y="4" width="2" height="1" fill="#b6f07a"/></svg>
+</div>
+      <div class="info">
+        <div class="t">What I&#39;ve been doing since leaving NerdWallet</div>
+        <div class="d">After nearly 6 years building NerdWallet, I left at the end of March to move back to my home country, Singapore. It&rsquo;s been nearly 18 years since …</div>
+      </div>
+      <div class="side">
+        <span class="xp">+90 XP</span>
+        <span class="date">5 SEP 2018</span>
+      </div>
+    </a>
+    
+  </div>
+</section>
+
+  <script data-goatcounter="https://shiyankoh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
