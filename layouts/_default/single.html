@@ -80,6 +80,13 @@
   .cta .box a{display:inline-block;font-family:'Press Start 2P';font-size:11px;color:#111;background:var(--gold);padding:13px 20px;text-decoration:none;border:2px solid #fff}
   .cta .box a:hover{background:#fff}
   @media(max-width:640px){body{font-size:19px}.banner h1{font-size:16px}.pager{grid-template-columns:1fr}}
+  /* San Francisco Victorian footer (About page) */
+  .sf-footer{position:relative;height:280px;overflow:hidden;border-top:3px solid #000;
+    background:linear-gradient(180deg,#2a0f4e,#7a2b8f 52%,#e6486b 84%,#ff9a52)}
+  .sf-footer .sfstars{position:absolute;inset:0;z-index:1}
+  .sf-footer .sf-row{position:absolute;left:0;right:0;bottom:0;z-index:2}
+  .sf-footer .sf-row svg{width:100%;height:240px;display:block;image-rendering:pixelated}
+  .sf-cap{position:absolute;top:16px;left:0;right:0;text-align:center;z-index:3;font-family:'Silkscreen';font-size:12px;letter-spacing:2px;color:#fde9c8}
 </style>
 {{ end }}
 
@@ -205,11 +212,57 @@
   </div>
 </div>
 
+{{ if ne .Section "blog" }}
+<section class="sf-footer">
+  <div class="sfstars" id="sfstars"></div>
+  <div class="sf-cap">◄ SAN FRANCISCO · THE OTHER HOME ►</div>
+  <div class="sf-row">
+    <!-- San Francisco Victorian "Painted Ladies" -->
+    <svg viewBox="0 0 320 80" preserveAspectRatio="none" shape-rendering="crispEdges">
+      {{ $vb := slice "#c96f6f" "#6f9fb0" "#c9a24b" "#7fa06f" "#b08fb0" "#d98f6a" "#6fb0a0" "#a0748f" }}
+      {{ $vr := slice "#7a3a4a" "#33566a" "#7a5a2a" "#3a5a3a" "#5a3a5a" "#7a4a3a" "#2a5a4a" "#5a3a4a" }}
+      {{ $cr := "#f4ecd9" }}
+      {{ $gl := "#2f4a55" }}
+      {{ range $i := (seq 0 7) }}
+      {{ $x := mul $i 40 }}
+      {{ $b := index $vb (mod $i 8) }}
+      {{ $r := index $vr (mod $i 8) }}
+      <rect x="{{ add $x 2 }}" y="20" width="36" height="60" fill="{{ $b }}"/>
+      <polygon points="{{ add $x 1 }},22 {{ add $x 20 }},4 {{ add $x 39 }},22" fill="{{ $r }}"/>
+      <rect x="{{ add $x 1 }}" y="20" width="38" height="2" fill="{{ $cr }}"/>
+      <rect x="{{ add $x 17 }}" y="11" width="6" height="7" fill="{{ $cr }}"/>
+      <rect x="{{ add $x 18 }}" y="12" width="4" height="5" fill="{{ $gl }}"/>
+      <rect x="{{ add $x 1 }}" y="20" width="2" height="60" fill="{{ $cr }}"/>
+      <rect x="{{ add $x 37 }}" y="20" width="2" height="60" fill="{{ $cr }}"/>
+      {{ range $fi, $f := (slice 26 46) }}
+      <rect x="{{ add $x 4 }}" y="{{ sub $f 1 }}" width="32" height="1" fill="{{ $cr }}"/>
+      {{ range $k := (seq 0 2) }}
+      {{ $wx := add (add $x 7) (mul $k 9) }}
+      <rect x="{{ $wx }}" y="{{ $f }}" width="7" height="13" fill="{{ $cr }}"/>
+      <rect x="{{ add $wx 1 }}" y="{{ add $f 1 }}" width="5" height="11" fill="{{ $gl }}"/>
+      <rect x="{{ add $wx 3 }}" y="{{ add $f 1 }}" width="1" height="11" fill="{{ $cr }}"/>
+      <rect x="{{ add $wx 1 }}" y="{{ add $f 6 }}" width="5" height="1" fill="{{ $cr }}"/>
+      {{ end }}
+      {{ end }}
+      <rect x="{{ add $x 2 }}" y="42" width="36" height="2" fill="{{ $cr }}"/>
+      <rect x="{{ add $x 15 }}" y="62" width="10" height="2" fill="{{ $cr }}"/>
+      <rect x="{{ add $x 16 }}" y="64" width="8" height="16" fill="{{ $r }}"/>
+      <rect x="{{ add $x 13 }}" y="77" width="14" height="3" fill="{{ $cr }}"/>
+      <rect x="{{ add $x 15 }}" y="74" width="10" height="3" fill="{{ $cr }}"/>
+      {{ end }}
+    </svg>
+  </div>
+</section>
+{{ end }}
+
 <script>
   const bs=document.getElementById('bstars'); let h='';
   for(let i=0;i<34;i++){const x=(i*41+9)%100,y=(i*57+5)%55,d=(i%5)*.4;
     h+=`<span class="b-star" style="left:${x}%;top:${y}%;animation-delay:${d}s"></span>`;}
   bs.innerHTML=h;
+  const sf=document.getElementById('sfstars');
+  if(sf){let s='';for(let i=0;i<30;i++){const x=(i*43+7)%100,y=(i*61+9)%60,d=(i%5)*.4;
+    s+=`<span class="b-star" style="left:${x}%;top:${y}%;animation-delay:${d}s"></span>`;}sf.innerHTML=s;}
   const bar=document.getElementById('bar'), pct=document.getElementById('pct');
   function upd(){
     const art=document.querySelector('article');
