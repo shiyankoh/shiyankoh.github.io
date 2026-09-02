@@ -177,6 +177,24 @@
   .sub-nav{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;z-index:2}
   .sub-nav a{font-family:'Silkscreen';font-size:13px;text-decoration:none;color:var(--cream);border:2px solid var(--line);padding:8px 14px}
   .sub-nav a:hover{border-color:var(--gold);color:var(--gold)}
+  /* writing activity heatmap */
+  .activity{position:relative;z-index:2;margin:36px auto 4px;max-width:540px;width:100%;
+    background:var(--panel2);border:3px solid var(--line);box-shadow:6px 6px 0 rgba(0,0,0,.5);padding:20px 22px;text-align:left}
+  .act-head{font-family:'Silkscreen';font-size:12px;letter-spacing:1px;color:var(--green);margin-bottom:16px}
+  .act-head span{color:var(--cream);opacity:.65}
+  .act-grid{display:flex;flex-direction:column;gap:4px}
+  .act-row{display:flex;align-items:center;gap:4px}
+  .act-row .yr{width:40px;font-family:'Silkscreen';font-size:10px;color:#9a8fb5;text-align:right}
+  .act-months .mlab{width:16px;text-align:center;font-family:'Silkscreen';font-size:9px;color:#7a6f95}
+  .cell{width:16px;height:16px;background:#241a33;border:1px solid #150c22;transition:.1s}
+  .cell[data-lvl="1"]{background:#2e5d3a}
+  .cell[data-lvl="2"]{background:#4fae5a}
+  .cell[data-lvl="3"]{background:#8be04f}
+  .cell:hover{outline:2px solid #fff;outline-offset:-1px}
+  .act-legend{margin-top:14px;display:flex;align-items:center;gap:5px;justify-content:flex-end;font-family:'Silkscreen';font-size:10px;color:#9a8fb5}
+  .act-legend i{width:13px;height:13px;display:inline-block;background:#241a33;border:1px solid #150c22}
+  .act-legend i[data-lvl="1"]{background:#2e5d3a}.act-legend i[data-lvl="2"]{background:#4fae5a}.act-legend i[data-lvl="3"]{background:#8be04f}
+  @media(max-width:560px){.activity{max-width:100%;padding:16px}.cell{width:12px;height:12px}.act-months .mlab{width:12px}.act-row .yr{width:34px}}
   @media(max-width:720px){
     body{font-size:20px}
     .worlds{grid-template-columns:repeat(2,1fr)}
@@ -198,6 +216,17 @@
 {{ $par := len (where $posts "Params.categories" "intersect" (slice "Parenting")) }}
 {{ $com := len (where $posts "Params.categories" "intersect" (slice "Community")) }}
 {{ $life := len (where $posts "Params.categories" "intersect" (slice "Life")) }}
+{{/* writing activity: year range + per-month post counts */}}
+{{ $yrs := slice }}
+{{ range $posts }}{{ $yrs = $yrs | append (int (.Date.Format "2006")) }}{{ end }}
+{{ $sortedYrs := sort $yrs }}
+{{ $minY := index $sortedYrs 0 }}
+{{ $maxY := index (last 1 $sortedYrs) 0 }}
+{{ $activity := dict }}
+{{ range $posts }}
+  {{ $k := .Date.Format "2006-01" }}
+  {{ $activity = merge $activity (dict $k (add (int (index $activity $k | default 0)) 1)) }}
+{{ end }}
 <div class="crt"></div>
 
 <!-- SCENE 1: TITLE (Singapore) -->
@@ -375,6 +404,31 @@
   <div class="defeated">★ DEFEATED — ESSAY SHIPPED ★</div>
   <h2>THANKS FOR PLAYING</h2>
   <p class="thx">You reached the end of the page. Real high score, honestly.</p>
+
+  <div class="activity">
+    <div class="act-head">◈ WRITING ACTIVITY <span>· {{ len $posts }} POSTS SINCE {{ $minY }}</span></div>
+    <div class="act-grid">
+      <div class="act-row act-months">
+        <span class="yr"></span>
+        <span class="mlab">J</span><span class="mlab">F</span><span class="mlab">M</span><span class="mlab">A</span><span class="mlab">M</span><span class="mlab">J</span><span class="mlab">J</span><span class="mlab">A</span><span class="mlab">S</span><span class="mlab">O</span><span class="mlab">N</span><span class="mlab">D</span>
+      </div>
+      {{ range seq $minY $maxY }}
+      {{ $y := . }}
+      <div class="act-row">
+        <span class="yr">{{ $y }}</span>
+        {{ range seq 1 12 }}
+        {{ $k := printf "%04d-%02d" $y . }}
+        {{ $d := printf "%04d-%02d-01" $y . }}
+        {{ $c := int (index $activity $k | default 0) }}
+        {{ $lvl := cond (ge $c 3) 3 $c }}
+        <span class="cell" data-lvl="{{ $lvl }}" title="{{ (time $d).Format "Jan 2006" }}: {{ $c }} post{{ if ne $c 1 }}s{{ end }}"></span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    <div class="act-legend">LESS <i data-lvl="0"></i><i data-lvl="1"></i><i data-lvl="2"></i><i data-lvl="3"></i> MORE</div>
+  </div>
+
   <div class="credits">
     A GAME BY <b>SHIYAN KOH</b><br>
     THE CULDESAC · A BLOG<br>
