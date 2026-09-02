@@ -116,23 +116,51 @@
       <rect x="168" y="70" width="152" height="10" fill="#1c2f5a"/>
     </svg>
     {{ else }}
-    <!-- Singapore colourful shophouses -->
+    <!-- Singapore Peranakan shophouses -->
     <svg viewBox="0 0 320 80" preserveAspectRatio="none" shape-rendering="crispEdges">
-      {{ $cols := slice "#ff6b9d" "#4fd1c5" "#ffd23f" "#8be04f" "#ff8f4f" "#b07bff" "#ff5277" "#57c6e6" }}
+      {{ $cols := slice "#ee7f96" "#5fc2b0" "#f0b83e" "#7fb8d6" "#e28a5a" "#a98fd0" "#e07a92" "#84b25f" }}
+      {{ $cream := "#f7efe0" }}
+      {{ $tiles := slice "#c94f6d" "#2f9c96" "#e0a93b" }}
       {{ range $i := (seq 0 7) }}
       {{ $x := mul $i 40 }}
       {{ $col := index $cols (mod $i 8) }}
-      <rect x="{{ add $x 1 }}" y="18" width="38" height="62" fill="{{ $col }}"/>
-      <rect x="{{ $x }}" y="12" width="40" height="7" fill="#f4e9d0"/>
-      <rect x="{{ $x }}" y="18" width="3" height="62" fill="#f4e9d0"/>
-      <rect x="{{ add $x 37 }}" y="18" width="3" height="62" fill="#f4e9d0"/>
-      <rect x="{{ add $x 8 }}" y="26" width="10" height="15" fill="#f4e9d0"/>
-      <rect x="{{ add $x 9 }}" y="27" width="8" height="13" fill="#2a1240"/>
-      <rect x="{{ add $x 22 }}" y="26" width="10" height="15" fill="#f4e9d0"/>
-      <rect x="{{ add $x 23 }}" y="27" width="8" height="13" fill="#2a1240"/>
-      <rect x="{{ add $x 6 }}" y="46" width="28" height="3" fill="#f4e9d0"/>
-      <rect x="{{ add $x 7 }}" y="58" width="26" height="22" fill="#f4e9d0"/>
-      <rect x="{{ add $x 9 }}" y="60" width="22" height="20" fill="#201533"/>
+      <!-- facade -->
+      <rect x="{{ add $x 1 }}" y="17" width="38" height="63" fill="{{ $col }}"/>
+      <!-- ornate parapet + central gable -->
+      <rect x="{{ $x }}" y="14" width="40" height="3" fill="{{ $cream }}"/>
+      <rect x="{{ add $x 13 }}" y="9" width="14" height="6" fill="{{ $cream }}"/>
+      <rect x="{{ add $x 16 }}" y="7" width="8" height="2" fill="{{ $cream }}"/>
+      <rect x="{{ add $x 18 }}" y="10" width="4" height="3" fill="{{ $col }}"/>
+      <!-- side pilasters -->
+      <rect x="{{ $x }}" y="16" width="2" height="64" fill="{{ $cream }}"/>
+      <rect x="{{ add $x 38 }}" y="16" width="2" height="64" fill="{{ $cream }}"/>
+      <!-- upper windows: arched fanlight + timber louvres -->
+      {{ range $wi, $w := (slice 6 22) }}
+      {{ $wx := add $x $w }}
+      <rect x="{{ sub $wx 1 }}" y="20" width="14" height="24" fill="{{ $cream }}"/>
+      <rect x="{{ add $wx 1 }}" y="22" width="12" height="3" fill="#cfe6e0"/>
+      <rect x="{{ add $wx 4 }}" y="22" width="1" height="3" fill="{{ $cream }}"/>
+      <rect x="{{ add $wx 8 }}" y="22" width="1" height="3" fill="{{ $cream }}"/>
+      <rect x="{{ add $wx 5 }}" y="20" width="4" height="1" fill="{{ $cream }}"/>
+      <rect x="{{ add $wx 1 }}" y="26" width="12" height="16" fill="#33645a"/>
+      {{ range $l := (seq 0 3) }}<rect x="{{ add $wx 1 }}" y="{{ add 28 (mul $l 3) }}" width="12" height="1" fill="#5f9184"/>{{ end }}
+      <rect x="{{ add $wx 6 }}" y="26" width="1" height="16" fill="{{ $cream }}"/>
+      {{ end }}
+      <!-- Peranakan tile frieze -->
+      {{ range $j := (seq 0 5) }}<rect x="{{ add (add $x 4) (mul $j 6) }}" y="45" width="3" height="2" fill="{{ index $tiles (mod $j 3) }}"/>{{ end }}
+      <rect x="{{ add $x 1 }}" y="48" width="38" height="2" fill="{{ $cream }}"/>
+      <!-- five-foot-way: columns + arched walkway -->
+      <rect x="{{ add $x 3 }}" y="52" width="4" height="28" fill="{{ $cream }}"/>
+      <rect x="{{ add $x 33 }}" y="52" width="4" height="28" fill="{{ $cream }}"/>
+      <rect x="{{ add $x 8 }}" y="58" width="24" height="22" fill="#241a2a"/>
+      <rect x="{{ add $x 8 }}" y="57" width="24" height="1" fill="{{ $cream }}"/>
+      <rect x="{{ add $x 9 }}" y="56" width="22" height="1" fill="{{ $cream }}"/>
+      <rect x="{{ add $x 11 }}" y="55" width="18" height="1" fill="{{ $cream }}"/>
+      <rect x="{{ add $x 14 }}" y="54" width="12" height="1" fill="{{ $cream }}"/>
+      <!-- hanging lantern -->
+      <rect x="{{ add $x 19 }}" y="59" width="2" height="1" fill="#7a1f1f"/>
+      <rect x="{{ add $x 18 }}" y="60" width="4" height="4" fill="#e0453f"/>
+      <rect x="{{ add $x 19 }}" y="64" width="2" height="1" fill="#e0a93b"/>
       {{ end }}
     </svg>
     {{ end }}
