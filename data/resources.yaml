@@ -6,6 +6,10 @@ shelves:
   - key: events
     label: SINGAPORE EVENTS
     items:
+      - title: "Hustle Fund Events"
+        by: "My fund"
+        url: "https://luma.com/hustlefund"
+        note: "Events we run for founders — office hours, meetups, and more."
       - title: "Lu.ma — Singapore"
         by: "Community events"
         url: "https://lu.ma/singapore"
