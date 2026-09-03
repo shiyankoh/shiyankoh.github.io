@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources | The Culdesac</title>
+  <meta name="description" content="The Culdesac - A blog by Shiyan Koh">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" rel="stylesheet">
+  
+<style>
+  :root{--panel:#150c22;--panel2:#1f142f;--cream:#fdf3dc;--gold:#ffd23f;--pink:#ff4f7d;--cyan:#38e0cf;--green:#8be04f;--violet:#b07bff;--line:#3a2857}
+  *{margin:0;padding:0;box-sizing:border-box}
+  ::selection{background:var(--pink);color:#fff}
+  body{background:var(--panel);color:var(--cream);font-family:'VT323',monospace;font-size:22px;line-height:1.35;image-rendering:pixelated;overflow-x:hidden}
+  svg{image-rendering:pixelated;display:block}
+  a{color:inherit}
+  .reads-scene{min-height:100vh;padding:60px 20px 90px;background:linear-gradient(180deg,#123a4a,#0f2f3f 60%,#0b2431);position:relative}
+  .reads-scene::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(56,224,207,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(56,224,207,.06) 2px,transparent 2px);background-size:34px 34px;pointer-events:none}
+  .reads-wrap{max-width:900px;margin:0 auto;position:relative;z-index:2}
+  .back{display:inline-block;font-family:'Press Start 2P';font-size:9px;color:var(--cream);text-decoration:none;background:rgba(0,0,0,.4);padding:9px 12px;border:2px solid rgba(255,255,255,.25);margin-bottom:28px}
+  .back:hover{background:var(--pink);border-color:#fff}
+  .reads-title{font-family:'Press Start 2P';font-size:clamp(16px,3.4vw,26px);color:var(--cyan);text-shadow:3px 3px 0 rgba(0,0,0,.5);margin-bottom:14px}
+  .reads-intro{font-size:22px;color:#cfe6e0;max-width:60ch;margin-bottom:44px}
+  .shelf{margin-bottom:44px}
+  .shelf-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .shelf-head .ico{width:34px;height:34px;flex:none}
+  .shelf-head h2{font-family:'Press Start 2P';font-size:14px;color:var(--cream);text-shadow:2px 2px 0 rgba(0,0,0,.5);line-height:1.5}
+  .shelf-head .cnt{font-family:'Silkscreen';font-size:12px;color:var(--cyan);margin-left:auto;white-space:nowrap}
+  .items{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .item-card{display:block;background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--gold);padding:16px 18px;text-decoration:none;transition:.12s}
+  .item-card:hover{transform:translateX(6px);border-color:#fff;background:#183042}
+  .shelf[data-shelf="events"] .item-card{border-left-color:var(--gold)}
+  .shelf[data-shelf="jobs"] .item-card{border-left-color:var(--cyan)}
+  .item-card .t{font-family:'Press Start 2P';font-size:11px;color:var(--cream);line-height:1.55}
+  .item-card:hover .t{color:var(--cyan)}
+  .item-card .by{font-family:'Silkscreen';font-size:11px;color:var(--gold);margin-top:9px;letter-spacing:.5px}
+  .item-card .note{font-size:19px;color:#cfe6e0;margin-top:9px;line-height:1.3}
+  .item-card .ext{float:right;font-family:'Silkscreen';font-size:10px;color:#9ec7c0}
+  @media(max-width:640px){.items{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+  
+
+<section class="reads-scene">
+  <div class="reads-wrap">
+    <a class="back" href="/">◄ WORLD MAP</a>
+    <h1 class="reads-title">▤ RESOURCES · PLUG INTO SINGAPORE</h1>
+    <p class="reads-intro">Where to plug into the Singapore tech scene — events worth showing up to, and a running list of AI companies building here.</p>
+
+    
+    <div class="shelf" data-shelf="events">
+      <div class="shelf-head">
+        
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="3" width="12" height="11" fill="#ffd23f"/><rect x="2" y="3" width="12" height="3" fill="#ff4f7d"/><rect x="4" y="1" width="1" height="3" fill="#c1305a"/><rect x="11" y="1" width="1" height="3" fill="#c1305a"/><rect x="5" y="8" width="2" height="2" fill="#45205f"/><rect x="9" y="8" width="2" height="2" fill="#45205f"/><rect x="5" y="11" width="2" height="2" fill="#45205f"/></svg>
+        
+        <h2>SINGAPORE EVENTS</h2>
+        <span class="cnt">4 LINKS</span>
+      </div>
+      <div class="items">
+        
+        <a class="item-card" href="https://lu.ma/singapore" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Lu.ma — Singapore</div>
+          <div class="by">Community events</div>
+          <div class="note">Where most SG tech and startup events get posted now.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.sginnovate.com/events" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">SGInnovate Events</div>
+          <div class="by">Deep tech</div>
+          <div class="note">Deep-tech and AI talks, demos, and meetups.</div>
+        </a>
+        
+        <a class="item-card" href="https://e27.co/events/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">e27 Events</div>
+          <div class="by">Startup ecosystem</div>
+          <div class="note">Conferences and meetups across the SEA startup scene.</div>
+        </a>
+        
+        <a class="item-card" href="https://www.techinasia.com/events" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Tech in Asia Events</div>
+          <div class="by">Conferences</div>
+          <div class="note">The big annual conference plus smaller gatherings.</div>
+        </a>
+        
+      </div>
+    </div>
+    
+    <div class="shelf" data-shelf="jobs">
+      <div class="shelf-head">
+        
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="3" width="10" height="11" fill="#38e0cf"/><rect x="5" y="5" width="2" height="2" fill="#0f2f3f"/><rect x="9" y="5" width="2" height="2" fill="#0f2f3f"/><rect x="5" y="8" width="2" height="2" fill="#0f2f3f"/><rect x="9" y="8" width="2" height="2" fill="#0f2f3f"/><rect x="6" y="11" width="4" height="3" fill="#0f2f3f"/></svg>
+        
+        <h2>AI COMPANIES HIRING IN SINGAPORE</h2>
+        <span class="cnt">1 LINK</span>
+      </div>
+      <div class="items">
+        
+        <a class="item-card" href="https://docs.google.com/spreadsheets/d/1gwbwSU3-RY-F8gXO_j3mzAEAErK2vNSNzqNMtRbzFyo/edit" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">AI companies with a Singapore presence</div>
+          <div class="by">Live master list</div>
+          <div class="note">My running list of AI firms building offices and hiring in SG. Open the sheet for the latest.</div>
+        </a>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+  <script data-goatcounter="https://shiyankoh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

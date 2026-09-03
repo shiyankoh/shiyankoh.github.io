@@ -110,7 +110,7 @@
   .h-band{text-align:center;position:relative;z-index:2;margin-bottom:44px}
   .h-band h2{font-size:clamp(16px,3.5vw,26px);color:var(--cyan);text-shadow:3px 3px 0 rgba(0,0,0,.5)}
   .h-band p{font-family:'Silkscreen';color:var(--cream);opacity:.75;margin-top:12px;font-size:14px;letter-spacing:1px}
-  .worlds{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;position:relative;z-index:2}
+  .worlds{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,144px));justify-content:center;gap:12px;position:relative;z-index:2}
   .world{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:20px 10px;
     background:var(--panel2);border:4px solid var(--line);transition:.12s;box-shadow:0 6px 0 rgba(0,0,0,.5)}
   .world:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 0 rgba(0,0,0,.5)}
@@ -448,6 +448,10 @@
     <a class="world" href="/reads/">
       <svg class="icn" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="2" width="10" height="12" fill="#ffd23f"/><rect x="3" y="2" width="10" height="2" fill="#ff4f7d"/><rect x="5" y="6" width="6" height="1" fill="#45205f"/><rect x="5" y="8" width="6" height="1" fill="#45205f"/><rect x="5" y="10" width="4" height="1" fill="#45205f"/></svg>
       <span class="nm">READS</span><span class="lv">LOOT</span>
+    </a>
+    <a class="world" href="/resources/">
+      <svg class="icn" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="3" width="10" height="11" fill="#38e0cf"/><rect x="5" y="5" width="2" height="2" fill="#0f2f3f"/><rect x="9" y="5" width="2" height="2" fill="#0f2f3f"/><rect x="5" y="8" width="2" height="2" fill="#0f2f3f"/><rect x="9" y="8" width="2" height="2" fill="#0f2f3f"/><rect x="6" y="11" width="4" height="3" fill="#0f2f3f"/></svg>
+      <span class="nm">RESOURCES</span><span class="lv">SG</span>
     </a>
     <a class="world" href="/about/">
       <svg class="icn" viewBox="0 0 16 16" shape-rendering="crispEdges"><circle cx="8" cy="6" r="4" fill="#ffcf9e"/><rect x="4" y="10" width="8" height="4" fill="#b07bff"/></svg>
