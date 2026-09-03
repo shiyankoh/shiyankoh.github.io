@@ -1,0 +1,32 @@
+# Resources — curated link-outs. Edit this file to add/remove links.
+# Each shelf: key (icon/colour), label, items. Each item: title, by, url, note.
+intro: "Where to plug into the Singapore tech scene — events worth showing up to, and a running list of AI companies building here."
+
+shelves:
+  - key: events
+    label: SINGAPORE EVENTS
+    items:
+      - title: "Lu.ma — Singapore"
+        by: "Community events"
+        url: "https://lu.ma/singapore"
+        note: "Where most SG tech and startup events get posted now."
+      - title: "SGInnovate Events"
+        by: "Deep tech"
+        url: "https://www.sginnovate.com/events"
+        note: "Deep-tech and AI talks, demos, and meetups."
+      - title: "e27 Events"
+        by: "Startup ecosystem"
+        url: "https://e27.co/events/"
+        note: "Conferences and meetups across the SEA startup scene."
+      - title: "Tech in Asia Events"
+        by: "Conferences"
+        url: "https://www.techinasia.com/events"
+        note: "The big annual conference plus smaller gatherings."
+
+  - key: jobs
+    label: AI COMPANIES HIRING IN SINGAPORE
+    items:
+      - title: "AI companies with a Singapore presence"
+        by: "Live master list"
+        url: "https://docs.google.com/spreadsheets/d/1gwbwSU3-RY-F8gXO_j3mzAEAErK2vNSNzqNMtRbzFyo/edit"
+        note: "My running list of AI firms building offices and hiring in SG. Open the sheet for the latest."
