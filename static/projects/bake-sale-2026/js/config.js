@@ -13,7 +13,7 @@ export const EVENT = {
 // Published-CSV endpoint for the responses sheet.
 // For OFFLINE local dev, set this to './sample-data.csv' and serve with a local http server.
 export const CSV_URL =
-  'https://docs.google.com/spreadsheets/d/1eCOFn86cwhnyo7JK0y5NQ_q3VfuK3rA_JmT3PXDYoxE/gviz/tq?tqx=out:csv';
+  'https://docs.google.com/spreadsheets/d/1I-6m1G32Gjwe5VBycYGhafPG4mJNpccwHSinXEMaRMw/gviz/tq?tqx=out:csv';
 
 // Maps founder fields -> exact sheet header names. Change here if you rename a form question.
 export const COLUMNS = {
