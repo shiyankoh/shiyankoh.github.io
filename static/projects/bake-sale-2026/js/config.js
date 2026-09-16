@@ -15,6 +15,20 @@ export const EVENT = {
 export const CSV_URL =
   'https://docs.google.com/spreadsheets/d/1I-6m1G32Gjwe5VBycYGhafPG4mJNpccwHSinXEMaRMw/gviz/tq?tqx=out:csv';
 
+// Neighborhood streets the kids can cover, used by the coverage map.
+// Add/remove streets here; the map redraws automatically.
+export const STREETS = [
+  'Coronation Road',
+  'Victoria Park Road',
+  'Sixth Avenue',
+  'Duchess Road',
+  'Greenleaf',
+  'Coronation Road West',
+  'Jalan Ampang',
+  'Jalan Lim Tai See',
+  'Jalan Haji Alias',
+];
+
 // Maps founder fields -> exact sheet header names. Change here if you rename a form question.
 export const COLUMNS = {
   name: "Kid's name",
