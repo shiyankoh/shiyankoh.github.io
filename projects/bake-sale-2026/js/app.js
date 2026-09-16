@@ -1,6 +1,7 @@
-import { EVENT, CSV_URL, COLUMNS } from './config.js';
+import { EVENT, CSV_URL, COLUMNS, STREETS } from './config.js';
 import { csvToObjects } from './csv.js';
 import { normalizeFounders } from './founders.js';
+import { computeCoverage } from './streets.js';
 import { rosetteBorderSVG, renderHome, renderFounder } from './render.js';
 
 const rosetteEl = document.getElementById('rosette');
@@ -16,7 +17,8 @@ function currentFounderId() {
 function route() {
   const id = currentFounderId();
   const founder = id ? founders.find(f => f.id === id) : null;
-  appEl.innerHTML = founder ? renderFounder(founder) : renderHome(EVENT, founders);
+  const coverage = computeCoverage(founders, STREETS);
+  appEl.innerHTML = founder ? renderFounder(founder) : renderHome(EVENT, founders, coverage);
   window.scrollTo(0, 0);
 }
 
@@ -46,7 +48,7 @@ async function init() {
     route();
   } catch (err) {
     // Event details still render from config even if the sheet fails.
-    appEl.innerHTML = renderHome(EVENT, []) +
+    appEl.innerHTML = renderHome(EVENT, [], computeCoverage([], STREETS)) +
       `<p class="error">Couldn't load the founders right now. Please refresh in a moment.</p>`;
     console.error('Failed to load CSV:', err);
   }

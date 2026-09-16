@@ -1,6 +1,7 @@
 :root{
   --cream:#f7f0dd; --board:#20302b; --wood:#b5793a; --teal:#2fb0a6;
   --coral:#e05a72; --mustard:#e8b04b; --pandan:#3fa34d; --gula:#7b4a2b;
+  --grey:#c3bca8;
   --ink:#3a3120;
 }
 *{ box-sizing:border-box; }
@@ -73,3 +74,16 @@ a{ color:var(--gula); }
 /* states */
 .empty,.loading,.error{ text-align:center; color:#6b6350; padding:40px 0; }
 .error{ color:var(--coral); }
+
+/* coverage map */
+.coverage{ margin-top:34px; }
+.cov-count{ margin:0 0 12px; color:#6b6350; font-size:15px; }
+.cov-count b{ color:var(--pandan); font-size:18px; }
+.cov-map{ background:#fff; border-radius:14px; padding:10px; box-shadow:0 3px 10px rgba(0,0,0,.07); }
+.cov-map svg{ display:block; }
+.cov-legend{ display:flex; gap:20px; justify-content:center; margin:12px 0 6px; font-size:13px; color:#6b6350; }
+.cov-legend i{ display:inline-block; width:20px; height:5px; border-radius:3px; vertical-align:middle; margin-right:6px; }
+.cov-legend .c-cov{ background:var(--pandan); }
+.cov-legend .c-open{ background:transparent; border-top:3px dashed var(--grey); height:0; }
+.cov-open{ text-align:center; color:#8a7a52; font-size:14px; margin:4px 0 0; }
+.cov-open b{ color:var(--gula); }
