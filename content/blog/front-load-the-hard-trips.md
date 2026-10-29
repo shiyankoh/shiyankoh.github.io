@@ -6,7 +6,7 @@ categories: ["Life"]
 draft: false
 ---
 
-Halfway down a 200-foot cliff wall, I was clinging to a ladder. The rungs and ropes were wet and slippery from the mist of the waterfall right next to us.
+Halfway down a 200-foot cliff wall, I was clinging to a ladder. The rungs and ropes were wet and slippery from the mist of Mooney Falls right next to us.
 
 Up to that point, I'd been thinking this was a trip I'd love to bring my older kids on. On that ladder, I changed my mind. No way. Far too dangerous.
 
@@ -40,7 +40,7 @@ I kept thinking about that ladder. My kids aren't ready for it. My parents would
 
 Staying friends for 26 years takes some work. We meet every year — some years it's a girls' trip, some years it's families and kids. We have a WhatsApp group to keep up with each other's lives between trips.
 
-We also have a second WhatsApp group just for fitness. It's been running for a long time. You post when you work out. That's the only rule.
+We also have a second WhatsApp group just for fitness. We started it about four years ago, when people began turning 40. You post when you work out. That's the only rule.
 
 It was super handy for this trip. It's a lot harder to skip your own workout when everyone else is posting theirs. We trained together across three time zones without ever being in the same gym. By the time we got to the trailhead, everyone was ready.
 
