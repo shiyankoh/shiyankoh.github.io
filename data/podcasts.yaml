@@ -46,6 +46,10 @@ guest:
 brave_intro: "I co-hosted a regular news show with Jeremy Au on BRAVE, Southeast Asia's tech podcast. Here's the full back catalogue."
 
 brave:
+  - year: 2026
+    episodes:
+      - { ep: 726, title: "$70,000 Per Child: What Singapore's New Family Package Actually Changes", url: "https://www.bravesea.com/singapore-child-financial-support/" }
+      - { ep: 704, title: "Singaporeans Are Willing to Give You a Chance if You Have \"The Focus\" (with Jeremy Tan)", url: "https://www.bravesea.com/jeremy-tan-singapore-politics/" }
   - year: 2025
     episodes:
       - { ep: 627, title: "eFishery Fallout, Indonesia's Growth Reset & Agritech's Future (with Dmitry Levit)", url: "https://www.bravesea.com/dmitry-levit-shiyan-koh-efishery-fraud-reset/" }
