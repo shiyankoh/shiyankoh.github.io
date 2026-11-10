@@ -1,0 +1,114 @@
+# Podcast appearances — edit this file to add/remove episodes.
+# guest:  one-off appearances on other people's shows, newest first.
+#         Each item: show, title, date (free text), url.
+# brave:  the BRAVE Southeast Asia Tech Podcast with Jeremy Au, grouped by year, newest first.
+#         Each episode: ep (episode number), title, url.
+intro: "Places I've talked into a microphone. Mostly about pre-seed investing, Southeast Asia, and whatever was in the news that week."
+
+guest:
+  - show: "The Generalists"
+    title: "Ep 36: The Hilarious Reality of Early Stage Investing"
+    date: "Jul 2025"
+    url: "https://www.youtube.com/watch?v=SFebgbsygdE"
+  - show: "Understanding VC"
+    title: "Seeing Big Markets: Insights from Hustle Fund's Shiyan Koh"
+    date: "Jul 2024"
+    url: "https://www.youtube.com/watch?v=igAUM1gDd6Q"
+  - show: "Founder Friendly: Venture Capital"
+    title: "Investing, Operating, and Hustling"
+    date: "Mar 2024"
+    url: "https://podcasts.apple.com/us/podcast/investing-operating-and-hustling-shiyan-koh-hustle-fund/id1502571259?i=1000648842700"
+  - show: "Startup Istanbul"
+    title: "Take Risks Early"
+    date: "Feb 2024"
+    url: "https://startupistanbul.substack.com/p/take-risks-early"
+  - show: "The Iterative Podcast"
+    title: "How to Fundraise in an Economic Downturn (with Hsu Ken Ooi)"
+    date: "Sep 2022"
+    url: "https://www.iterative.vc/post/how-to-fundraise-in-an-economic-downturn"
+  - show: "Unlearn with Barry O'Reilly"
+    title: "Startup Hustle with Shiyan Koh"
+    date: "Nov 2021"
+    url: "https://barryoreilly.com/explore/podcast/startup-hustle/"
+  - show: "Asia Tech Podcast"
+    title: "EP 140: We Should Stick To the Process"
+    date: "Sep 2021"
+    url: "https://open.spotify.com/episode/4L4Rq5pWX6htYeSKMAwDsf"
+  - show: "Sidedoor Podcast"
+    title: "Backing Hilariously Early Founders"
+    date: "Feb 2021"
+    url: "https://creators.spotify.com/pod/profile/bouman/episodes/Shiyan-Koh---Backing-Hilariously-Early-Founders-eqfu0r"
+  - show: "Asia VC Cast"
+    title: "Guest episode"
+    date: "Aug 2019"
+    url: "https://podchaser.com/podcasts/asia-vc-cast-625553/episodes/recent"
+
+brave_intro: "I co-hosted a regular news show with Jeremy Au on BRAVE, Southeast Asia's tech podcast. Here's the full back catalogue."
+
+brave:
+  - year: 2025
+    episodes:
+      - { ep: 627, title: "eFishery Fallout, Indonesia's Growth Reset & Agritech's Future (with Dmitry Levit)", url: "https://www.bravesea.com/dmitry-levit-shiyan-koh-efishery-fraud-reset/" }
+      - { ep: 608, title: "Singapore Studies Nuclear Energy, SEA Startup Pessimism & AI Waifus", url: "https://www.bravesea.com/shiyan-koh-singapore-nuclear-energy/" }
+      - { ep: 594, title: "Demographic Collapse, Broken Visas & Why Global Talent Is Rerouting to Southeast Asia", url: "https://www.bravesea.com/talent-without-borders/" }
+      - { ep: 561, title: "U.S. Tariff Logic, Southeast Asia Export Fallout & Startup Frugality in Crisis", url: "https://www.bravesea.com/tariff-shock-response/" }
+      - { ep: 552, title: "AI Job Disruption, Hiring Shift & Youth Unemployment", url: "https://www.bravesea.com/ai-job-disruption/" }
+      - { ep: 525, title: "eFishery's $1B Valuation Collapse, Fraud Allegations & Sovereign Fund Exits", url: "https://www.bravesea.com/efishery-unicorn-fraud/" }
+  - year: 2024
+    episodes:
+      - { ep: 513, title: "5 Predictions & 5 Wishes in 2025 for Southeast Asia Tech", url: "https://www.bravesea.com/5-predictions-5-wishes-2025/" }
+      - { ep: 496, title: "Trump Win vs. Southeast Asia Trade, China Talent Flows & Silicon Valley Divided", url: "https://www.bravesea.com/trump-win-vs-southeast-asia-trade/" }
+      - { ep: 488, title: "Singapore Vetoes Allianz $4.4B Insurer Acquisition", url: "https://www.bravesea.com/singapore-vetoes-allianz-acquisition/" }
+      - { ep: 473, title: "Johor Special Economic Zone, US Reverse CFIUS & Regional Trade Diversification", url: "https://www.bravesea.com/johor-singapore-sez/" }
+      - { ep: 464, title: "Disney+ Arbitration PR Crisis, Good vs. Bad Startup Sci-Fi Ideas & Defence Tech Rise", url: "https://www.bravesea.com/good-vs-bad-startup-ideas/" }
+      - { ep: 452, title: "Kamala vs. Trump, NTUC Income Privatization by Allianz & Indonesia D2C", url: "https://www.bravesea.com/singapore-insurance-cooperative-privatization/" }
+      - { ep: 443, title: "Singapore Port Traffic Jam, Arctic Shipping Route & Trump Tariffs", url: "https://www.bravesea.com/global-supply-chain-disruptions/" }
+      - { ep: 437, title: "$3B Money Laundering, Singapore Family Offices, Apple AI & VC Fraud Maze", url: "https://www.bravesea.com/money-laundering-family-offices/" }
+      - { ep: 431, title: "Post-AI \"Good Jobs\", SGX & IDX Challenges & USA VC vs. Southeast Asia Fund Performance", url: "https://www.bravesea.com/post-ai-good-jobs/" }
+      - { ep: 428, title: "Singapore vs. USA Education Systems, WEIRD AI Teddy Bears & the $32B AI Bill", url: "https://www.bravesea.com/weird-ai-teddy-bears/" }
+      - { ep: 419, title: "New Prime Minister Transition, Immigration Assimilation & Schools", url: "https://www.bravesea.com/singapore-new-prime-minister/" }
+      - { ep: 410, title: "51% SE Asia Favor China, Sequoia & GGV Decoupling & Mobility Game Theory", url: "https://www.bravesea.com/sea-favor-china/" }
+      - { ep: 401, title: "TikTok Ban Resurrection, Grab \"Too Big To Fail\" Debate & ShopBack Layoffs", url: "https://www.bravesea.com/tiktok-us-ban/" }
+      - { ep: 395, title: "Taylor Swift $500M Singapore Economy Boost, Blockbusters vs. Long Tail & City Talent Vortex", url: "https://www.bravesea.com/taylor-swift-economics/" }
+  - year: 2023
+    episodes:
+      - { ep: 386, title: "Overreaction, Dislocation & Confusion: 2023 vs. 2024 Investment Landscape (with Dmitry Levit)", url: "https://www.bravesea.com/overreaction-dislocation-confusion/" }
+      - { ep: 383, title: "Founders Reviewing VCs, Startup Fraud Triangle & Difficult Wind-Down Decisions", url: "https://www.bravesea.com/founders-reviewing-vcs/" }
+      - { ep: 380, title: "Silicon Box Unicorn, TheAsianParent Acquisition & Sovereign Wealth Fund Shifts", url: "https://www.bravesea.com/fund-investment-shifts/" }
+      - { ep: 371, title: "2024 Regional Tech Forecast & 2023 Bear Market Reflections", url: "https://www.bravesea.com/2024-tech-forecast/" }
+      - { ep: 358, title: "USA Civilian Nuclear Deal, Politicians vs. Technocrats & Allianz Acquiring NTUC Income", url: "https://www.bravesea.com/singapore-usa-nuclear-deal/" }
+      - { ep: 323, title: "$4B Singapore Chip Fabrication Plant, Regional Web3 Investments & Corporate VC Funds", url: "https://www.bravesea.com/web3-and-crypto/" }
+      - { ep: 317, title: "Founder-Investor First Meeting Dynamics & Pitching Preparation", url: "https://www.bravesea.com/first-meeting-dynamics/" }
+      - { ep: 311, title: "Down Rounds & Recapitalizations, Startup Failure Patterns & Persevere vs. Pivot vs. Shutdown", url: "https://www.bravesea.com/downrounds-and-recaps/" }
+      - { ep: 308, title: "Listener Q&A: Founder-Investor Trust, Buy-Now Pay-Later & SEC Regulatory Impact", url: "https://www.bravesea.com/listener-qna/" }
+      - { ep: 305, title: "Sea Group Stock Price 29% Drop, Digital Bank Strategy & Fintech Underwriting Quality", url: "https://www.bravesea.com/digital-bank-strategy/" }
+      - { ep: 302, title: "Biden's China VC Investment Ban, Singapore Ecosystem Guide & Reverse Culture Shock", url: "https://www.bravesea.com/china-investment-ban/" }
+      - { ep: 300, title: "56% Startup Funding Decline 2023 & Founder Fundraising Tactics", url: "https://www.bravesea.com/startup-funding-decline/" }
+      - { ep: 298, title: "Request for Startups: LLM for Bahasa Indonesia, Community Unbundling, Wealth Advisors", url: "https://www.bravesea.com/request-for-startups/" }
+      - { ep: 296, title: "Taylor Swift UOB Card 45% Surge, 17.4% Women VC Representation & Career Advice for Investors", url: "https://www.bravesea.com/women-vc-representation/" }
+      - { ep: 294, title: "Family Office Investment Dynamics, Conspicuous Consumption & Redefining Local", url: "https://www.bravesea.com/family-office/" }
+      - { ep: 292, title: "Super Apps Dive, Vietnam's World-Class Education System & Founder Leadership Transitions", url: "https://www.bravesea.com/vietnam-education/" }
+      - { ep: 282, title: "Temasek FTX Review, Crypto Regulatory Debate & Retail Investor Democratization", url: "https://www.bravesea.com/temasek-ftx-pay-cut/" }
+      - { ep: 280, title: "VC Market 2023-2024 Outlook, Tough Fundraising Decisions & Board vs. CEO Scenarios", url: "https://www.bravesea.com/vc-market-outlook/" }
+      - { ep: 278, title: "Mastering Fundraising as a System: Mistakes vs. Wins", url: "https://www.bravesea.com/mastering-fundraising/" }
+      - { ep: 276, title: "People Leadership Failures, Performance vs. Recruiting vs. HR", url: "https://www.bravesea.com/people-leadership/" }
+      - { ep: 274, title: "23.8% Taiwan Conflict 2024 Odds, China & USA Decoupling vs. Containment", url: "https://www.bravesea.com/taiwan-conflict-2024/" }
+      - { ep: 272, title: "Sustainability & ESG Investing Fundamentals & Regional Impact Startups", url: "https://www.bravesea.com/climate-change/" }
+      - { ep: 270, title: "Children in the Age of AI, Robot Best Friends & Contrarian Parenting Beliefs", url: "https://www.bravesea.com/parenting-ai/" }
+      - { ep: 268, title: "Startup Tech Talent Insights, Salary Arbitrage & Hybrid vs. Remote vs. Office", url: "https://www.bravesea.com/startup-tech-talents/" }
+      - { ep: 262, title: "Founder & VC \"Lost In Translation\": Common Misunderstandings", url: "https://www.bravesea.com/lost-in-translation/" }
+      - { ep: 259, title: "TikTok vs. Congress, Pro vs. Anti Ban Argument & Gen Z Lobbying", url: "https://www.bravesea.com/tiktok-vs-congress/" }
+      - { ep: 253, title: "Silicon Valley Bank Implosion, SE Asia Impact & 2023 Fintech Trends", url: "https://www.bravesea.com/silicon-valley-bank-implosion/" }
+      - { ep: 250, title: "Luxury & Conspicuous Consumption, Brand vs. Performance Startup Marketers", url: "https://www.bravesea.com/luxury-conspicuous-consumption/" }
+      - { ep: 246, title: "SaaS Marketplaces vs. Middleware, Embedded Finance & Urban Income Inflection Points", url: "https://www.bravesea.com/january-capital-report/" }
+      - { ep: 243, title: "Singapore 2023 Budget Winners, Crowding Out Startups & Generative AI", url: "https://www.bravesea.com/2023-budget-winners/" }
+  - year: 2022
+    episodes:
+      - { ep: 238, title: "Tech Layoff & Recruiting Advice, Light At The End Of The Tunnel", url: "https://www.bravesea.com/tech-layoff/" }
+      - { ep: 236, title: "Zalora Talent Mafia vs. Network Magnets, Vietnam Sea Turtles & Exits", url: "https://www.bravesea.com/zalora-talent-mafia/" }
+      - { ep: 234, title: "2023 Southeast Asia's Winners, Losers & Contrarian Beliefs", url: "https://www.bravesea.com/2023-southeast-asia-winners/" }
+      - { ep: 233, title: "Creative Founder Sim Wong Hoo's Legacy, SPH Circulation Inflation & Founder Lessons", url: "https://www.bravesea.com/creative-founder-legacy/" }
+      - { ep: 192, title: "Southeast Asia VC Outlook Over The Next Decade (panel with Goh Yiping & Mohan Belani)", url: "https://www.bravesea.com/panel-vc-outlook/" }
+  - year: 2021
+    episodes:
+      - { ep: 60, title: "Choosing Bosses, Learning Acceleration & Building Investor-Founder Trust", url: "https://www.bravesea.com/shiyan-koh/" }

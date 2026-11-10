@@ -1,0 +1,98 @@
+{{/* Podcasts page. Content lives in data/podcasts.yaml — edit that file, not this one.
+     Styling mirrors layouts/_default/reads.html so the two pages look like siblings. */}}
+{{ define "head" }}
+<style>
+  :root{--panel:#150c22;--panel2:#1f142f;--cream:#fdf3dc;--gold:#ffd23f;--pink:#ff4f7d;--cyan:#38e0cf;--green:#8be04f;--violet:#b07bff;--line:#3a2857}
+  *{margin:0;padding:0;box-sizing:border-box}
+  ::selection{background:var(--pink);color:#fff}
+  body{background:var(--panel);color:var(--cream);font-family:'VT323',monospace;font-size:22px;line-height:1.35;image-rendering:pixelated;overflow-x:hidden}
+  svg{image-rendering:pixelated;display:block}
+  a{color:inherit}
+  .pod-scene{min-height:100vh;padding:60px 20px 90px;background:linear-gradient(180deg,#241636,#1a0f28);position:relative}
+  .pod-scene::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 2px,transparent 2px);background-size:28px 28px;pointer-events:none}
+  .pod-wrap{max-width:900px;margin:0 auto;position:relative;z-index:2}
+  .back{display:inline-block;font-family:'Press Start 2P';font-size:9px;color:var(--cream);text-decoration:none;background:rgba(0,0,0,.4);padding:9px 12px;border:2px solid rgba(255,255,255,.25);margin-bottom:28px}
+  .back:hover{background:var(--pink);border-color:#fff}
+  .pod-title{font-family:'Press Start 2P';font-size:clamp(16px,3.4vw,26px);color:var(--gold);text-shadow:3px 3px 0 rgba(0,0,0,.5);margin-bottom:14px;line-height:1.4}
+  .pod-intro{font-size:22px;color:#c9bda6;max-width:60ch;margin-bottom:44px}
+  .shelf{margin-bottom:52px}
+  .shelf-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .shelf-head .ico{width:34px;height:34px;flex:none}
+  .shelf-head h2{font-family:'Press Start 2P';font-size:15px;color:var(--cream);text-shadow:2px 2px 0 rgba(0,0,0,.5);line-height:1.4}
+  .shelf-head .cnt{font-family:'Silkscreen';font-size:12px;color:var(--cyan);margin-left:auto;white-space:nowrap}
+  .shelf-note{font-size:21px;color:#c9bda6;max-width:60ch;margin-bottom:20px}
+  /* Guest appearances: cards, two across */
+  .items{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .item-card{display:block;background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--pink);padding:16px 18px;text-decoration:none;transition:.12s}
+  .item-card:hover{transform:translateX(6px);border-color:#fff;background:#26173a}
+  .item-card .t{font-family:'Press Start 2P';font-size:11px;color:var(--cream);line-height:1.55}
+  .item-card:hover .t{color:var(--gold)}
+  .item-card .by{font-family:'Silkscreen';font-size:11px;color:var(--cyan);margin-top:9px;letter-spacing:.5px}
+  .item-card .ext{float:right;font-family:'Silkscreen';font-size:10px;color:#9a8fb5}
+  /* BRAVE archive: one collapsible block per year */
+  .year{background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--green);margin-bottom:12px}
+  .year summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:14px 18px;font-family:'Press Start 2P';font-size:12px;color:var(--cream)}
+  .year summary::-webkit-details-marker{display:none}
+  .year summary::before{content:"►";color:var(--green);font-size:10px}
+  .year[open] summary::before{content:"▼"}
+  .year summary:hover{color:var(--gold)}
+  .year summary .cnt{font-family:'Silkscreen';font-size:11px;color:var(--cyan);margin-left:auto}
+  .eps{list-style:none;border-top:3px solid var(--line)}
+  .eps a{display:flex;gap:14px;align-items:baseline;padding:10px 18px;text-decoration:none;border-bottom:1px solid var(--line);font-size:21px;line-height:1.25;color:#e4d8c0}
+  .eps li:last-child a{border-bottom:0}
+  .eps a:hover{background:#26173a;color:var(--gold)}
+  .eps .ep{font-family:'Silkscreen';font-size:11px;color:var(--cyan);flex:none;width:44px}
+  @media(max-width:640px){.items{grid-template-columns:1fr}}
+</style>
+{{ end }}
+
+{{ define "main" }}
+{{ $d := site.Data.podcasts }}
+{{/* Count BRAVE episodes across all years for the section header */}}
+{{ $braveCount := 0 }}
+{{ range $d.brave }}{{ $braveCount = add $braveCount (len .episodes) }}{{ end }}
+<section class="pod-scene">
+  <div class="pod-wrap">
+    <a class="back" href="{{ "/" | relURL }}">◄ WORLD MAP</a>
+    <h1 class="pod-title">♪ THE RADIO TOWER · PODCASTS</h1>
+    {{ with $d.intro }}<p class="pod-intro">{{ . }}</p>{{ end }}
+
+    <div class="shelf">
+      <div class="shelf-head">
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="6" y="1" width="4" height="8" fill="#ff4f7d"/><rect x="4" y="6" width="1" height="4" fill="#fdf3dc"/><rect x="11" y="6" width="1" height="4" fill="#fdf3dc"/><rect x="5" y="10" width="6" height="1" fill="#fdf3dc"/><rect x="7" y="11" width="2" height="3" fill="#fdf3dc"/><rect x="5" y="14" width="6" height="1" fill="#fdf3dc"/></svg>
+        <h2>GUEST APPEARANCES</h2>
+        <span class="cnt">{{ len $d.guest }} SHOWS</span>
+      </div>
+      <div class="items">
+        {{ range $d.guest }}
+        <a class="item-card" href="{{ .url }}" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">{{ .title }}</div>
+          <div class="by">{{ .show }}{{ with .date }} · {{ . }}{{ end }}</div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="shelf">
+      <div class="shelf-head">
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="4" y="2" width="8" height="2" fill="#8be04f"/><rect x="3" y="3" width="2" height="5" fill="#8be04f"/><rect x="11" y="3" width="2" height="5" fill="#8be04f"/><rect x="2" y="7" width="3" height="6" fill="#38e0cf"/><rect x="11" y="7" width="3" height="6" fill="#38e0cf"/></svg>
+        <h2>BRAVE WITH JEREMY AU</h2>
+        <span class="cnt">{{ $braveCount }} EPISODES</span>
+      </div>
+      {{ with $d.brave_intro }}<p class="shelf-note">{{ . }}</p>{{ end }}
+      {{ range $i, $y := $d.brave }}
+      {{/* Newest year starts open; the rest are collapsed so the page stays short */}}
+      <details class="year"{{ if eq $i 0 }} open{{ end }}>
+        <summary>{{ $y.year }}<span class="cnt">{{ len $y.episodes }} EP{{ if ne (len $y.episodes) 1 }}S{{ end }}</span></summary>
+        <ul class="eps">
+          {{ range $y.episodes }}
+          <li><a href="{{ .url }}" target="_blank" rel="noopener"><span class="ep">E{{ .ep }}</span><span>{{ .title }}</span></a></li>
+          {{ end }}
+        </ul>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
