@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Podcasts | The Culdesac</title>
+  <meta name="description" content="The Culdesac - A blog by Shiyan Koh">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" rel="stylesheet">
+  
+<style>
+  :root{--panel:#150c22;--panel2:#1f142f;--cream:#fdf3dc;--gold:#ffd23f;--pink:#ff4f7d;--cyan:#38e0cf;--green:#8be04f;--violet:#b07bff;--line:#3a2857}
+  *{margin:0;padding:0;box-sizing:border-box}
+  ::selection{background:var(--pink);color:#fff}
+  body{background:var(--panel);color:var(--cream);font-family:'VT323',monospace;font-size:22px;line-height:1.35;image-rendering:pixelated;overflow-x:hidden}
+  svg{image-rendering:pixelated;display:block}
+  a{color:inherit}
+  .pod-scene{min-height:100vh;padding:60px 20px 90px;background:linear-gradient(180deg,#241636,#1a0f28);position:relative}
+  .pod-scene::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 2px,transparent 2px);background-size:28px 28px;pointer-events:none}
+  .pod-wrap{max-width:900px;margin:0 auto;position:relative;z-index:2}
+  .back{display:inline-block;font-family:'Press Start 2P';font-size:9px;color:var(--cream);text-decoration:none;background:rgba(0,0,0,.4);padding:9px 12px;border:2px solid rgba(255,255,255,.25);margin-bottom:28px}
+  .back:hover{background:var(--pink);border-color:#fff}
+  .pod-title{font-family:'Press Start 2P';font-size:clamp(16px,3.4vw,26px);color:var(--gold);text-shadow:3px 3px 0 rgba(0,0,0,.5);margin-bottom:14px;line-height:1.4}
+  .pod-intro{font-size:22px;color:#c9bda6;max-width:60ch;margin-bottom:44px}
+  .shelf{margin-bottom:52px}
+  .shelf-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .shelf-head .ico{width:34px;height:34px;flex:none}
+  .shelf-head h2{font-family:'Press Start 2P';font-size:15px;color:var(--cream);text-shadow:2px 2px 0 rgba(0,0,0,.5);line-height:1.4}
+  .shelf-head .cnt{font-family:'Silkscreen';font-size:12px;color:var(--cyan);margin-left:auto;white-space:nowrap}
+  .shelf-note{font-size:21px;color:#c9bda6;max-width:60ch;margin-bottom:20px}
+   
+  .items{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .item-card{display:block;background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--pink);padding:16px 18px;text-decoration:none;transition:.12s}
+  .item-card:hover{transform:translateX(6px);border-color:#fff;background:#26173a}
+  .item-card .t{font-family:'Press Start 2P';font-size:11px;color:var(--cream);line-height:1.55}
+  .item-card:hover .t{color:var(--gold)}
+  .item-card .by{font-family:'Silkscreen';font-size:11px;color:var(--cyan);margin-top:9px;letter-spacing:.5px}
+  .item-card .ext{float:right;font-family:'Silkscreen';font-size:10px;color:#9a8fb5}
+   
+  .year{background:var(--panel2);border:3px solid var(--line);border-left:8px solid var(--green);margin-bottom:12px}
+  .year summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:14px 18px;font-family:'Press Start 2P';font-size:12px;color:var(--cream)}
+  .year summary::-webkit-details-marker{display:none}
+  .year summary::before{content:"►";color:var(--green);font-size:10px}
+  .year[open] summary::before{content:"▼"}
+  .year summary:hover{color:var(--gold)}
+  .year summary .cnt{font-family:'Silkscreen';font-size:11px;color:var(--cyan);margin-left:auto}
+  .eps{list-style:none;border-top:3px solid var(--line)}
+  .eps a{display:flex;gap:14px;align-items:baseline;padding:10px 18px;text-decoration:none;border-bottom:1px solid var(--line);font-size:21px;line-height:1.25;color:#e4d8c0}
+  .eps li:last-child a{border-bottom:0}
+  .eps a:hover{background:#26173a;color:var(--gold)}
+  .eps .ep{font-family:'Silkscreen';font-size:11px;color:var(--cyan);flex:none;width:44px}
+  @media(max-width:640px){.items{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+  
+
+
+
+
+<section class="pod-scene">
+  <div class="pod-wrap">
+    <a class="back" href="/">◄ WORLD MAP</a>
+    <h1 class="pod-title">♪ THE RADIO TOWER · PODCASTS</h1>
+    <p class="pod-intro">Places I&#39;ve talked into a microphone. Mostly about pre-seed investing, Southeast Asia, and whatever was in the news that week.</p>
+
+    <div class="shelf">
+      <div class="shelf-head">
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="6" y="1" width="4" height="8" fill="#ff4f7d"/><rect x="4" y="6" width="1" height="4" fill="#fdf3dc"/><rect x="11" y="6" width="1" height="4" fill="#fdf3dc"/><rect x="5" y="10" width="6" height="1" fill="#fdf3dc"/><rect x="7" y="11" width="2" height="3" fill="#fdf3dc"/><rect x="5" y="14" width="6" height="1" fill="#fdf3dc"/></svg>
+        <h2>GUEST APPEARANCES</h2>
+        <span class="cnt">9 SHOWS</span>
+      </div>
+      <div class="items">
+        
+        <a class="item-card" href="https://www.youtube.com/watch?v=SFebgbsygdE" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Ep 36: The Hilarious Reality of Early Stage Investing</div>
+          <div class="by">The Generalists · Jul 2025</div>
+        </a>
+        
+        <a class="item-card" href="https://www.youtube.com/watch?v=igAUM1gDd6Q" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Seeing Big Markets: Insights from Hustle Fund&#39;s Shiyan Koh</div>
+          <div class="by">Understanding VC · Jul 2024</div>
+        </a>
+        
+        <a class="item-card" href="https://podcasts.apple.com/us/podcast/investing-operating-and-hustling-shiyan-koh-hustle-fund/id1502571259?i=1000648842700" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Investing, Operating, and Hustling</div>
+          <div class="by">Founder Friendly: Venture Capital · Mar 2024</div>
+        </a>
+        
+        <a class="item-card" href="https://startupistanbul.substack.com/p/take-risks-early" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Take Risks Early</div>
+          <div class="by">Startup Istanbul · Feb 2024</div>
+        </a>
+        
+        <a class="item-card" href="https://www.iterative.vc/post/how-to-fundraise-in-an-economic-downturn" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">How to Fundraise in an Economic Downturn (with Hsu Ken Ooi)</div>
+          <div class="by">The Iterative Podcast · Sep 2022</div>
+        </a>
+        
+        <a class="item-card" href="https://barryoreilly.com/explore/podcast/startup-hustle/" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Startup Hustle with Shiyan Koh</div>
+          <div class="by">Unlearn with Barry O&#39;Reilly · Nov 2021</div>
+        </a>
+        
+        <a class="item-card" href="https://open.spotify.com/episode/4L4Rq5pWX6htYeSKMAwDsf" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">EP 140: We Should Stick To the Process</div>
+          <div class="by">Asia Tech Podcast · Sep 2021</div>
+        </a>
+        
+        <a class="item-card" href="https://creators.spotify.com/pod/profile/bouman/episodes/Shiyan-Koh---Backing-Hilariously-Early-Founders-eqfu0r" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Backing Hilariously Early Founders</div>
+          <div class="by">Sidedoor Podcast · Feb 2021</div>
+        </a>
+        
+        <a class="item-card" href="https://podchaser.com/podcasts/asia-vc-cast-625553/episodes/recent" target="_blank" rel="noopener">
+          <span class="ext">↗</span>
+          <div class="t">Guest episode</div>
+          <div class="by">Asia VC Cast · Aug 2019</div>
+        </a>
+        
+      </div>
+    </div>
+
+    <div class="shelf">
+      <div class="shelf-head">
+        <svg class="ico" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="4" y="2" width="8" height="2" fill="#8be04f"/><rect x="3" y="3" width="2" height="5" fill="#8be04f"/><rect x="11" y="3" width="2" height="5" fill="#8be04f"/><rect x="2" y="7" width="3" height="6" fill="#38e0cf"/><rect x="11" y="7" width="3" height="6" fill="#38e0cf"/></svg>
+        <h2>BRAVE WITH JEREMY AU</h2>
+        <span class="cnt">56 EPISODES</span>
+      </div>
+      <p class="shelf-note">I co-hosted a regular news show with Jeremy Au on BRAVE, Southeast Asia&#39;s tech podcast. Here&#39;s the full back catalogue.</p>
+      
+      
+      <details class="year" open>
+        <summary>2025<span class="cnt">6 EPS</span></summary>
+        <ul class="eps">
+          
+          <li><a href="https://www.bravesea.com/dmitry-levit-shiyan-koh-efishery-fraud-reset/" target="_blank" rel="noopener"><span class="ep">E627</span><span>eFishery Fallout, Indonesia&#39;s Growth Reset &amp; Agritech&#39;s Future (with Dmitry Levit)</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/shiyan-koh-singapore-nuclear-energy/" target="_blank" rel="noopener"><span class="ep">E608</span><span>Singapore Studies Nuclear Energy, SEA Startup Pessimism &amp; AI Waifus</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/talent-without-borders/" target="_blank" rel="noopener"><span class="ep">E594</span><span>Demographic Collapse, Broken Visas &amp; Why Global Talent Is Rerouting to Southeast Asia</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/tariff-shock-response/" target="_blank" rel="noopener"><span class="ep">E561</span><span>U.S. Tariff Logic, Southeast Asia Export Fallout &amp; Startup Frugality in Crisis</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/ai-job-disruption/" target="_blank" rel="noopener"><span class="ep">E552</span><span>AI Job Disruption, Hiring Shift &amp; Youth Unemployment</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/efishery-unicorn-fraud/" target="_blank" rel="noopener"><span class="ep">E525</span><span>eFishery&#39;s $1B Valuation Collapse, Fraud Allegations &amp; Sovereign Fund Exits</span></a></li>
+          
+        </ul>
+      </details>
+      
+      
+      <details class="year">
+        <summary>2024<span class="cnt">14 EPS</span></summary>
+        <ul class="eps">
+          
+          <li><a href="https://www.bravesea.com/5-predictions-5-wishes-2025/" target="_blank" rel="noopener"><span class="ep">E513</span><span>5 Predictions &amp; 5 Wishes in 2025 for Southeast Asia Tech</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/trump-win-vs-southeast-asia-trade/" target="_blank" rel="noopener"><span class="ep">E496</span><span>Trump Win vs. Southeast Asia Trade, China Talent Flows &amp; Silicon Valley Divided</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/singapore-vetoes-allianz-acquisition/" target="_blank" rel="noopener"><span class="ep">E488</span><span>Singapore Vetoes Allianz $4.4B Insurer Acquisition</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/johor-singapore-sez/" target="_blank" rel="noopener"><span class="ep">E473</span><span>Johor Special Economic Zone, US Reverse CFIUS &amp; Regional Trade Diversification</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/good-vs-bad-startup-ideas/" target="_blank" rel="noopener"><span class="ep">E464</span><span>Disney&#43; Arbitration PR Crisis, Good vs. Bad Startup Sci-Fi Ideas &amp; Defence Tech Rise</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/singapore-insurance-cooperative-privatization/" target="_blank" rel="noopener"><span class="ep">E452</span><span>Kamala vs. Trump, NTUC Income Privatization by Allianz &amp; Indonesia D2C</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/global-supply-chain-disruptions/" target="_blank" rel="noopener"><span class="ep">E443</span><span>Singapore Port Traffic Jam, Arctic Shipping Route &amp; Trump Tariffs</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/money-laundering-family-offices/" target="_blank" rel="noopener"><span class="ep">E437</span><span>$3B Money Laundering, Singapore Family Offices, Apple AI &amp; VC Fraud Maze</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/post-ai-good-jobs/" target="_blank" rel="noopener"><span class="ep">E431</span><span>Post-AI &#34;Good Jobs&#34;, SGX &amp; IDX Challenges &amp; USA VC vs. Southeast Asia Fund Performance</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/weird-ai-teddy-bears/" target="_blank" rel="noopener"><span class="ep">E428</span><span>Singapore vs. USA Education Systems, WEIRD AI Teddy Bears &amp; the $32B AI Bill</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/singapore-new-prime-minister/" target="_blank" rel="noopener"><span class="ep">E419</span><span>New Prime Minister Transition, Immigration Assimilation &amp; Schools</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/sea-favor-china/" target="_blank" rel="noopener"><span class="ep">E410</span><span>51% SE Asia Favor China, Sequoia &amp; GGV Decoupling &amp; Mobility Game Theory</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/tiktok-us-ban/" target="_blank" rel="noopener"><span class="ep">E401</span><span>TikTok Ban Resurrection, Grab &#34;Too Big To Fail&#34; Debate &amp; ShopBack Layoffs</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/taylor-swift-economics/" target="_blank" rel="noopener"><span class="ep">E395</span><span>Taylor Swift $500M Singapore Economy Boost, Blockbusters vs. Long Tail &amp; City Talent Vortex</span></a></li>
+          
+        </ul>
+      </details>
+      
+      
+      <details class="year">
+        <summary>2023<span class="cnt">30 EPS</span></summary>
+        <ul class="eps">
+          
+          <li><a href="https://www.bravesea.com/overreaction-dislocation-confusion/" target="_blank" rel="noopener"><span class="ep">E386</span><span>Overreaction, Dislocation &amp; Confusion: 2023 vs. 2024 Investment Landscape (with Dmitry Levit)</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/founders-reviewing-vcs/" target="_blank" rel="noopener"><span class="ep">E383</span><span>Founders Reviewing VCs, Startup Fraud Triangle &amp; Difficult Wind-Down Decisions</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/fund-investment-shifts/" target="_blank" rel="noopener"><span class="ep">E380</span><span>Silicon Box Unicorn, TheAsianParent Acquisition &amp; Sovereign Wealth Fund Shifts</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/2024-tech-forecast/" target="_blank" rel="noopener"><span class="ep">E371</span><span>2024 Regional Tech Forecast &amp; 2023 Bear Market Reflections</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/singapore-usa-nuclear-deal/" target="_blank" rel="noopener"><span class="ep">E358</span><span>USA Civilian Nuclear Deal, Politicians vs. Technocrats &amp; Allianz Acquiring NTUC Income</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/web3-and-crypto/" target="_blank" rel="noopener"><span class="ep">E323</span><span>$4B Singapore Chip Fabrication Plant, Regional Web3 Investments &amp; Corporate VC Funds</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/first-meeting-dynamics/" target="_blank" rel="noopener"><span class="ep">E317</span><span>Founder-Investor First Meeting Dynamics &amp; Pitching Preparation</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/downrounds-and-recaps/" target="_blank" rel="noopener"><span class="ep">E311</span><span>Down Rounds &amp; Recapitalizations, Startup Failure Patterns &amp; Persevere vs. Pivot vs. Shutdown</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/listener-qna/" target="_blank" rel="noopener"><span class="ep">E308</span><span>Listener Q&amp;A: Founder-Investor Trust, Buy-Now Pay-Later &amp; SEC Regulatory Impact</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/digital-bank-strategy/" target="_blank" rel="noopener"><span class="ep">E305</span><span>Sea Group Stock Price 29% Drop, Digital Bank Strategy &amp; Fintech Underwriting Quality</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/china-investment-ban/" target="_blank" rel="noopener"><span class="ep">E302</span><span>Biden&#39;s China VC Investment Ban, Singapore Ecosystem Guide &amp; Reverse Culture Shock</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/startup-funding-decline/" target="_blank" rel="noopener"><span class="ep">E300</span><span>56% Startup Funding Decline 2023 &amp; Founder Fundraising Tactics</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/request-for-startups/" target="_blank" rel="noopener"><span class="ep">E298</span><span>Request for Startups: LLM for Bahasa Indonesia, Community Unbundling, Wealth Advisors</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/women-vc-representation/" target="_blank" rel="noopener"><span class="ep">E296</span><span>Taylor Swift UOB Card 45% Surge, 17.4% Women VC Representation &amp; Career Advice for Investors</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/family-office/" target="_blank" rel="noopener"><span class="ep">E294</span><span>Family Office Investment Dynamics, Conspicuous Consumption &amp; Redefining Local</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/vietnam-education/" target="_blank" rel="noopener"><span class="ep">E292</span><span>Super Apps Dive, Vietnam&#39;s World-Class Education System &amp; Founder Leadership Transitions</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/temasek-ftx-pay-cut/" target="_blank" rel="noopener"><span class="ep">E282</span><span>Temasek FTX Review, Crypto Regulatory Debate &amp; Retail Investor Democratization</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/vc-market-outlook/" target="_blank" rel="noopener"><span class="ep">E280</span><span>VC Market 2023-2024 Outlook, Tough Fundraising Decisions &amp; Board vs. CEO Scenarios</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/mastering-fundraising/" target="_blank" rel="noopener"><span class="ep">E278</span><span>Mastering Fundraising as a System: Mistakes vs. Wins</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/people-leadership/" target="_blank" rel="noopener"><span class="ep">E276</span><span>People Leadership Failures, Performance vs. Recruiting vs. HR</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/taiwan-conflict-2024/" target="_blank" rel="noopener"><span class="ep">E274</span><span>23.8% Taiwan Conflict 2024 Odds, China &amp; USA Decoupling vs. Containment</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/climate-change/" target="_blank" rel="noopener"><span class="ep">E272</span><span>Sustainability &amp; ESG Investing Fundamentals &amp; Regional Impact Startups</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/parenting-ai/" target="_blank" rel="noopener"><span class="ep">E270</span><span>Children in the Age of AI, Robot Best Friends &amp; Contrarian Parenting Beliefs</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/startup-tech-talents/" target="_blank" rel="noopener"><span class="ep">E268</span><span>Startup Tech Talent Insights, Salary Arbitrage &amp; Hybrid vs. Remote vs. Office</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/lost-in-translation/" target="_blank" rel="noopener"><span class="ep">E262</span><span>Founder &amp; VC &#34;Lost In Translation&#34;: Common Misunderstandings</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/tiktok-vs-congress/" target="_blank" rel="noopener"><span class="ep">E259</span><span>TikTok vs. Congress, Pro vs. Anti Ban Argument &amp; Gen Z Lobbying</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/silicon-valley-bank-implosion/" target="_blank" rel="noopener"><span class="ep">E253</span><span>Silicon Valley Bank Implosion, SE Asia Impact &amp; 2023 Fintech Trends</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/luxury-conspicuous-consumption/" target="_blank" rel="noopener"><span class="ep">E250</span><span>Luxury &amp; Conspicuous Consumption, Brand vs. Performance Startup Marketers</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/january-capital-report/" target="_blank" rel="noopener"><span class="ep">E246</span><span>SaaS Marketplaces vs. Middleware, Embedded Finance &amp; Urban Income Inflection Points</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/2023-budget-winners/" target="_blank" rel="noopener"><span class="ep">E243</span><span>Singapore 2023 Budget Winners, Crowding Out Startups &amp; Generative AI</span></a></li>
+          
+        </ul>
+      </details>
+      
+      
+      <details class="year">
+        <summary>2022<span class="cnt">5 EPS</span></summary>
+        <ul class="eps">
+          
+          <li><a href="https://www.bravesea.com/tech-layoff/" target="_blank" rel="noopener"><span class="ep">E238</span><span>Tech Layoff &amp; Recruiting Advice, Light At The End Of The Tunnel</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/zalora-talent-mafia/" target="_blank" rel="noopener"><span class="ep">E236</span><span>Zalora Talent Mafia vs. Network Magnets, Vietnam Sea Turtles &amp; Exits</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/2023-southeast-asia-winners/" target="_blank" rel="noopener"><span class="ep">E234</span><span>2023 Southeast Asia&#39;s Winners, Losers &amp; Contrarian Beliefs</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/creative-founder-legacy/" target="_blank" rel="noopener"><span class="ep">E233</span><span>Creative Founder Sim Wong Hoo&#39;s Legacy, SPH Circulation Inflation &amp; Founder Lessons</span></a></li>
+          
+          <li><a href="https://www.bravesea.com/panel-vc-outlook/" target="_blank" rel="noopener"><span class="ep">E192</span><span>Southeast Asia VC Outlook Over The Next Decade (panel with Goh Yiping &amp; Mohan Belani)</span></a></li>
+          
+        </ul>
+      </details>
+      
+      
+      <details class="year">
+        <summary>2021<span class="cnt">1 EP</span></summary>
+        <ul class="eps">
+          
+          <li><a href="https://www.bravesea.com/shiyan-koh/" target="_blank" rel="noopener"><span class="ep">E60</span><span>Choosing Bosses, Learning Acceleration &amp; Building Investor-Founder Trust</span></a></li>
+          
+        </ul>
+      </details>
+      
+    </div>
+  </div>
+</section>
+
+  <script data-goatcounter="https://shiyankoh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
